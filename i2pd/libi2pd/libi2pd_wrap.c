@@ -10,7 +10,8 @@
 
 /* source: libi2pd.i */
 
-#define SWIGMODULE example
+#define SWIGMODULE i2pd
+#define SWIGGO_PREFIX go.i2pd
 /* -----------------------------------------------------------------------------
  *  This section contains generic SWIG labels for method/variable
  *  declarations/attributes, and other compiler dependent labels.
@@ -148,70 +149,92 @@ typedef int intgo;
 typedef unsigned int uintgo;
 
 
-# if !defined(__clang__) && (defined(__i386__) || defined(__x86_64__))
-#   define SWIGSTRUCTPACKED __attribute__((__packed__, __gcc_struct__))
-# else
-#   define SWIGSTRUCTPACKED __attribute__((__packed__))
-# endif
-
-
 
 typedef struct { char *p; intgo n; } _gostring_;
 typedef struct { void* array; intgo len; intgo cap; } _goslice_;
 
 
 
-
-#define swiggo_size_assert_eq(x, y, name) typedef char name[(x-y)*(x-y)*-2+1];
-#define swiggo_size_assert(t, n) swiggo_size_assert_eq(sizeof(t), n, swiggo_sizeof_##t##_is_not_##n)
-
-swiggo_size_assert(char, 1)
-swiggo_size_assert(short, 2)
-swiggo_size_assert(int, 4)
-typedef long long swiggo_long_long;
-swiggo_size_assert(swiggo_long_long, 8)
-swiggo_size_assert(float, 4)
-swiggo_size_assert(double, 8)
+#define SWIGGO_GCCGO
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-extern void crosscall2(void (*fn)(void *, int), void *, int);
-extern char* _cgo_topofstack(void) __attribute__ ((weak));
-extern void _cgo_allocate(void *, int);
-extern void _cgo_panic(void *, int);
+extern void *_cgo_allocate(size_t);
+extern void _cgo_panic(const char *);
 #ifdef __cplusplus
 }
 #endif
 
-static char *_swig_topofstack() {
-  if (_cgo_topofstack) {
-    return _cgo_topofstack();
-  } else {
-    return 0;
-  }
+#define _swig_goallocate _cgo_allocate
+#define _swig_gopanic _cgo_panic
+
+
+
+/* Implementations of SwigCgocall and friends for different versions
+   of gccgo.  The Go code will call these functions using C names with
+   a prefix of the module name.  The implementations here call the
+   routine in libgo.  The routines to call vary depending on the gccgo
+   version.  We assume that the version of gcc used to compile this
+   file is the same as the version of gccgo.  */
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define SWIG_GCC_VERSION \
+  (__GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__)
+
+#if SWIG_GCC_VERSION < 40700
+#define SwigDoCgocall()
+#define SwigDoCgocallDone()
+#define SwigDoCgocallBack()
+#define SwigDoCgocallBackDone()
+#elif SWIG_GCC_VERSION == 40700
+void SwigDoCgocall(void) __asm__("libgo_syscall.syscall.Entersyscall");
+void SwigDoCgocallDone(void) __asm__("libgo_syscall.syscall.Exitsyscall");
+void SwigDoCgocallBack(void) __asm__("libgo_syscall.syscall.Exitsyscall");
+void SwigDoCgocallBackDone(void) __asm__("libgo_syscall.syscall.Entersyscall");
+#else
+void SwigDoCgocall(void) __asm__("syscall.Cgocall");
+void SwigDoCgocallDone(void) __asm__("syscall.CgocallDone");
+void SwigDoCgocallBack(void) __asm__("syscall.CgocallBack");
+void SwigDoCgocallBackDone(void) __asm__("syscall.CgocallBackDone");
+#endif
+
+#define SWIGSTRINGIFY2(s) #s
+#define SWIGSTRINGIFY(s) SWIGSTRINGIFY2(s)
+
+void SwigCgocall()
+  __asm__(SWIGSTRINGIFY(SWIGGO_PREFIX) ".SwigCgocall");
+void SwigCgocall() {
+  SwigDoCgocall();
 }
 
-static void _swig_gopanic(const char *p) {
-  struct {
-    const char *p;
-  } SWIGSTRUCTPACKED a;
-  a.p = p;
-  crosscall2(_cgo_panic, &a, (int) sizeof a);
+void SwigCgocallDone()
+  __asm__(SWIGSTRINGIFY(SWIGGO_PREFIX) ".SwigCgocallDone");
+void SwigCgocallDone() {
+  SwigDoCgocallDone();
 }
 
-
-
-
-static void *_swig_goallocate(size_t len) {
-  struct {
-    size_t len;
-    void *ret;
-  } SWIGSTRUCTPACKED a;
-  a.len = len;
-  crosscall2(_cgo_allocate, &a, (int) sizeof a);
-  return a.ret;
+void SwigCgocallBack()
+  __asm__(SWIGSTRINGIFY(SWIGGO_PREFIX) ".SwigCgocallBack");
+void SwigCgocallBack() {
+  SwigDoCgocallBack();
 }
+
+void SwigCgocallBackDone()
+  __asm__(SWIGSTRINGIFY(SWIGGO_PREFIX) ".SwigCgocallBackDone");
+void SwigCgocallBackDone() {
+  SwigDoCgocallBackDone();
+}
+
+#undef SWIGSTRINGIFY
+#undef SWIGSTRINGIFY2
+
+#ifdef __cplusplus
+}
+#endif
 
 
 
@@ -243,67 +266,69 @@ static void* Swig_malloc(int c) {
 
 
 /* Includes the header in the wrapper code */
-#include "api.h"
+#include "Config.h"
+#include "FS.h"
+#include "Base.h"
+#include "version.h"
+#include "Transports.h"
+#include "NTCPSession.h"
+#include "RouterInfo.h"
+#include "RouterContext.h"
+#include "Tunnel.h"
+#include "HTTP.h"
+#include "NetDb.hpp"
+#include "Garlic.h"
+#include "Streaming.h"
+#include "Destination.h"
+#include "Crypto.h"
+#include "Timestamp.h"
+#include "util.h"
+#include "Event.h"
+#include "Tunnel.h"
+#include "Transports.h"
+#include "NetDb.hpp"
+#include "HTTP.h"
+#include "LeaseSet.h"
+#include "Destination.h"
+#include "RouterContext.h"
+#include "version.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void
-_wrap_Swig_free_example_bfb481a830edf618(void *swig_v)
-{
+void go__wrap_Swig_free_i2pd_3cde21bb36a9caa1(void *garg1) __asm__("go.i2pd__wrap_Swig_free_i2pd_3cde21bb36a9caa1");
+void go__wrap_Swig_free_i2pd_3cde21bb36a9caa1(void *garg1) {
   void *arg1 = (void *) 0 ;
-  void *_swig_go_0;
-  struct swigargs {
-    void *arg1;
-  } SWIGSTRUCTPACKED *swig_a = (struct swigargs *) swig_v;
   
-  _swig_go_0 = swig_a->arg1;
-  arg1 = *(void **)&_swig_go_0; 
+  arg1 = *(void **)&garg1; 
   
   Swig_free(arg1);
   
 }
 
 
-void
-_wrap_Swig_malloc_example_bfb481a830edf618(void *swig_v)
-{
+void *go__wrap_Swig_malloc_i2pd_3cde21bb36a9caa1(intgo garg1) __asm__("go.i2pd__wrap_Swig_malloc_i2pd_3cde21bb36a9caa1");
+void *go__wrap_Swig_malloc_i2pd_3cde21bb36a9caa1(intgo garg1) {
   int arg1 ;
   void *result = 0 ;
-  intgo _swig_go_0;
   void *_swig_go_result;
-  char *swig_stktop;
-  struct swigargs {
-    intgo arg1;
-    long : 0;
-    void *result;
-  } SWIGSTRUCTPACKED *swig_a = (struct swigargs *) swig_v;
   
-  _swig_go_0 = swig_a->arg1;
-  arg1 = (int)_swig_go_0; 
+  arg1 = (int)garg1; 
   
-  swig_stktop = _swig_topofstack();
   result = (void *)Swig_malloc(arg1);
   *(void **)&_swig_go_result = (void *)result; 
-  swig_a = (struct swigargs*)((char*)swig_a + (_swig_topofstack() - swig_stktop));
-  swig_a->result = _swig_go_result;
+  return _swig_go_result;
 }
 
 
-void
-_wrap_i2p_set_example_bfb481a830edf618(void *swig_v)
-{
+void go__wrap_i2p_set_i2pd_3cde21bb36a9caa1(namespace *garg1) __asm__("go.i2pd__wrap_i2p_set_i2pd_3cde21bb36a9caa1");
+void go__wrap_i2p_set_i2pd_3cde21bb36a9caa1(namespace *garg1) {
   namespace arg1 ;
   namespace *argp1 ;
-  namespace *_swig_go_0;
-  struct swigargs {
-    namespace *arg1;
-  } SWIGSTRUCTPACKED *swig_a = (struct swigargs *) swig_v;
   
-  _swig_go_0 = swig_a->arg1;
   
-  argp1 = (namespace *)_swig_go_0;
+  argp1 = (namespace *)garg1;
   if (argp1 == NULL) {
     _swig_gopanic("Attempt to dereference null namespace");
   }
@@ -315,27 +340,298 @@ _wrap_i2p_set_example_bfb481a830edf618(void *swig_v)
 }
 
 
-void
-_wrap_i2p_get_example_bfb481a830edf618(void *swig_v)
-{
+namespace *go__wrap_i2p_get_i2pd_3cde21bb36a9caa1() __asm__("go.i2pd__wrap_i2p_get_i2pd_3cde21bb36a9caa1");
+namespace *go__wrap_i2p_get_i2pd_3cde21bb36a9caa1() {
   namespace result;
   namespace *_swig_go_result;
-  char *swig_stktop;
-  struct swigargs {
-    long : 0;
-    namespace *result;
-  } SWIGSTRUCTPACKED *swig_a = (struct swigargs *) swig_v;
   
   
-  swig_stktop = _swig_topofstack();
   result = i2p;
   {
     namespace * resultptr = (namespace *)malloc(sizeof(namespace));
     memmove(resultptr, &result, sizeof(namespace));
     *(namespace **)&_swig_go_result = resultptr;
   }
-  swig_a = (struct swigargs*)((char*)swig_a + (_swig_topofstack() - swig_stktop));
-  swig_a->result = _swig_go_result;
+  return _swig_go_result;
+}
+
+
+intgo go__wrap_DSA_set0_pqg_i2pd_3cde21bb36a9caa1(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_DSA_set0_pqg_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_DSA_set0_pqg_i2pd_3cde21bb36a9caa1(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
+  DSA *arg1 = (DSA *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  BIGNUM *arg4 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(DSA **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  arg4 = *(BIGNUM **)&garg4; 
+  
+  result = (int)DSA_set0_pqg(arg1,arg2,arg3,arg4);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+intgo go__wrap_DSA_set0_key_i2pd_3cde21bb36a9caa1(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DSA_set0_key_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_DSA_set0_key_i2pd_3cde21bb36a9caa1(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+  DSA *arg1 = (DSA *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(DSA **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  
+  result = (int)DSA_set0_key(arg1,arg2,arg3);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void go__wrap_DSA_get0_key_i2pd_3cde21bb36a9caa1(DSA *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DSA_get0_key_i2pd_3cde21bb36a9caa1");
+void go__wrap_DSA_get0_key_i2pd_3cde21bb36a9caa1(DSA *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+  DSA *arg1 = (DSA *) 0 ;
+  BIGNUM **arg2 = (BIGNUM **) 0 ;
+  BIGNUM **arg3 = (BIGNUM **) 0 ;
+  
+  arg1 = *(DSA **)&garg1; 
+  arg2 = *(BIGNUM ***)&garg2; 
+  arg3 = *(BIGNUM ***)&garg3; 
+  
+  DSA_get0_key((DSA const *)arg1,(BIGNUM const **)arg2,(BIGNUM const **)arg3);
+  
+}
+
+
+intgo go__wrap_DSA_SIG_set0_i2pd_3cde21bb36a9caa1(DSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DSA_SIG_set0_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_DSA_SIG_set0_i2pd_3cde21bb36a9caa1(DSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+  DSA_SIG *arg1 = (DSA_SIG *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(DSA_SIG **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  
+  result = (int)DSA_SIG_set0(arg1,arg2,arg3);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void go__wrap_DSA_SIG_get0_i2pd_3cde21bb36a9caa1(DSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DSA_SIG_get0_i2pd_3cde21bb36a9caa1");
+void go__wrap_DSA_SIG_get0_i2pd_3cde21bb36a9caa1(DSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+  DSA_SIG *arg1 = (DSA_SIG *) 0 ;
+  BIGNUM **arg2 = (BIGNUM **) 0 ;
+  BIGNUM **arg3 = (BIGNUM **) 0 ;
+  
+  arg1 = *(DSA_SIG **)&garg1; 
+  arg2 = *(BIGNUM ***)&garg2; 
+  arg3 = *(BIGNUM ***)&garg3; 
+  
+  DSA_SIG_get0((DSA_SIG const *)arg1,(BIGNUM const **)arg2,(BIGNUM const **)arg3);
+  
+}
+
+
+intgo go__wrap_ECDSA_SIG_set0_i2pd_3cde21bb36a9caa1(ECDSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_ECDSA_SIG_set0_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_ECDSA_SIG_set0_i2pd_3cde21bb36a9caa1(ECDSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+  ECDSA_SIG *arg1 = (ECDSA_SIG *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(ECDSA_SIG **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  
+  result = (int)ECDSA_SIG_set0(arg1,arg2,arg3);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void go__wrap_ECDSA_SIG_get0_i2pd_3cde21bb36a9caa1(ECDSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_ECDSA_SIG_get0_i2pd_3cde21bb36a9caa1");
+void go__wrap_ECDSA_SIG_get0_i2pd_3cde21bb36a9caa1(ECDSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+  ECDSA_SIG *arg1 = (ECDSA_SIG *) 0 ;
+  BIGNUM **arg2 = (BIGNUM **) 0 ;
+  BIGNUM **arg3 = (BIGNUM **) 0 ;
+  
+  arg1 = *(ECDSA_SIG **)&garg1; 
+  arg2 = *(BIGNUM ***)&garg2; 
+  arg3 = *(BIGNUM ***)&garg3; 
+  
+  ECDSA_SIG_get0((ECDSA_SIG const *)arg1,(BIGNUM const **)arg2,(BIGNUM const **)arg3);
+  
+}
+
+
+intgo go__wrap_RSA_set0_key_i2pd_3cde21bb36a9caa1(RSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_RSA_set0_key_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_RSA_set0_key_i2pd_3cde21bb36a9caa1(RSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
+  RSA *arg1 = (RSA *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  BIGNUM *arg4 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(RSA **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  arg4 = *(BIGNUM **)&garg4; 
+  
+  result = (int)RSA_set0_key(arg1,arg2,arg3,arg4);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void go__wrap_RSA_get0_key_i2pd_3cde21bb36a9caa1(RSA *garg1, BIGNUM **garg2, BIGNUM **garg3, BIGNUM **garg4) __asm__("go.i2pd__wrap_RSA_get0_key_i2pd_3cde21bb36a9caa1");
+void go__wrap_RSA_get0_key_i2pd_3cde21bb36a9caa1(RSA *garg1, BIGNUM **garg2, BIGNUM **garg3, BIGNUM **garg4) {
+  RSA *arg1 = (RSA *) 0 ;
+  BIGNUM **arg2 = (BIGNUM **) 0 ;
+  BIGNUM **arg3 = (BIGNUM **) 0 ;
+  BIGNUM **arg4 = (BIGNUM **) 0 ;
+  
+  arg1 = *(RSA **)&garg1; 
+  arg2 = *(BIGNUM ***)&garg2; 
+  arg3 = *(BIGNUM ***)&garg3; 
+  arg4 = *(BIGNUM ***)&garg4; 
+  
+  RSA_get0_key((RSA const *)arg1,(BIGNUM const **)arg2,(BIGNUM const **)arg3,(BIGNUM const **)arg4);
+  
+}
+
+
+intgo go__wrap_DH_set0_pqg_i2pd_3cde21bb36a9caa1(DH *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_DH_set0_pqg_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_DH_set0_pqg_i2pd_3cde21bb36a9caa1(DH *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
+  DH *arg1 = (DH *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  BIGNUM *arg4 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(DH **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  arg4 = *(BIGNUM **)&garg4; 
+  
+  result = (int)DH_set0_pqg(arg1,arg2,arg3,arg4);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+intgo go__wrap_DH_set0_key_i2pd_3cde21bb36a9caa1(DH *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DH_set0_key_i2pd_3cde21bb36a9caa1");
+intgo go__wrap_DH_set0_key_i2pd_3cde21bb36a9caa1(DH *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+  DH *arg1 = (DH *) 0 ;
+  BIGNUM *arg2 = (BIGNUM *) 0 ;
+  BIGNUM *arg3 = (BIGNUM *) 0 ;
+  int result;
+  intgo _swig_go_result;
+  
+  arg1 = *(DH **)&garg1; 
+  arg2 = *(BIGNUM **)&garg2; 
+  arg3 = *(BIGNUM **)&garg3; 
+  
+  result = (int)DH_set0_key(arg1,arg2,arg3);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void go__wrap_DH_get0_key_i2pd_3cde21bb36a9caa1(DH *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DH_get0_key_i2pd_3cde21bb36a9caa1");
+void go__wrap_DH_get0_key_i2pd_3cde21bb36a9caa1(DH *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+  DH *arg1 = (DH *) 0 ;
+  BIGNUM **arg2 = (BIGNUM **) 0 ;
+  BIGNUM **arg3 = (BIGNUM **) 0 ;
+  
+  arg1 = *(DH **)&garg1; 
+  arg2 = *(BIGNUM ***)&garg2; 
+  arg3 = *(BIGNUM ***)&garg3; 
+  
+  DH_get0_key((DH const *)arg1,(BIGNUM const **)arg2,(BIGNUM const **)arg3);
+  
+}
+
+
+RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_3cde21bb36a9caa1(EVP_PKEY *garg1) __asm__("go.i2pd__wrap_EVP_PKEY_get0_RSA_i2pd_3cde21bb36a9caa1");
+RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_3cde21bb36a9caa1(EVP_PKEY *garg1) {
+  EVP_PKEY *arg1 = (EVP_PKEY *) 0 ;
+  RSA *result = 0 ;
+  RSA *_swig_go_result;
+  
+  arg1 = *(EVP_PKEY **)&garg1; 
+  
+  result = (RSA *)EVP_PKEY_get0_RSA(arg1);
+  *(RSA **)&_swig_go_result = (RSA *)result; 
+  return _swig_go_result;
+}
+
+
+EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_3cde21bb36a9caa1() __asm__("go.i2pd__wrap_EVP_MD_CTX_new_i2pd_3cde21bb36a9caa1");
+EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_3cde21bb36a9caa1() {
+  EVP_MD_CTX *result = 0 ;
+  EVP_MD_CTX *_swig_go_result;
+  
+  
+  result = (EVP_MD_CTX *)EVP_MD_CTX_new();
+  *(EVP_MD_CTX **)&_swig_go_result = (EVP_MD_CTX *)result; 
+  return _swig_go_result;
+}
+
+
+void go__wrap_EVP_MD_CTX_free_i2pd_3cde21bb36a9caa1(EVP_MD_CTX *garg1) __asm__("go.i2pd__wrap_EVP_MD_CTX_free_i2pd_3cde21bb36a9caa1");
+void go__wrap_EVP_MD_CTX_free_i2pd_3cde21bb36a9caa1(EVP_MD_CTX *garg1) {
+  EVP_MD_CTX *arg1 = (EVP_MD_CTX *) 0 ;
+  
+  arg1 = *(EVP_MD_CTX **)&garg1; 
+  
+  EVP_MD_CTX_free(arg1);
+  
+}
+
+
+void go__wrap_QueueIntEvent_i2pd_3cde21bb36a9caa1(std::string *garg1, std::string *garg2, uint64_t *garg3) __asm__("go.i2pd__wrap_QueueIntEvent_i2pd_3cde21bb36a9caa1");
+void go__wrap_QueueIntEvent_i2pd_3cde21bb36a9caa1(std::string *garg1, std::string *garg2, uint64_t *garg3) {
+  std::string *arg1 = 0 ;
+  std::string *arg2 = 0 ;
+  uint64_t arg3 ;
+  uint64_t *argp3 ;
+  
+  arg1 = *(std::string **)&garg1; 
+  arg2 = *(std::string **)&garg2; 
+  
+  argp3 = (uint64_t *)garg3;
+  if (argp3 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg3 = (uint64_t)*argp3;
+  
+  
+  QueueIntEvent((std::string const &)*arg1,(std::string const &)*arg2,arg3);
+  
+}
+
+
+void go__wrap_EmitEvent_i2pd_3cde21bb36a9caa1(std::map< std::string,std::string > *garg1) __asm__("go.i2pd__wrap_EmitEvent_i2pd_3cde21bb36a9caa1");
+void go__wrap_EmitEvent_i2pd_3cde21bb36a9caa1(std::map< std::string,std::string > *garg1) {
+  EventType *arg1 = 0 ;
+  
+  arg1 = *(EventType **)&garg1; 
+  
+  EmitEvent((std::map< std::string,std::string > const &)*arg1);
+  
 }
 
 
