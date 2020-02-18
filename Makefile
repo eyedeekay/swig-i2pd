@@ -1,6 +1,6 @@
 
-export CGO_ENABLED=yes
-CGO_ENABLED=yes
+#export CGO_ENABLED=yes
+#CGO_ENABLED=yes
 VERSION=2.29.0
 
 
@@ -29,6 +29,8 @@ libi2pdinterface:
 	./generate include2 | tee -a swig/libi2pd.i
 	sed -i 's|%include "Log.h"||g' swig/libi2pd.i
 	sed -i 's|%include "LittleBigEndian.h"||g' swig/libi2pd.i
+	@echo 'package i2pd' | tee i2pd/libi2pd/binding.go
+	@echo 'import "C"' | tee -a i2pd/libi2pd/binding.go
 
 libi2pd_clientinterface:
 	@echo '%module i2pdclient' | tee swig/libi2pd_client.i
@@ -61,6 +63,8 @@ libi2pd_clientinterface:
 	@echo '%include "SOCKS.h"' | tee -a swig/libi2pd_client.i
 	@echo '%include "Websocket.h"' | tee -a swig/libi2pd_client.i
 	@echo '%include "WebSocks.h"' | tee -a swig/libi2pd_client.i
+	@echo 'package i2pdclient' | tee i2pd/libi2pd_client/binding.go
+	@echo 'import "C"' | tee -a i2pd/libi2pd_client/binding.go
 
 get: clean
 	wget -O i2pd.zip -c https://github.com/PurpleI2P/i2pd/archive/$(VERSION).zip
