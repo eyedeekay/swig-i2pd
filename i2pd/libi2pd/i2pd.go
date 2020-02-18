@@ -41,7 +41,7 @@ func SwigCgocallDone()
 func SwigCgocallBack()
 func SwigCgocallBackDone()
 
-//extern go.i2pd__wrap_Swig_free_i2pd_3cde21bb36a9caa1
+//extern go.i2pd__wrap_Swig_free_i2pd_1dc115fabc28a9e4
 func _swig_wrap_Swig_free(base uintptr)
 
 func Swig_free(arg1 uintptr) {
@@ -50,7 +50,7 @@ func Swig_free(arg1 uintptr) {
 	_swig_wrap_Swig_free(arg1)
 }
 
-//extern go.i2pd__wrap_Swig_malloc_i2pd_3cde21bb36a9caa1
+//extern go.i2pd__wrap_Swig_malloc_i2pd_1dc115fabc28a9e4
 func _swig_wrap_Swig_malloc(base int) (_ uintptr)
 
 func Swig_malloc(arg1 int) (_swig_ret uintptr) {
@@ -59,7 +59,7 @@ func Swig_malloc(arg1 int) (_swig_ret uintptr) {
 	return _swig_wrap_Swig_malloc(arg1)
 }
 
-//extern go.i2pd__wrap_i2p_set_i2pd_3cde21bb36a9caa1
+//extern go.i2pd__wrap_i2p_set_i2pd_1dc115fabc28a9e4
 func _swig_wrap_i2p_set(base uintptr)
 
 func SetI2p(arg1 Namespace) {
@@ -68,13 +68,356 @@ func SetI2p(arg1 Namespace) {
 	_swig_wrap_i2p_set(arg1.Swigcptr())
 }
 
-//extern go.i2pd__wrap_i2p_get_i2pd_3cde21bb36a9caa1
+//extern go.i2pd__wrap_i2p_get_i2pd_1dc115fabc28a9e4
 func _swig_wrap_i2p_get() (base SwigcptrNamespace)
 
 func GetI2p() (_swig_ret Namespace) {
 	defer SwigCgocallDone()
 	SwigCgocall()
 	return _swig_wrap_i2p_get()
+}
+
+const LEGACY_OPENSSL int = 1
+//extern go.i2pd__wrap_DSA_set0_pqg_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DSA_set0_pqg(base uintptr, _ uintptr, _ uintptr, _ uintptr) (_ int)
+
+func DSA_set0_pqg(arg1 DSA, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_DSA_set0_pqg(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DSA_set0_key_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DSA_set0_key(base uintptr, _ uintptr, _ uintptr) (_ int)
+
+func DSA_set0_key(arg1 DSA, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_DSA_set0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DSA_get0_key_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DSA_get0_key(base uintptr, _ uintptr, _ uintptr)
+
+func DSA_get0_key(arg1 DSA, arg2 BIGNUM, arg3 BIGNUM) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_DSA_get0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DSA_SIG_set0_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DSA_SIG_set0(base uintptr, _ uintptr, _ uintptr) (_ int)
+
+func DSA_SIG_set0(arg1 DSA_SIG, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_DSA_SIG_set0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DSA_SIG_get0_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DSA_SIG_get0(base uintptr, _ uintptr, _ uintptr)
+
+func DSA_SIG_get0(arg1 DSA_SIG, arg2 BIGNUM, arg3 BIGNUM) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_DSA_SIG_get0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_ECDSA_SIG_set0_i2pd_1dc115fabc28a9e4
+func _swig_wrap_ECDSA_SIG_set0(base uintptr, _ uintptr, _ uintptr) (_ int)
+
+func ECDSA_SIG_set0(arg1 ECDSA_SIG, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_ECDSA_SIG_set0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_ECDSA_SIG_get0_i2pd_1dc115fabc28a9e4
+func _swig_wrap_ECDSA_SIG_get0(base uintptr, _ uintptr, _ uintptr)
+
+func ECDSA_SIG_get0(arg1 ECDSA_SIG, arg2 BIGNUM, arg3 BIGNUM) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_ECDSA_SIG_get0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_RSA_set0_key_i2pd_1dc115fabc28a9e4
+func _swig_wrap_RSA_set0_key(base uintptr, _ uintptr, _ uintptr, _ uintptr) (_ int)
+
+func RSA_set0_key(arg1 RSA, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_RSA_set0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
+}
+
+//extern go.i2pd__wrap_RSA_get0_key_i2pd_1dc115fabc28a9e4
+func _swig_wrap_RSA_get0_key(base uintptr, _ uintptr, _ uintptr, _ uintptr)
+
+func RSA_get0_key(arg1 RSA, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_RSA_get0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DH_set0_pqg_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DH_set0_pqg(base uintptr, _ uintptr, _ uintptr, _ uintptr) (_ int)
+
+func DH_set0_pqg(arg1 DH, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_DH_set0_pqg(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DH_set0_key_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DH_set0_key(base uintptr, _ uintptr, _ uintptr) (_ int)
+
+func DH_set0_key(arg1 DH, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_DH_set0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_DH_get0_key_i2pd_1dc115fabc28a9e4
+func _swig_wrap_DH_get0_key(base uintptr, _ uintptr, _ uintptr)
+
+func DH_get0_key(arg1 DH, arg2 BIGNUM, arg3 BIGNUM) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_DH_get0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_EVP_PKEY_get0_RSA_i2pd_1dc115fabc28a9e4
+func _swig_wrap_EVP_PKEY_get0_RSA(base uintptr) (_ SwigcptrRSA)
+
+func EVP_PKEY_get0_RSA(arg1 EVP_PKEY) (_swig_ret RSA) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_EVP_PKEY_get0_RSA(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_EVP_MD_CTX_new_i2pd_1dc115fabc28a9e4
+func _swig_wrap_EVP_MD_CTX_new() (base SwigcptrEVP_MD_CTX)
+
+func EVP_MD_CTX_new() (_swig_ret EVP_MD_CTX) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_EVP_MD_CTX_new()
+}
+
+//extern go.i2pd__wrap_EVP_MD_CTX_free_i2pd_1dc115fabc28a9e4
+func _swig_wrap_EVP_MD_CTX_free(base uintptr)
+
+func EVP_MD_CTX_free(arg1 EVP_MD_CTX) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_EVP_MD_CTX_free(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_QueueIntEvent_i2pd_1dc115fabc28a9e4
+func _swig_wrap_QueueIntEvent(base uintptr, _ uintptr, _ uintptr)
+
+func QueueIntEvent(arg1 Std_string, arg2 Std_string, arg3 Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_QueueIntEvent(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
+}
+
+//extern go.i2pd__wrap_EmitEvent_i2pd_1dc115fabc28a9e4
+func _swig_wrap_EmitEvent(base uintptr)
+
+func EmitEvent(arg1 Std_map_Sl_std_string_Sc_std_string_Sg_) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_EmitEvent(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobe16_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobe16(base uintptr) (_ SwigcptrUint16_t)
+
+func Htobe16(arg1 Uint16_t) (_swig_ret Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_htobe16(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobe32_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobe32(base uintptr) (_ SwigcptrUint32_t)
+
+func Htobe32(arg1 Uint32_t) (_swig_ret Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_htobe32(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobe64_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobe64(base uintptr) (_ SwigcptrUint64_t)
+
+func Htobe64(arg1 Uint64_t) (_swig_ret Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_htobe64(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_be16toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_be16toh(base uintptr) (_ SwigcptrUint16_t)
+
+func Be16toh(arg1 Uint16_t) (_swig_ret Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_be16toh(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_be32toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_be32toh(base uintptr) (_ SwigcptrUint32_t)
+
+func Be32toh(arg1 Uint32_t) (_swig_ret Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_be32toh(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_be64toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_be64toh(base uintptr) (_ SwigcptrUint64_t)
+
+func Be64toh(arg1 Uint64_t) (_swig_ret Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_be64toh(arg1.Swigcptr())
+}
+
+//extern go.i2pd__wrap_buf16toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_buf16toh(base uintptr) (_ SwigcptrUint16_t)
+
+func Buf16toh(arg1 uintptr) (_swig_ret Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_buf16toh(arg1)
+}
+
+//extern go.i2pd__wrap_buf32toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_buf32toh(base uintptr) (_ SwigcptrUint32_t)
+
+func Buf32toh(arg1 uintptr) (_swig_ret Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_buf32toh(arg1)
+}
+
+//extern go.i2pd__wrap_buf64toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_buf64toh(base uintptr) (_ SwigcptrUint64_t)
+
+func Buf64toh(arg1 uintptr) (_swig_ret Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_buf64toh(arg1)
+}
+
+//extern go.i2pd__wrap_bufbe16toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_bufbe16toh(base uintptr) (_ SwigcptrUint16_t)
+
+func Bufbe16toh(arg1 uintptr) (_swig_ret Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_bufbe16toh(arg1)
+}
+
+//extern go.i2pd__wrap_bufbe32toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_bufbe32toh(base uintptr) (_ SwigcptrUint32_t)
+
+func Bufbe32toh(arg1 uintptr) (_swig_ret Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_bufbe32toh(arg1)
+}
+
+//extern go.i2pd__wrap_bufbe64toh_i2pd_1dc115fabc28a9e4
+func _swig_wrap_bufbe64toh(base uintptr) (_ SwigcptrUint64_t)
+
+func Bufbe64toh(arg1 uintptr) (_swig_ret Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	return _swig_wrap_bufbe64toh(arg1)
+}
+
+//extern go.i2pd__wrap_htobuf16_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobuf16(base uintptr, _ uintptr)
+
+func Htobuf16(arg1 uintptr, arg2 Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htobuf16(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobuf32_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobuf32(base uintptr, _ uintptr)
+
+func Htobuf32(arg1 uintptr, arg2 Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htobuf32(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobuf64_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobuf64(base uintptr, _ uintptr)
+
+func Htobuf64(arg1 uintptr, arg2 Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htobuf64(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobe16buf_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobe16buf(base uintptr, _ uintptr)
+
+func Htobe16buf(arg1 uintptr, arg2 Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htobe16buf(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobe32buf_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobe32buf(base uintptr, _ uintptr)
+
+func Htobe32buf(arg1 uintptr, arg2 Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htobe32buf(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htobe64buf_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htobe64buf(base uintptr, _ uintptr)
+
+func Htobe64buf(arg1 uintptr, arg2 Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htobe64buf(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htole16buf_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htole16buf(base uintptr, _ uintptr)
+
+func Htole16buf(arg1 uintptr, arg2 Uint16_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htole16buf(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htole32buf_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htole32buf(base uintptr, _ uintptr)
+
+func Htole32buf(arg1 uintptr, arg2 Uint32_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htole32buf(arg1, arg2.Swigcptr())
+}
+
+//extern go.i2pd__wrap_htole64buf_i2pd_1dc115fabc28a9e4
+func _swig_wrap_htole64buf(base uintptr, _ uintptr)
+
+func Htole64buf(arg1 uintptr, arg2 Uint64_t) {
+	defer SwigCgocallDone()
+	SwigCgocall()
+	_swig_wrap_htole64buf(arg1, arg2.Swigcptr())
 }
 
 const CODENAME string = "Purple"
@@ -90,166 +433,12 @@ const I2P_VERSION_MINOR int = 9
 const I2P_VERSION_MICRO int = 43
 const I2P_VERSION_PATCH int = 0
 const I2P_VERSION string = "0.9.43"
-const LEGACY_OPENSSL int = 1
-//extern go.i2pd__wrap_DSA_set0_pqg_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DSA_set0_pqg(base uintptr, _ uintptr, _ uintptr, _ uintptr) (_ int)
 
-func DSA_set0_pqg(arg1 DSA, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_DSA_set0_pqg(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DSA_set0_key_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DSA_set0_key(base uintptr, _ uintptr, _ uintptr) (_ int)
-
-func DSA_set0_key(arg1 DSA, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_DSA_set0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DSA_get0_key_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DSA_get0_key(base uintptr, _ uintptr, _ uintptr)
-
-func DSA_get0_key(arg1 DSA, arg2 BIGNUM, arg3 BIGNUM) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_DSA_get0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DSA_SIG_set0_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DSA_SIG_set0(base uintptr, _ uintptr, _ uintptr) (_ int)
-
-func DSA_SIG_set0(arg1 DSA_SIG, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_DSA_SIG_set0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DSA_SIG_get0_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DSA_SIG_get0(base uintptr, _ uintptr, _ uintptr)
-
-func DSA_SIG_get0(arg1 DSA_SIG, arg2 BIGNUM, arg3 BIGNUM) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_DSA_SIG_get0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_ECDSA_SIG_set0_i2pd_3cde21bb36a9caa1
-func _swig_wrap_ECDSA_SIG_set0(base uintptr, _ uintptr, _ uintptr) (_ int)
-
-func ECDSA_SIG_set0(arg1 ECDSA_SIG, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_ECDSA_SIG_set0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_ECDSA_SIG_get0_i2pd_3cde21bb36a9caa1
-func _swig_wrap_ECDSA_SIG_get0(base uintptr, _ uintptr, _ uintptr)
-
-func ECDSA_SIG_get0(arg1 ECDSA_SIG, arg2 BIGNUM, arg3 BIGNUM) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_ECDSA_SIG_get0(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_RSA_set0_key_i2pd_3cde21bb36a9caa1
-func _swig_wrap_RSA_set0_key(base uintptr, _ uintptr, _ uintptr, _ uintptr) (_ int)
-
-func RSA_set0_key(arg1 RSA, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_RSA_set0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
-}
-
-//extern go.i2pd__wrap_RSA_get0_key_i2pd_3cde21bb36a9caa1
-func _swig_wrap_RSA_get0_key(base uintptr, _ uintptr, _ uintptr, _ uintptr)
-
-func RSA_get0_key(arg1 RSA, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_RSA_get0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DH_set0_pqg_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DH_set0_pqg(base uintptr, _ uintptr, _ uintptr, _ uintptr) (_ int)
-
-func DH_set0_pqg(arg1 DH, arg2 BIGNUM, arg3 BIGNUM, arg4 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_DH_set0_pqg(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr(), arg4.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DH_set0_key_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DH_set0_key(base uintptr, _ uintptr, _ uintptr) (_ int)
-
-func DH_set0_key(arg1 DH, arg2 BIGNUM, arg3 BIGNUM) (_swig_ret int) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_DH_set0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_DH_get0_key_i2pd_3cde21bb36a9caa1
-func _swig_wrap_DH_get0_key(base uintptr, _ uintptr, _ uintptr)
-
-func DH_get0_key(arg1 DH, arg2 BIGNUM, arg3 BIGNUM) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_DH_get0_key(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_EVP_PKEY_get0_RSA_i2pd_3cde21bb36a9caa1
-func _swig_wrap_EVP_PKEY_get0_RSA(base uintptr) (_ SwigcptrRSA)
-
-func EVP_PKEY_get0_RSA(arg1 EVP_PKEY) (_swig_ret RSA) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_EVP_PKEY_get0_RSA(arg1.Swigcptr())
-}
-
-//extern go.i2pd__wrap_EVP_MD_CTX_new_i2pd_3cde21bb36a9caa1
-func _swig_wrap_EVP_MD_CTX_new() (base SwigcptrEVP_MD_CTX)
-
-func EVP_MD_CTX_new() (_swig_ret EVP_MD_CTX) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_EVP_MD_CTX_new()
-}
-
-//extern go.i2pd__wrap_EVP_MD_CTX_free_i2pd_3cde21bb36a9caa1
-func _swig_wrap_EVP_MD_CTX_free(base uintptr)
-
-func EVP_MD_CTX_free(arg1 EVP_MD_CTX) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_EVP_MD_CTX_free(arg1.Swigcptr())
-}
-
-//extern go.i2pd__wrap_QueueIntEvent_i2pd_3cde21bb36a9caa1
-func _swig_wrap_QueueIntEvent(base uintptr, _ uintptr, _ uintptr)
-
-func QueueIntEvent(arg1 Std_string, arg2 Std_string, arg3 Uint64_t) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_QueueIntEvent(arg1.Swigcptr(), arg2.Swigcptr(), arg3.Swigcptr())
-}
-
-//extern go.i2pd__wrap_EmitEvent_i2pd_3cde21bb36a9caa1
-func _swig_wrap_EmitEvent(base uintptr)
-
-func EmitEvent(arg1 Std_map_Sl_std_string_Sc_std_string_Sg_) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_EmitEvent(arg1.Swigcptr())
-}
-
-
-type SwigcptrEVP_MD_CTX uintptr
-type EVP_MD_CTX interface {
+type SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_ uintptr
+type Std_map_Sl_std_string_Sc_std_string_Sg_ interface {
 	Swigcptr() uintptr;
 }
-func (p SwigcptrEVP_MD_CTX) Swigcptr() uintptr {
+func (p SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_) Swigcptr() uintptr {
 	return uintptr(p)
 }
 
@@ -261,75 +450,19 @@ func (p SwigcptrDSA) Swigcptr() uintptr {
 	return uintptr(p)
 }
 
-type SwigcptrRSA uintptr
-type RSA interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrRSA) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrDH uintptr
-type DH interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrDH) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrBIGNUM uintptr
-type BIGNUM interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrBIGNUM) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrDSA_SIG uintptr
-type DSA_SIG interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrDSA_SIG) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrECDSA_SIG uintptr
-type ECDSA_SIG interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrECDSA_SIG) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrStd_string uintptr
-type Std_string interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrStd_string) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrUint64_t uintptr
-type Uint64_t interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrUint64_t) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
-type SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_ uintptr
-type Std_map_Sl_std_string_Sc_std_string_Sg_ interface {
-	Swigcptr() uintptr;
-}
-func (p SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_) Swigcptr() uintptr {
-	return uintptr(p)
-}
-
 type SwigcptrVoid uintptr
 type Void interface {
 	Swigcptr() uintptr;
 }
 func (p SwigcptrVoid) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint16_t uintptr
+type Uint16_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint16_t) Swigcptr() uintptr {
 	return uintptr(p)
 }
 
@@ -341,11 +474,83 @@ func (p SwigcptrNamespace) Swigcptr() uintptr {
 	return uintptr(p)
 }
 
+type SwigcptrDH uintptr
+type DH interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrDH) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint32_t uintptr
+type Uint32_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint32_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint64_t uintptr
+type Uint64_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint64_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_string uintptr
+type Std_string interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_string) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrRSA uintptr
+type RSA interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrRSA) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
 type SwigcptrEVP_PKEY uintptr
 type EVP_PKEY interface {
 	Swigcptr() uintptr;
 }
 func (p SwigcptrEVP_PKEY) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBIGNUM uintptr
+type BIGNUM interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBIGNUM) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrEVP_MD_CTX uintptr
+type EVP_MD_CTX interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrEVP_MD_CTX) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrECDSA_SIG uintptr
+type ECDSA_SIG interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrECDSA_SIG) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrDSA_SIG uintptr
+type DSA_SIG interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrDSA_SIG) Swigcptr() uintptr {
 	return uintptr(p)
 }
 

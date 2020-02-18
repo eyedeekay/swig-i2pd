@@ -2,70 +2,61 @@
 export CGO_ENABLED=yes
 CGO_ENABLED=yes
 
-binding: get interface
+binding: get interface libi2pd libi2pd_client
+
+libi2pd:
 	cp swig/libi2pd.i i2pd/libi2pd/
 	cd i2pd/libi2pd/ && swig -gccgo -intgosize 32 -go libi2pd.i
 	go build i2pd/libi2pd/i2pd.go
 
-interface:
+libi2pd_client:
+	cp swig/libi2pd_client.i i2pd/libi2pd_client/
+	cd i2pd/libi2pd_client/ && swig -gccgo -intgosize 32 -go libi2pd_client.i
+	go build i2pd/libi2pd_client/i2pd.go
+
+interface: libi2pdinterface libi2pd_clientinterface
+
+libi2pdinterface:
 	@echo '%module i2pd' | tee swig/libi2pd.i
 	@echo '%{' | tee -a swig/libi2pd.i
 	@echo '/* Includes the header in the wrapper code */' | tee -a swig/libi2pd.i
-	@echo '#include "Config.h"' | tee -a swig/libi2pd.i
-	@echo '#include "FS.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Base.h"' | tee -a swig/libi2pd.i
-	@echo '#include "version.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Transports.h"' | tee -a swig/libi2pd.i
-	@echo '#include "NTCPSession.h"' | tee -a swig/libi2pd.i
-	@echo '#include "RouterInfo.h"' | tee -a swig/libi2pd.i
-	@echo '#include "RouterContext.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Tunnel.h"' | tee -a swig/libi2pd.i
-	@echo '#include "HTTP.h"' | tee -a swig/libi2pd.i
-	@echo '#include "NetDb.hpp"' | tee -a swig/libi2pd.i
-	@echo '#include "Garlic.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Streaming.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Destination.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Crypto.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Timestamp.h"' | tee -a swig/libi2pd.i
-	@echo '#include "util.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Event.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Tunnel.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Transports.h"' | tee -a swig/libi2pd.i
-	@echo '#include "NetDb.hpp"' | tee -a swig/libi2pd.i
-	@echo '#include "HTTP.h"' | tee -a swig/libi2pd.i
-	@echo '#include "LeaseSet.h"' | tee -a swig/libi2pd.i
-	@echo '#include "Destination.h"' | tee -a swig/libi2pd.i
-	@echo '#include "RouterContext.h"' | tee -a swig/libi2pd.i
-	@echo '#include "version.h"' | tee -a swig/libi2pd.i
+	./generate include1 | tee -a swig/libi2pd.i
 	@echo '%}' | tee -a swig/libi2pd.i
 	@echo '' | tee -a swig/libi2pd.i
 	@echo '/* Parse the header file to generate wrappers */' | tee -a swig/libi2pd.i
-	@echo %include "Config.h" | tee -a swig/libi2pd.i
-	@echo %include "FS.h" | tee -a swig/libi2pd.i
-	@echo %include "Base.h" | tee -a swig/libi2pd.i
-	@echo %include "version.h" | tee -a swig/libi2pd.i
-	@echo %include "Transports.h" | tee -a swig/libi2pd.i
-	@echo %include "NTCPSession.h" | tee -a swig/libi2pd.i
-	@echo %include "RouterInfo.h" | tee -a swig/libi2pd.i
-	@echo %include "RouterContext.h" | tee -a swig/libi2pd.i
-	@echo %include "Tunnel.h" | tee -a swig/libi2pd.i
-	@echo %include "HTTP.h" | tee -a swig/libi2pd.i
-	@echo %include "NetDb.hpp" | tee -a swig/libi2pd.i
-	@echo %include "Garlic.h" | tee -a swig/libi2pd.i
-	@echo %include "Streaming.h" | tee -a swig/libi2pd.i
-	@echo %include "Destination.h" | tee -a swig/libi2pd.i
-	@echo %include "Crypto.h" | tee -a swig/libi2pd.i
-	@echo %include "Timestamp.h" | tee -a swig/libi2pd.i
-	@echo %include "util.h" | tee -a swig/libi2pd.i
-	@echo %include "Event.h" | tee -a swig/libi2pd.i
-	@echo %include "Tunnel.h" | tee -a swig/libi2pd.i
-	@echo %include "Transports.h" | tee -a swig/libi2pd.i
-	@echo %include "NetDb.hpp" | tee -a swig/libi2pd.i
-	@echo %include "HTTP.h" | tee -a swig/libi2pd.i
-	@echo %include "LeaseSet.h" | tee -a swig/libi2pd.i
-	@echo %include "Destination.h" | tee -a swig/libi2pd.i
-	@echo %include "RouterContext.h" | tee -a swig/libi2pd.i
-	@echo %include "version.h" | tee -a swig/libi2pd.i
+	./generate include2 | tee -a swig/libi2pd.i
+
+libi2pd_clientinterface:
+	@echo '%module i2pd' | tee swig/libi2pd_client.i
+	@echo '%{' | tee -a swig/libi2pd_client.i
+	@echo '/* Includes the header in the wrapper code */' | tee -a swig/libi2pd_client.i
+	@echo '#include "AddressBook.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "BOB.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "ClientContext.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "HTTPProxy.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "I2CP.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "I2PService.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "I2PTunnel.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "MatchedDestination.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "SAM.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "SOCKS.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "Websocket.h"' | tee -a swig/libi2pd_client.i
+	@echo '#include "WebSocks.h"' | tee -a swig/libi2pd_client.i
+	@echo '%}' | tee -a swig/libi2pd_client.i
+	@echo '' | tee -a swig/libi2pd_client.i
+	@echo '/* Parse the header file to generate wrappers */' | tee -a swig/libi2pd_client.i
+	@echo '%include "AddressBook.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "BOB.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "ClientContext.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "HTTPProxy.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "I2CP.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "I2PService.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "I2PTunnel.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "MatchedDestination.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "SAM.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "SOCKS.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "Websocket.h"' | tee -a swig/libi2pd_client.i
+	@echo '%include "WebSocks.h"' | tee -a swig/libi2pd_client.i
 
 get: clean
 	wget -O i2pd.zip -c https://github.com/PurpleI2P/i2pd/archive/2.29.0.zip
