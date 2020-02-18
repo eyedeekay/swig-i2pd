@@ -1,6 +1,8 @@
 
 export CGO_ENABLED=yes
 CGO_ENABLED=yes
+VERSION=2.29.0
+
 
 binding: get interface libi2pd libi2pd_client
 
@@ -61,7 +63,7 @@ libi2pd_clientinterface:
 	@echo '%include "WebSocks.h"' | tee -a swig/libi2pd_client.i
 
 get: clean
-	wget -O i2pd.zip -c https://github.com/PurpleI2P/i2pd/archive/2.29.0.zip
+	wget -O i2pd.zip -c https://github.com/PurpleI2P/i2pd/archive/$(VERSION).zip
 	unzip -o i2pd.zip -d .i2pd
 	mv .i2pd/* i2pd
 	rm -rfv .i2pd

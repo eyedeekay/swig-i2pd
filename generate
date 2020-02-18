@@ -1,0 +1,11 @@
+#! /usr/bin/env sh
+
+include1(){
+    for f in $(ls i2pd/libi2pd/*.h); do echo -n "#include \""; echo $f\" | sed 's|i2pd/libi2pd/||g'; done
+}
+
+include2(){
+    for f in $(ls i2pd/libi2pd/*.h); do echo -n "%include \""; echo $f\" | sed 's|i2pd/libi2pd/||g'; done
+}
+
+$1
