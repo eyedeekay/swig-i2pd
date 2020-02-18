@@ -25,6 +25,8 @@
 #include "I2PEndian.h"
 #include "Identity.h"
 #include "LeaseSet.h"
+#include "LittleBigEndian.h"
+#include "Log.h"
 #include "NetDbRequests.h"
 #include "NTCP2.h"
 #include "NTCPSession.h"
@@ -80,6 +82,8 @@
 %include "I2PEndian.h"
 %include "Identity.h"
 %include "LeaseSet.h"
+
+
 %include "NetDbRequests.h"
 %include "NTCP2.h"
 %include "NTCPSession.h"

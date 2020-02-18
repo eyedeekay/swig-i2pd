@@ -25,6 +25,8 @@ libi2pdinterface:
 	@echo '' | tee -a swig/libi2pd.i
 	@echo '/* Parse the header file to generate wrappers */' | tee -a swig/libi2pd.i
 	./generate include2 | tee -a swig/libi2pd.i
+	sed -i 's|%include "Log.h"||g' swig/libi2pd.i
+	sed -i 's|%include "LittleBigEndian.h"||g' swig/libi2pd.i
 
 libi2pd_clientinterface:
 	@echo '%module i2pd' | tee swig/libi2pd_client.i

@@ -290,6 +290,8 @@ static void* Swig_malloc(int c) {
 #include "I2PEndian.h"
 #include "Identity.h"
 #include "LeaseSet.h"
+#include "LittleBigEndian.h"
+#include "Log.h"
 #include "NetDbRequests.h"
 #include "NTCP2.h"
 #include "NTCPSession.h"
@@ -323,8 +325,8 @@ static void* Swig_malloc(int c) {
 extern "C" {
 #endif
 
-void go__wrap_Swig_free_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_Swig_free_i2pd_1dc115fabc28a9e4");
-void go__wrap_Swig_free_i2pd_1dc115fabc28a9e4(void *garg1) {
+void go__wrap_Swig_free_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_Swig_free_i2pd_3959b4e6eb97331e");
+void go__wrap_Swig_free_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&garg1; 
@@ -334,8 +336,8 @@ void go__wrap_Swig_free_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-void *go__wrap_Swig_malloc_i2pd_1dc115fabc28a9e4(intgo garg1) __asm__("go.i2pd__wrap_Swig_malloc_i2pd_1dc115fabc28a9e4");
-void *go__wrap_Swig_malloc_i2pd_1dc115fabc28a9e4(intgo garg1) {
+void *go__wrap_Swig_malloc_i2pd_3959b4e6eb97331e(intgo garg1) __asm__("go.i2pd__wrap_Swig_malloc_i2pd_3959b4e6eb97331e");
+void *go__wrap_Swig_malloc_i2pd_3959b4e6eb97331e(intgo garg1) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -348,8 +350,8 @@ void *go__wrap_Swig_malloc_i2pd_1dc115fabc28a9e4(intgo garg1) {
 }
 
 
-void go__wrap_i2p_set_i2pd_1dc115fabc28a9e4(namespace *garg1) __asm__("go.i2pd__wrap_i2p_set_i2pd_1dc115fabc28a9e4");
-void go__wrap_i2p_set_i2pd_1dc115fabc28a9e4(namespace *garg1) {
+void go__wrap_i2p_set_i2pd_3959b4e6eb97331e(namespace *garg1) __asm__("go.i2pd__wrap_i2p_set_i2pd_3959b4e6eb97331e");
+void go__wrap_i2p_set_i2pd_3959b4e6eb97331e(namespace *garg1) {
   namespace arg1 ;
   namespace *argp1 ;
   
@@ -366,8 +368,8 @@ void go__wrap_i2p_set_i2pd_1dc115fabc28a9e4(namespace *garg1) {
 }
 
 
-namespace *go__wrap_i2p_get_i2pd_1dc115fabc28a9e4() __asm__("go.i2pd__wrap_i2p_get_i2pd_1dc115fabc28a9e4");
-namespace *go__wrap_i2p_get_i2pd_1dc115fabc28a9e4() {
+namespace *go__wrap_i2p_get_i2pd_3959b4e6eb97331e() __asm__("go.i2pd__wrap_i2p_get_i2pd_3959b4e6eb97331e");
+namespace *go__wrap_i2p_get_i2pd_3959b4e6eb97331e() {
   namespace result;
   namespace *_swig_go_result;
   
@@ -382,8 +384,8 @@ namespace *go__wrap_i2p_get_i2pd_1dc115fabc28a9e4() {
 }
 
 
-intgo go__wrap_DSA_set0_pqg_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_DSA_set0_pqg_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_DSA_set0_pqg_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
+intgo go__wrap_DSA_set0_pqg_i2pd_3959b4e6eb97331e(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_DSA_set0_pqg_i2pd_3959b4e6eb97331e");
+intgo go__wrap_DSA_set0_pqg_i2pd_3959b4e6eb97331e(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
   DSA *arg1 = (DSA *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -402,8 +404,8 @@ intgo go__wrap_DSA_set0_pqg_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM *garg2, BIG
 }
 
 
-intgo go__wrap_DSA_set0_key_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DSA_set0_key_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_DSA_set0_key_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+intgo go__wrap_DSA_set0_key_i2pd_3959b4e6eb97331e(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DSA_set0_key_i2pd_3959b4e6eb97331e");
+intgo go__wrap_DSA_set0_key_i2pd_3959b4e6eb97331e(DSA *garg1, BIGNUM *garg2, BIGNUM *garg3) {
   DSA *arg1 = (DSA *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -420,8 +422,8 @@ intgo go__wrap_DSA_set0_key_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM *garg2, BIG
 }
 
 
-void go__wrap_DSA_get0_key_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DSA_get0_key_i2pd_1dc115fabc28a9e4");
-void go__wrap_DSA_get0_key_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+void go__wrap_DSA_get0_key_i2pd_3959b4e6eb97331e(DSA *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DSA_get0_key_i2pd_3959b4e6eb97331e");
+void go__wrap_DSA_get0_key_i2pd_3959b4e6eb97331e(DSA *garg1, BIGNUM **garg2, BIGNUM **garg3) {
   DSA *arg1 = (DSA *) 0 ;
   BIGNUM **arg2 = (BIGNUM **) 0 ;
   BIGNUM **arg3 = (BIGNUM **) 0 ;
@@ -435,8 +437,8 @@ void go__wrap_DSA_get0_key_i2pd_1dc115fabc28a9e4(DSA *garg1, BIGNUM **garg2, BIG
 }
 
 
-intgo go__wrap_DSA_SIG_set0_i2pd_1dc115fabc28a9e4(DSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DSA_SIG_set0_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_DSA_SIG_set0_i2pd_1dc115fabc28a9e4(DSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+intgo go__wrap_DSA_SIG_set0_i2pd_3959b4e6eb97331e(DSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DSA_SIG_set0_i2pd_3959b4e6eb97331e");
+intgo go__wrap_DSA_SIG_set0_i2pd_3959b4e6eb97331e(DSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) {
   DSA_SIG *arg1 = (DSA_SIG *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -453,8 +455,8 @@ intgo go__wrap_DSA_SIG_set0_i2pd_1dc115fabc28a9e4(DSA_SIG *garg1, BIGNUM *garg2,
 }
 
 
-void go__wrap_DSA_SIG_get0_i2pd_1dc115fabc28a9e4(DSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DSA_SIG_get0_i2pd_1dc115fabc28a9e4");
-void go__wrap_DSA_SIG_get0_i2pd_1dc115fabc28a9e4(DSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+void go__wrap_DSA_SIG_get0_i2pd_3959b4e6eb97331e(DSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DSA_SIG_get0_i2pd_3959b4e6eb97331e");
+void go__wrap_DSA_SIG_get0_i2pd_3959b4e6eb97331e(DSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) {
   DSA_SIG *arg1 = (DSA_SIG *) 0 ;
   BIGNUM **arg2 = (BIGNUM **) 0 ;
   BIGNUM **arg3 = (BIGNUM **) 0 ;
@@ -468,8 +470,8 @@ void go__wrap_DSA_SIG_get0_i2pd_1dc115fabc28a9e4(DSA_SIG *garg1, BIGNUM **garg2,
 }
 
 
-intgo go__wrap_ECDSA_SIG_set0_i2pd_1dc115fabc28a9e4(ECDSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_ECDSA_SIG_set0_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_ECDSA_SIG_set0_i2pd_1dc115fabc28a9e4(ECDSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+intgo go__wrap_ECDSA_SIG_set0_i2pd_3959b4e6eb97331e(ECDSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_ECDSA_SIG_set0_i2pd_3959b4e6eb97331e");
+intgo go__wrap_ECDSA_SIG_set0_i2pd_3959b4e6eb97331e(ECDSA_SIG *garg1, BIGNUM *garg2, BIGNUM *garg3) {
   ECDSA_SIG *arg1 = (ECDSA_SIG *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -486,8 +488,8 @@ intgo go__wrap_ECDSA_SIG_set0_i2pd_1dc115fabc28a9e4(ECDSA_SIG *garg1, BIGNUM *ga
 }
 
 
-void go__wrap_ECDSA_SIG_get0_i2pd_1dc115fabc28a9e4(ECDSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_ECDSA_SIG_get0_i2pd_1dc115fabc28a9e4");
-void go__wrap_ECDSA_SIG_get0_i2pd_1dc115fabc28a9e4(ECDSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+void go__wrap_ECDSA_SIG_get0_i2pd_3959b4e6eb97331e(ECDSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_ECDSA_SIG_get0_i2pd_3959b4e6eb97331e");
+void go__wrap_ECDSA_SIG_get0_i2pd_3959b4e6eb97331e(ECDSA_SIG *garg1, BIGNUM **garg2, BIGNUM **garg3) {
   ECDSA_SIG *arg1 = (ECDSA_SIG *) 0 ;
   BIGNUM **arg2 = (BIGNUM **) 0 ;
   BIGNUM **arg3 = (BIGNUM **) 0 ;
@@ -501,8 +503,8 @@ void go__wrap_ECDSA_SIG_get0_i2pd_1dc115fabc28a9e4(ECDSA_SIG *garg1, BIGNUM **ga
 }
 
 
-intgo go__wrap_RSA_set0_key_i2pd_1dc115fabc28a9e4(RSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_RSA_set0_key_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_RSA_set0_key_i2pd_1dc115fabc28a9e4(RSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
+intgo go__wrap_RSA_set0_key_i2pd_3959b4e6eb97331e(RSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_RSA_set0_key_i2pd_3959b4e6eb97331e");
+intgo go__wrap_RSA_set0_key_i2pd_3959b4e6eb97331e(RSA *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
   RSA *arg1 = (RSA *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -521,8 +523,8 @@ intgo go__wrap_RSA_set0_key_i2pd_1dc115fabc28a9e4(RSA *garg1, BIGNUM *garg2, BIG
 }
 
 
-void go__wrap_RSA_get0_key_i2pd_1dc115fabc28a9e4(RSA *garg1, BIGNUM **garg2, BIGNUM **garg3, BIGNUM **garg4) __asm__("go.i2pd__wrap_RSA_get0_key_i2pd_1dc115fabc28a9e4");
-void go__wrap_RSA_get0_key_i2pd_1dc115fabc28a9e4(RSA *garg1, BIGNUM **garg2, BIGNUM **garg3, BIGNUM **garg4) {
+void go__wrap_RSA_get0_key_i2pd_3959b4e6eb97331e(RSA *garg1, BIGNUM **garg2, BIGNUM **garg3, BIGNUM **garg4) __asm__("go.i2pd__wrap_RSA_get0_key_i2pd_3959b4e6eb97331e");
+void go__wrap_RSA_get0_key_i2pd_3959b4e6eb97331e(RSA *garg1, BIGNUM **garg2, BIGNUM **garg3, BIGNUM **garg4) {
   RSA *arg1 = (RSA *) 0 ;
   BIGNUM **arg2 = (BIGNUM **) 0 ;
   BIGNUM **arg3 = (BIGNUM **) 0 ;
@@ -538,8 +540,8 @@ void go__wrap_RSA_get0_key_i2pd_1dc115fabc28a9e4(RSA *garg1, BIGNUM **garg2, BIG
 }
 
 
-intgo go__wrap_DH_set0_pqg_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_DH_set0_pqg_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_DH_set0_pqg_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
+intgo go__wrap_DH_set0_pqg_i2pd_3959b4e6eb97331e(DH *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) __asm__("go.i2pd__wrap_DH_set0_pqg_i2pd_3959b4e6eb97331e");
+intgo go__wrap_DH_set0_pqg_i2pd_3959b4e6eb97331e(DH *garg1, BIGNUM *garg2, BIGNUM *garg3, BIGNUM *garg4) {
   DH *arg1 = (DH *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -558,8 +560,8 @@ intgo go__wrap_DH_set0_pqg_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM *garg2, BIGNU
 }
 
 
-intgo go__wrap_DH_set0_key_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DH_set0_key_i2pd_1dc115fabc28a9e4");
-intgo go__wrap_DH_set0_key_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM *garg2, BIGNUM *garg3) {
+intgo go__wrap_DH_set0_key_i2pd_3959b4e6eb97331e(DH *garg1, BIGNUM *garg2, BIGNUM *garg3) __asm__("go.i2pd__wrap_DH_set0_key_i2pd_3959b4e6eb97331e");
+intgo go__wrap_DH_set0_key_i2pd_3959b4e6eb97331e(DH *garg1, BIGNUM *garg2, BIGNUM *garg3) {
   DH *arg1 = (DH *) 0 ;
   BIGNUM *arg2 = (BIGNUM *) 0 ;
   BIGNUM *arg3 = (BIGNUM *) 0 ;
@@ -576,8 +578,8 @@ intgo go__wrap_DH_set0_key_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM *garg2, BIGNU
 }
 
 
-void go__wrap_DH_get0_key_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DH_get0_key_i2pd_1dc115fabc28a9e4");
-void go__wrap_DH_get0_key_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM **garg2, BIGNUM **garg3) {
+void go__wrap_DH_get0_key_i2pd_3959b4e6eb97331e(DH *garg1, BIGNUM **garg2, BIGNUM **garg3) __asm__("go.i2pd__wrap_DH_get0_key_i2pd_3959b4e6eb97331e");
+void go__wrap_DH_get0_key_i2pd_3959b4e6eb97331e(DH *garg1, BIGNUM **garg2, BIGNUM **garg3) {
   DH *arg1 = (DH *) 0 ;
   BIGNUM **arg2 = (BIGNUM **) 0 ;
   BIGNUM **arg3 = (BIGNUM **) 0 ;
@@ -591,8 +593,8 @@ void go__wrap_DH_get0_key_i2pd_1dc115fabc28a9e4(DH *garg1, BIGNUM **garg2, BIGNU
 }
 
 
-RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_1dc115fabc28a9e4(EVP_PKEY *garg1) __asm__("go.i2pd__wrap_EVP_PKEY_get0_RSA_i2pd_1dc115fabc28a9e4");
-RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_1dc115fabc28a9e4(EVP_PKEY *garg1) {
+RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_3959b4e6eb97331e(EVP_PKEY *garg1) __asm__("go.i2pd__wrap_EVP_PKEY_get0_RSA_i2pd_3959b4e6eb97331e");
+RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_3959b4e6eb97331e(EVP_PKEY *garg1) {
   EVP_PKEY *arg1 = (EVP_PKEY *) 0 ;
   RSA *result = 0 ;
   RSA *_swig_go_result;
@@ -605,8 +607,8 @@ RSA *go__wrap_EVP_PKEY_get0_RSA_i2pd_1dc115fabc28a9e4(EVP_PKEY *garg1) {
 }
 
 
-EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_1dc115fabc28a9e4() __asm__("go.i2pd__wrap_EVP_MD_CTX_new_i2pd_1dc115fabc28a9e4");
-EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_1dc115fabc28a9e4() {
+EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_3959b4e6eb97331e() __asm__("go.i2pd__wrap_EVP_MD_CTX_new_i2pd_3959b4e6eb97331e");
+EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_3959b4e6eb97331e() {
   EVP_MD_CTX *result = 0 ;
   EVP_MD_CTX *_swig_go_result;
   
@@ -617,8 +619,8 @@ EVP_MD_CTX *go__wrap_EVP_MD_CTX_new_i2pd_1dc115fabc28a9e4() {
 }
 
 
-void go__wrap_EVP_MD_CTX_free_i2pd_1dc115fabc28a9e4(EVP_MD_CTX *garg1) __asm__("go.i2pd__wrap_EVP_MD_CTX_free_i2pd_1dc115fabc28a9e4");
-void go__wrap_EVP_MD_CTX_free_i2pd_1dc115fabc28a9e4(EVP_MD_CTX *garg1) {
+void go__wrap_EVP_MD_CTX_free_i2pd_3959b4e6eb97331e(EVP_MD_CTX *garg1) __asm__("go.i2pd__wrap_EVP_MD_CTX_free_i2pd_3959b4e6eb97331e");
+void go__wrap_EVP_MD_CTX_free_i2pd_3959b4e6eb97331e(EVP_MD_CTX *garg1) {
   EVP_MD_CTX *arg1 = (EVP_MD_CTX *) 0 ;
   
   arg1 = *(EVP_MD_CTX **)&garg1; 
@@ -628,8 +630,8 @@ void go__wrap_EVP_MD_CTX_free_i2pd_1dc115fabc28a9e4(EVP_MD_CTX *garg1) {
 }
 
 
-void go__wrap_QueueIntEvent_i2pd_1dc115fabc28a9e4(std::string *garg1, std::string *garg2, uint64_t *garg3) __asm__("go.i2pd__wrap_QueueIntEvent_i2pd_1dc115fabc28a9e4");
-void go__wrap_QueueIntEvent_i2pd_1dc115fabc28a9e4(std::string *garg1, std::string *garg2, uint64_t *garg3) {
+void go__wrap_QueueIntEvent_i2pd_3959b4e6eb97331e(std::string *garg1, std::string *garg2, uint64_t *garg3) __asm__("go.i2pd__wrap_QueueIntEvent_i2pd_3959b4e6eb97331e");
+void go__wrap_QueueIntEvent_i2pd_3959b4e6eb97331e(std::string *garg1, std::string *garg2, uint64_t *garg3) {
   std::string *arg1 = 0 ;
   std::string *arg2 = 0 ;
   uint64_t arg3 ;
@@ -650,8 +652,8 @@ void go__wrap_QueueIntEvent_i2pd_1dc115fabc28a9e4(std::string *garg1, std::strin
 }
 
 
-void go__wrap_EmitEvent_i2pd_1dc115fabc28a9e4(std::map< std::string,std::string > *garg1) __asm__("go.i2pd__wrap_EmitEvent_i2pd_1dc115fabc28a9e4");
-void go__wrap_EmitEvent_i2pd_1dc115fabc28a9e4(std::map< std::string,std::string > *garg1) {
+void go__wrap_EmitEvent_i2pd_3959b4e6eb97331e(std::map< std::string,std::string > *garg1) __asm__("go.i2pd__wrap_EmitEvent_i2pd_3959b4e6eb97331e");
+void go__wrap_EmitEvent_i2pd_3959b4e6eb97331e(std::map< std::string,std::string > *garg1) {
   EventType *arg1 = 0 ;
   
   arg1 = *(EventType **)&garg1; 
@@ -661,8 +663,8 @@ void go__wrap_EmitEvent_i2pd_1dc115fabc28a9e4(std::map< std::string,std::string 
 }
 
 
-uint16_t *go__wrap_htobe16_i2pd_1dc115fabc28a9e4(uint16_t *garg1) __asm__("go.i2pd__wrap_htobe16_i2pd_1dc115fabc28a9e4");
-uint16_t *go__wrap_htobe16_i2pd_1dc115fabc28a9e4(uint16_t *garg1) {
+uint16_t *go__wrap_htobe16_i2pd_3959b4e6eb97331e(uint16_t *garg1) __asm__("go.i2pd__wrap_htobe16_i2pd_3959b4e6eb97331e");
+uint16_t *go__wrap_htobe16_i2pd_3959b4e6eb97331e(uint16_t *garg1) {
   uint16_t arg1 ;
   uint16_t *argp1 ;
   uint16_t result;
@@ -686,8 +688,8 @@ uint16_t *go__wrap_htobe16_i2pd_1dc115fabc28a9e4(uint16_t *garg1) {
 }
 
 
-uint32_t *go__wrap_htobe32_i2pd_1dc115fabc28a9e4(uint32_t *garg1) __asm__("go.i2pd__wrap_htobe32_i2pd_1dc115fabc28a9e4");
-uint32_t *go__wrap_htobe32_i2pd_1dc115fabc28a9e4(uint32_t *garg1) {
+uint32_t *go__wrap_htobe32_i2pd_3959b4e6eb97331e(uint32_t *garg1) __asm__("go.i2pd__wrap_htobe32_i2pd_3959b4e6eb97331e");
+uint32_t *go__wrap_htobe32_i2pd_3959b4e6eb97331e(uint32_t *garg1) {
   uint32_t arg1 ;
   uint32_t *argp1 ;
   uint32_t result;
@@ -711,8 +713,8 @@ uint32_t *go__wrap_htobe32_i2pd_1dc115fabc28a9e4(uint32_t *garg1) {
 }
 
 
-uint64_t *go__wrap_htobe64_i2pd_1dc115fabc28a9e4(uint64_t *garg1) __asm__("go.i2pd__wrap_htobe64_i2pd_1dc115fabc28a9e4");
-uint64_t *go__wrap_htobe64_i2pd_1dc115fabc28a9e4(uint64_t *garg1) {
+uint64_t *go__wrap_htobe64_i2pd_3959b4e6eb97331e(uint64_t *garg1) __asm__("go.i2pd__wrap_htobe64_i2pd_3959b4e6eb97331e");
+uint64_t *go__wrap_htobe64_i2pd_3959b4e6eb97331e(uint64_t *garg1) {
   uint64_t arg1 ;
   uint64_t *argp1 ;
   uint64_t result;
@@ -736,8 +738,8 @@ uint64_t *go__wrap_htobe64_i2pd_1dc115fabc28a9e4(uint64_t *garg1) {
 }
 
 
-uint16_t *go__wrap_be16toh_i2pd_1dc115fabc28a9e4(uint16_t *garg1) __asm__("go.i2pd__wrap_be16toh_i2pd_1dc115fabc28a9e4");
-uint16_t *go__wrap_be16toh_i2pd_1dc115fabc28a9e4(uint16_t *garg1) {
+uint16_t *go__wrap_be16toh_i2pd_3959b4e6eb97331e(uint16_t *garg1) __asm__("go.i2pd__wrap_be16toh_i2pd_3959b4e6eb97331e");
+uint16_t *go__wrap_be16toh_i2pd_3959b4e6eb97331e(uint16_t *garg1) {
   uint16_t arg1 ;
   uint16_t *argp1 ;
   uint16_t result;
@@ -761,8 +763,8 @@ uint16_t *go__wrap_be16toh_i2pd_1dc115fabc28a9e4(uint16_t *garg1) {
 }
 
 
-uint32_t *go__wrap_be32toh_i2pd_1dc115fabc28a9e4(uint32_t *garg1) __asm__("go.i2pd__wrap_be32toh_i2pd_1dc115fabc28a9e4");
-uint32_t *go__wrap_be32toh_i2pd_1dc115fabc28a9e4(uint32_t *garg1) {
+uint32_t *go__wrap_be32toh_i2pd_3959b4e6eb97331e(uint32_t *garg1) __asm__("go.i2pd__wrap_be32toh_i2pd_3959b4e6eb97331e");
+uint32_t *go__wrap_be32toh_i2pd_3959b4e6eb97331e(uint32_t *garg1) {
   uint32_t arg1 ;
   uint32_t *argp1 ;
   uint32_t result;
@@ -786,8 +788,8 @@ uint32_t *go__wrap_be32toh_i2pd_1dc115fabc28a9e4(uint32_t *garg1) {
 }
 
 
-uint64_t *go__wrap_be64toh_i2pd_1dc115fabc28a9e4(uint64_t *garg1) __asm__("go.i2pd__wrap_be64toh_i2pd_1dc115fabc28a9e4");
-uint64_t *go__wrap_be64toh_i2pd_1dc115fabc28a9e4(uint64_t *garg1) {
+uint64_t *go__wrap_be64toh_i2pd_3959b4e6eb97331e(uint64_t *garg1) __asm__("go.i2pd__wrap_be64toh_i2pd_3959b4e6eb97331e");
+uint64_t *go__wrap_be64toh_i2pd_3959b4e6eb97331e(uint64_t *garg1) {
   uint64_t arg1 ;
   uint64_t *argp1 ;
   uint64_t result;
@@ -811,8 +813,8 @@ uint64_t *go__wrap_be64toh_i2pd_1dc115fabc28a9e4(uint64_t *garg1) {
 }
 
 
-uint16_t *go__wrap_buf16toh_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_buf16toh_i2pd_1dc115fabc28a9e4");
-uint16_t *go__wrap_buf16toh_i2pd_1dc115fabc28a9e4(void *garg1) {
+uint16_t *go__wrap_buf16toh_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_buf16toh_i2pd_3959b4e6eb97331e");
+uint16_t *go__wrap_buf16toh_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   uint16_t result;
   uint16_t *_swig_go_result;
@@ -829,8 +831,8 @@ uint16_t *go__wrap_buf16toh_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-uint32_t *go__wrap_buf32toh_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_buf32toh_i2pd_1dc115fabc28a9e4");
-uint32_t *go__wrap_buf32toh_i2pd_1dc115fabc28a9e4(void *garg1) {
+uint32_t *go__wrap_buf32toh_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_buf32toh_i2pd_3959b4e6eb97331e");
+uint32_t *go__wrap_buf32toh_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   uint32_t result;
   uint32_t *_swig_go_result;
@@ -847,8 +849,8 @@ uint32_t *go__wrap_buf32toh_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-uint64_t *go__wrap_buf64toh_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_buf64toh_i2pd_1dc115fabc28a9e4");
-uint64_t *go__wrap_buf64toh_i2pd_1dc115fabc28a9e4(void *garg1) {
+uint64_t *go__wrap_buf64toh_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_buf64toh_i2pd_3959b4e6eb97331e");
+uint64_t *go__wrap_buf64toh_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   uint64_t result;
   uint64_t *_swig_go_result;
@@ -865,8 +867,8 @@ uint64_t *go__wrap_buf64toh_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-uint16_t *go__wrap_bufbe16toh_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_bufbe16toh_i2pd_1dc115fabc28a9e4");
-uint16_t *go__wrap_bufbe16toh_i2pd_1dc115fabc28a9e4(void *garg1) {
+uint16_t *go__wrap_bufbe16toh_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_bufbe16toh_i2pd_3959b4e6eb97331e");
+uint16_t *go__wrap_bufbe16toh_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   uint16_t result;
   uint16_t *_swig_go_result;
@@ -883,8 +885,8 @@ uint16_t *go__wrap_bufbe16toh_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-uint32_t *go__wrap_bufbe32toh_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_bufbe32toh_i2pd_1dc115fabc28a9e4");
-uint32_t *go__wrap_bufbe32toh_i2pd_1dc115fabc28a9e4(void *garg1) {
+uint32_t *go__wrap_bufbe32toh_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_bufbe32toh_i2pd_3959b4e6eb97331e");
+uint32_t *go__wrap_bufbe32toh_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   uint32_t result;
   uint32_t *_swig_go_result;
@@ -901,8 +903,8 @@ uint32_t *go__wrap_bufbe32toh_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-uint64_t *go__wrap_bufbe64toh_i2pd_1dc115fabc28a9e4(void *garg1) __asm__("go.i2pd__wrap_bufbe64toh_i2pd_1dc115fabc28a9e4");
-uint64_t *go__wrap_bufbe64toh_i2pd_1dc115fabc28a9e4(void *garg1) {
+uint64_t *go__wrap_bufbe64toh_i2pd_3959b4e6eb97331e(void *garg1) __asm__("go.i2pd__wrap_bufbe64toh_i2pd_3959b4e6eb97331e");
+uint64_t *go__wrap_bufbe64toh_i2pd_3959b4e6eb97331e(void *garg1) {
   void *arg1 = (void *) 0 ;
   uint64_t result;
   uint64_t *_swig_go_result;
@@ -919,8 +921,8 @@ uint64_t *go__wrap_bufbe64toh_i2pd_1dc115fabc28a9e4(void *garg1) {
 }
 
 
-void go__wrap_htobuf16_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) __asm__("go.i2pd__wrap_htobuf16_i2pd_1dc115fabc28a9e4");
-void go__wrap_htobuf16_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) {
+void go__wrap_htobuf16_i2pd_3959b4e6eb97331e(void *garg1, uint16_t *garg2) __asm__("go.i2pd__wrap_htobuf16_i2pd_3959b4e6eb97331e");
+void go__wrap_htobuf16_i2pd_3959b4e6eb97331e(void *garg1, uint16_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint16_t arg2 ;
   uint16_t *argp2 ;
@@ -939,8 +941,8 @@ void go__wrap_htobuf16_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) {
 }
 
 
-void go__wrap_htobuf32_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) __asm__("go.i2pd__wrap_htobuf32_i2pd_1dc115fabc28a9e4");
-void go__wrap_htobuf32_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) {
+void go__wrap_htobuf32_i2pd_3959b4e6eb97331e(void *garg1, uint32_t *garg2) __asm__("go.i2pd__wrap_htobuf32_i2pd_3959b4e6eb97331e");
+void go__wrap_htobuf32_i2pd_3959b4e6eb97331e(void *garg1, uint32_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint32_t arg2 ;
   uint32_t *argp2 ;
@@ -959,8 +961,8 @@ void go__wrap_htobuf32_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) {
 }
 
 
-void go__wrap_htobuf64_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) __asm__("go.i2pd__wrap_htobuf64_i2pd_1dc115fabc28a9e4");
-void go__wrap_htobuf64_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) {
+void go__wrap_htobuf64_i2pd_3959b4e6eb97331e(void *garg1, uint64_t *garg2) __asm__("go.i2pd__wrap_htobuf64_i2pd_3959b4e6eb97331e");
+void go__wrap_htobuf64_i2pd_3959b4e6eb97331e(void *garg1, uint64_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint64_t arg2 ;
   uint64_t *argp2 ;
@@ -979,8 +981,8 @@ void go__wrap_htobuf64_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) {
 }
 
 
-void go__wrap_htobe16buf_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) __asm__("go.i2pd__wrap_htobe16buf_i2pd_1dc115fabc28a9e4");
-void go__wrap_htobe16buf_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) {
+void go__wrap_htobe16buf_i2pd_3959b4e6eb97331e(void *garg1, uint16_t *garg2) __asm__("go.i2pd__wrap_htobe16buf_i2pd_3959b4e6eb97331e");
+void go__wrap_htobe16buf_i2pd_3959b4e6eb97331e(void *garg1, uint16_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint16_t arg2 ;
   uint16_t *argp2 ;
@@ -999,8 +1001,8 @@ void go__wrap_htobe16buf_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) {
 }
 
 
-void go__wrap_htobe32buf_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) __asm__("go.i2pd__wrap_htobe32buf_i2pd_1dc115fabc28a9e4");
-void go__wrap_htobe32buf_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) {
+void go__wrap_htobe32buf_i2pd_3959b4e6eb97331e(void *garg1, uint32_t *garg2) __asm__("go.i2pd__wrap_htobe32buf_i2pd_3959b4e6eb97331e");
+void go__wrap_htobe32buf_i2pd_3959b4e6eb97331e(void *garg1, uint32_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint32_t arg2 ;
   uint32_t *argp2 ;
@@ -1019,8 +1021,8 @@ void go__wrap_htobe32buf_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) {
 }
 
 
-void go__wrap_htobe64buf_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) __asm__("go.i2pd__wrap_htobe64buf_i2pd_1dc115fabc28a9e4");
-void go__wrap_htobe64buf_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) {
+void go__wrap_htobe64buf_i2pd_3959b4e6eb97331e(void *garg1, uint64_t *garg2) __asm__("go.i2pd__wrap_htobe64buf_i2pd_3959b4e6eb97331e");
+void go__wrap_htobe64buf_i2pd_3959b4e6eb97331e(void *garg1, uint64_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint64_t arg2 ;
   uint64_t *argp2 ;
@@ -1039,8 +1041,8 @@ void go__wrap_htobe64buf_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) {
 }
 
 
-void go__wrap_htole16buf_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) __asm__("go.i2pd__wrap_htole16buf_i2pd_1dc115fabc28a9e4");
-void go__wrap_htole16buf_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) {
+void go__wrap_htole16buf_i2pd_3959b4e6eb97331e(void *garg1, uint16_t *garg2) __asm__("go.i2pd__wrap_htole16buf_i2pd_3959b4e6eb97331e");
+void go__wrap_htole16buf_i2pd_3959b4e6eb97331e(void *garg1, uint16_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint16_t arg2 ;
   uint16_t *argp2 ;
@@ -1059,8 +1061,8 @@ void go__wrap_htole16buf_i2pd_1dc115fabc28a9e4(void *garg1, uint16_t *garg2) {
 }
 
 
-void go__wrap_htole32buf_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) __asm__("go.i2pd__wrap_htole32buf_i2pd_1dc115fabc28a9e4");
-void go__wrap_htole32buf_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) {
+void go__wrap_htole32buf_i2pd_3959b4e6eb97331e(void *garg1, uint32_t *garg2) __asm__("go.i2pd__wrap_htole32buf_i2pd_3959b4e6eb97331e");
+void go__wrap_htole32buf_i2pd_3959b4e6eb97331e(void *garg1, uint32_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint32_t arg2 ;
   uint32_t *argp2 ;
@@ -1079,8 +1081,8 @@ void go__wrap_htole32buf_i2pd_1dc115fabc28a9e4(void *garg1, uint32_t *garg2) {
 }
 
 
-void go__wrap_htole64buf_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) __asm__("go.i2pd__wrap_htole64buf_i2pd_1dc115fabc28a9e4");
-void go__wrap_htole64buf_i2pd_1dc115fabc28a9e4(void *garg1, uint64_t *garg2) {
+void go__wrap_htole64buf_i2pd_3959b4e6eb97331e(void *garg1, uint64_t *garg2) __asm__("go.i2pd__wrap_htole64buf_i2pd_3959b4e6eb97331e");
+void go__wrap_htole64buf_i2pd_3959b4e6eb97331e(void *garg1, uint64_t *garg2) {
   void *arg1 = (void *) 0 ;
   uint64_t arg2 ;
   uint64_t *argp2 ;
