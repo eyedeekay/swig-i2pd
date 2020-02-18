@@ -10,8 +10,8 @@
 
 /* source: libi2pd_client.i */
 
-#define SWIGMODULE i2pd
-#define SWIGGO_PREFIX go.i2pd
+#define SWIGMODULE i2pdclient
+#define SWIGGO_PREFIX go.i2pdclient
 /* -----------------------------------------------------------------------------
  *  This section contains generic SWIG labels for method/variable
  *  declarations/attributes, and other compiler dependent labels.
@@ -283,8 +283,8 @@ static void* Swig_malloc(int c) {
 extern "C" {
 #endif
 
-void go__wrap_Swig_free_i2pd_5423f53f1e7a3f19(void *garg1) __asm__("go.i2pd__wrap_Swig_free_i2pd_5423f53f1e7a3f19");
-void go__wrap_Swig_free_i2pd_5423f53f1e7a3f19(void *garg1) {
+void go__wrap_Swig_free_i2pdclient_813fe33f58267b59(void *garg1) __asm__("go.i2pdclient__wrap_Swig_free_i2pdclient_813fe33f58267b59");
+void go__wrap_Swig_free_i2pdclient_813fe33f58267b59(void *garg1) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&garg1; 
@@ -294,8 +294,8 @@ void go__wrap_Swig_free_i2pd_5423f53f1e7a3f19(void *garg1) {
 }
 
 
-void *go__wrap_Swig_malloc_i2pd_5423f53f1e7a3f19(intgo garg1) __asm__("go.i2pd__wrap_Swig_malloc_i2pd_5423f53f1e7a3f19");
-void *go__wrap_Swig_malloc_i2pd_5423f53f1e7a3f19(intgo garg1) {
+void *go__wrap_Swig_malloc_i2pdclient_813fe33f58267b59(intgo garg1) __asm__("go.i2pdclient__wrap_Swig_malloc_i2pdclient_813fe33f58267b59");
+void *go__wrap_Swig_malloc_i2pdclient_813fe33f58267b59(intgo garg1) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -308,8 +308,8 @@ void *go__wrap_Swig_malloc_i2pd_5423f53f1e7a3f19(intgo garg1) {
 }
 
 
-void go__wrap_i2p_set_i2pd_5423f53f1e7a3f19(namespace *garg1) __asm__("go.i2pd__wrap_i2p_set_i2pd_5423f53f1e7a3f19");
-void go__wrap_i2p_set_i2pd_5423f53f1e7a3f19(namespace *garg1) {
+void go__wrap_i2p_set_i2pdclient_813fe33f58267b59(namespace *garg1) __asm__("go.i2pdclient__wrap_i2p_set_i2pdclient_813fe33f58267b59");
+void go__wrap_i2p_set_i2pdclient_813fe33f58267b59(namespace *garg1) {
   namespace arg1 ;
   namespace *argp1 ;
   
@@ -326,8 +326,8 @@ void go__wrap_i2p_set_i2pd_5423f53f1e7a3f19(namespace *garg1) {
 }
 
 
-namespace *go__wrap_i2p_get_i2pd_5423f53f1e7a3f19() __asm__("go.i2pd__wrap_i2p_get_i2pd_5423f53f1e7a3f19");
-namespace *go__wrap_i2p_get_i2pd_5423f53f1e7a3f19() {
+namespace *go__wrap_i2p_get_i2pdclient_813fe33f58267b59() __asm__("go.i2pdclient__wrap_i2p_get_i2pdclient_813fe33f58267b59");
+namespace *go__wrap_i2p_get_i2pdclient_813fe33f58267b59() {
   namespace result;
   namespace *_swig_go_result;
   

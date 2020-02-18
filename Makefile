@@ -14,7 +14,7 @@ libi2pd:
 libi2pd_client:
 	cp swig/libi2pd_client.i i2pd/libi2pd_client/
 	cd i2pd/libi2pd_client/ && swig -gccgo -intgosize 32 -go libi2pd_client.i
-	go build i2pd/libi2pd_client/i2pd.go
+	go build i2pd/libi2pd_client/i2pdclient.go
 
 interface: libi2pdinterface libi2pd_clientinterface
 
@@ -31,7 +31,7 @@ libi2pdinterface:
 	sed -i 's|%include "LittleBigEndian.h"||g' swig/libi2pd.i
 
 libi2pd_clientinterface:
-	@echo '%module i2pd' | tee swig/libi2pd_client.i
+	@echo '%module i2pdclient' | tee swig/libi2pd_client.i
 	@echo '%{' | tee -a swig/libi2pd_client.i
 	@echo '/* Includes the header in the wrapper code */' | tee -a swig/libi2pd_client.i
 	@echo '#include "AddressBook.h"' | tee -a swig/libi2pd_client.i

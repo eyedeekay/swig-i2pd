@@ -10,7 +10,7 @@
 
 // source: libi2pd_client.i
 
-package i2pd
+package i2pdclient
 
 import "syscall"
 import "unsafe"
@@ -41,7 +41,7 @@ func SwigCgocallDone()
 func SwigCgocallBack()
 func SwigCgocallBackDone()
 
-//extern go.i2pd__wrap_Swig_free_i2pd_5423f53f1e7a3f19
+//extern go.i2pdclient__wrap_Swig_free_i2pdclient_813fe33f58267b59
 func _swig_wrap_Swig_free(base uintptr)
 
 func Swig_free(arg1 uintptr) {
@@ -50,7 +50,7 @@ func Swig_free(arg1 uintptr) {
 	_swig_wrap_Swig_free(arg1)
 }
 
-//extern go.i2pd__wrap_Swig_malloc_i2pd_5423f53f1e7a3f19
+//extern go.i2pdclient__wrap_Swig_malloc_i2pdclient_813fe33f58267b59
 func _swig_wrap_Swig_malloc(base int) (_ uintptr)
 
 func Swig_malloc(arg1 int) (_swig_ret uintptr) {
@@ -59,7 +59,7 @@ func Swig_malloc(arg1 int) (_swig_ret uintptr) {
 	return _swig_wrap_Swig_malloc(arg1)
 }
 
-//extern go.i2pd__wrap_i2p_set_i2pd_5423f53f1e7a3f19
+//extern go.i2pdclient__wrap_i2p_set_i2pdclient_813fe33f58267b59
 func _swig_wrap_i2p_set(base uintptr)
 
 func SetI2p(arg1 Namespace) {
@@ -68,7 +68,7 @@ func SetI2p(arg1 Namespace) {
 	_swig_wrap_i2p_set(arg1.Swigcptr())
 }
 
-//extern go.i2pd__wrap_i2p_get_i2pd_5423f53f1e7a3f19
+//extern go.i2pdclient__wrap_i2p_get_i2pdclient_813fe33f58267b59
 func _swig_wrap_i2p_get() (base SwigcptrNamespace)
 
 func GetI2p() (_swig_ret Namespace) {
