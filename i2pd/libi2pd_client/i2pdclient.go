@@ -12,14 +12,946 @@
 
 package i2pdclient
 
-import "syscall"
+/*
+#define intgo swig_intgo
+typedef void *swig_voidp;
+
+#include <stdint.h>
+
+
+typedef long long intgo;
+typedef unsigned long long uintgo;
+
+
+
+typedef struct { char *p; intgo n; } _gostring_;
+typedef struct { void* array; intgo len; intgo cap; } _goslice_;
+
+
+typedef long long swig_type_1;
+typedef long long swig_type_2;
+typedef _gostring_ swig_type_3;
+typedef _gostring_ swig_type_4;
+typedef _gostring_ swig_type_5;
+typedef _gostring_ swig_type_6;
+typedef _gostring_ swig_type_7;
+typedef _gostring_ swig_type_8;
+typedef _gostring_ swig_type_9;
+typedef _gostring_ swig_type_10;
+typedef _gostring_ swig_type_11;
+typedef _gostring_ swig_type_12;
+typedef _gostring_ swig_type_13;
+typedef _gostring_ swig_type_14;
+typedef _gostring_ swig_type_15;
+typedef _gostring_ swig_type_16;
+typedef _gostring_ swig_type_17;
+typedef _gostring_ swig_type_18;
+typedef _gostring_ swig_type_19;
+typedef _gostring_ swig_type_20;
+typedef _gostring_ swig_type_21;
+typedef _gostring_ swig_type_22;
+typedef _gostring_ swig_type_23;
+typedef _gostring_ swig_type_24;
+typedef _gostring_ swig_type_25;
+typedef _gostring_ swig_type_26;
+typedef _gostring_ swig_type_27;
+typedef _gostring_ swig_type_28;
+typedef _gostring_ swig_type_29;
+typedef _gostring_ swig_type_30;
+typedef _gostring_ swig_type_31;
+typedef _gostring_ swig_type_32;
+typedef _gostring_ swig_type_33;
+typedef _gostring_ swig_type_34;
+typedef _gostring_ swig_type_35;
+typedef _gostring_ swig_type_36;
+typedef _gostring_ swig_type_37;
+typedef _gostring_ swig_type_38;
+typedef _gostring_ swig_type_39;
+typedef _gostring_ swig_type_40;
+typedef _gostring_ swig_type_41;
+typedef _gostring_ swig_type_42;
+typedef _gostring_ swig_type_43;
+typedef _gostring_ swig_type_44;
+typedef _gostring_ swig_type_45;
+typedef long long swig_type_46;
+typedef _gostring_ swig_type_47;
+typedef long long swig_type_48;
+typedef _gostring_ swig_type_49;
+typedef long long swig_type_50;
+typedef _gostring_ swig_type_51;
+typedef long long swig_type_52;
+typedef _gostring_ swig_type_53;
+typedef long long swig_type_54;
+typedef _gostring_ swig_type_55;
+typedef long long swig_type_56;
+typedef _gostring_ swig_type_57;
+typedef long long swig_type_58;
+typedef _gostring_ swig_type_59;
+typedef long long swig_type_60;
+typedef _gostring_ swig_type_61;
+typedef long long swig_type_62;
+typedef _gostring_ swig_type_63;
+typedef long long swig_type_64;
+typedef _gostring_ swig_type_65;
+typedef long long swig_type_66;
+typedef _gostring_ swig_type_67;
+typedef long long swig_type_68;
+typedef _gostring_ swig_type_69;
+typedef long long swig_type_70;
+typedef _gostring_ swig_type_71;
+typedef long long swig_type_72;
+typedef _gostring_ swig_type_73;
+typedef long long swig_type_74;
+typedef _gostring_ swig_type_75;
+typedef long long swig_type_76;
+typedef _gostring_ swig_type_77;
+typedef long long swig_type_78;
+typedef _gostring_ swig_type_79;
+typedef long long swig_type_80;
+typedef _gostring_ swig_type_81;
+typedef long long swig_type_82;
+typedef _gostring_ swig_type_83;
+typedef long long swig_type_84;
+typedef _gostring_ swig_type_85;
+typedef long long swig_type_86;
+typedef _gostring_ swig_type_87;
+typedef _gostring_ swig_type_88;
+typedef _gostring_ swig_type_89;
+typedef _gostring_ swig_type_90;
+typedef _gostring_ swig_type_91;
+typedef _gostring_ swig_type_92;
+typedef _gostring_ swig_type_93;
+typedef _gostring_ swig_type_94;
+typedef _gostring_ swig_type_95;
+typedef _gostring_ swig_type_96;
+typedef _gostring_ swig_type_97;
+typedef _gostring_ swig_type_98;
+typedef _gostring_ swig_type_99;
+typedef _gostring_ swig_type_100;
+typedef _gostring_ swig_type_101;
+typedef _gostring_ swig_type_102;
+typedef _gostring_ swig_type_103;
+typedef _gostring_ swig_type_104;
+typedef _gostring_ swig_type_105;
+typedef _gostring_ swig_type_106;
+typedef _gostring_ swig_type_107;
+typedef _gostring_ swig_type_108;
+typedef _gostring_ swig_type_109;
+typedef _gostring_ swig_type_110;
+typedef _gostring_ swig_type_111;
+typedef _gostring_ swig_type_112;
+typedef _gostring_ swig_type_113;
+typedef _gostring_ swig_type_114;
+typedef _gostring_ swig_type_115;
+typedef _gostring_ swig_type_116;
+typedef long long swig_type_117;
+typedef long long swig_type_118;
+typedef long long swig_type_119;
+typedef long long swig_type_120;
+typedef _gostring_ swig_type_121;
+typedef _gostring_ swig_type_122;
+typedef long long swig_type_123;
+typedef long long swig_type_124;
+typedef long long swig_type_125;
+typedef long long swig_type_126;
+typedef long long swig_type_127;
+typedef long long swig_type_128;
+typedef long long swig_type_129;
+typedef long long swig_type_130;
+typedef long long swig_type_131;
+typedef long long swig_type_132;
+typedef long long swig_type_133;
+typedef long long swig_type_134;
+typedef long long swig_type_135;
+typedef long long swig_type_136;
+typedef long long swig_type_137;
+typedef long long swig_type_138;
+typedef _gostring_ swig_type_139;
+typedef long long swig_type_140;
+typedef _gostring_ swig_type_141;
+typedef long long swig_type_142;
+typedef _gostring_ swig_type_143;
+typedef _gostring_ swig_type_144;
+typedef _gostring_ swig_type_145;
+typedef long long swig_type_146;
+typedef long long swig_type_147;
+typedef _gostring_ swig_type_148;
+typedef long long swig_type_149;
+typedef _gostring_ swig_type_150;
+typedef _gostring_ swig_type_151;
+typedef _gostring_ swig_type_152;
+typedef _gostring_ swig_type_153;
+typedef _gostring_ swig_type_154;
+typedef long long swig_type_155;
+typedef _gostring_ swig_type_156;
+typedef _gostring_ swig_type_157;
+typedef _gostring_ swig_type_158;
+typedef _gostring_ swig_type_159;
+typedef _gostring_ swig_type_160;
+typedef _gostring_ swig_type_161;
+typedef _gostring_ swig_type_162;
+typedef _gostring_ swig_type_163;
+typedef _gostring_ swig_type_164;
+typedef _gostring_ swig_type_165;
+typedef _gostring_ swig_type_166;
+typedef _gostring_ swig_type_167;
+typedef _gostring_ swig_type_168;
+typedef _gostring_ swig_type_169;
+typedef _gostring_ swig_type_170;
+typedef _gostring_ swig_type_171;
+typedef _gostring_ swig_type_172;
+typedef _gostring_ swig_type_173;
+typedef _gostring_ swig_type_174;
+typedef _gostring_ swig_type_175;
+typedef _gostring_ swig_type_176;
+typedef _gostring_ swig_type_177;
+typedef _gostring_ swig_type_178;
+typedef _gostring_ swig_type_179;
+typedef _gostring_ swig_type_180;
+typedef _gostring_ swig_type_181;
+typedef _gostring_ swig_type_182;
+typedef _gostring_ swig_type_183;
+typedef _gostring_ swig_type_184;
+typedef _gostring_ swig_type_185;
+typedef _gostring_ swig_type_186;
+typedef _gostring_ swig_type_187;
+typedef _gostring_ swig_type_188;
+typedef _gostring_ swig_type_189;
+typedef _gostring_ swig_type_190;
+typedef _gostring_ swig_type_191;
+typedef _gostring_ swig_type_192;
+typedef _gostring_ swig_type_193;
+typedef _gostring_ swig_type_194;
+typedef _gostring_ swig_type_195;
+typedef _gostring_ swig_type_196;
+typedef _gostring_ swig_type_197;
+typedef _gostring_ swig_type_198;
+typedef _gostring_ swig_type_199;
+typedef _gostring_ swig_type_200;
+typedef _gostring_ swig_type_201;
+typedef _gostring_ swig_type_202;
+typedef _gostring_ swig_type_203;
+typedef long long swig_type_204;
+typedef _gostring_ swig_type_205;
+typedef _gostring_ swig_type_206;
+extern void _wrap_Swig_free_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_Swig_malloc_i2pdclient_813fe33f58267b59(swig_intgo arg1);
+extern swig_intgo _wrap_INITIAL_SUBSCRIPTION_UPDATE_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_INITIAL_SUBSCRIPTION_RETRY_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_CONTINIOUS_SUBSCRIPTION_UPDATE_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_CONTINIOUS_SUBSCRIPTION_RETRY_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_CONTINIOUS_SUBSCRIPTION_MAX_NUM_RETRIES_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_SUBSCRIPTION_REQUEST_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_ADDRESS_RESOLVER_DATAGRAM_PORT_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_ADDRESS_RESPONSE_DATAGRAM_PORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_1 _wrap_B33_ADDRESS_THRESHOLD_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eAddressIndentHash_Address_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eAddressBlindedPublicKey_Address_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eAddressInvalid_Address_i2pdclient_813fe33f58267b59(void);
+extern void _wrap_Address_addressType_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_Address_addressType_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_Address_identHash_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_Address_identHash_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_Address_blindedPublicKey_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_Address_blindedPublicKey_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_Address__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_Address__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_Address_IsIdentHash_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_Address_IsValid_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_Address_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_GetB32Address_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_AddressBookStorage_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_AddressBookStorage_GetAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_AddressBookStorage_AddAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_AddressBookStorage_RemoveAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern _Bool _wrap_AddressBookStorage_Init_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_intgo _wrap_AddressBookStorage_Load_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_AddressBookStorage_LoadLocal_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_AddressBookStorage_Save_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_AddressBookStorage_SaveEtag_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern _Bool _wrap_AddressBookStorage_GetEtag_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern void _wrap_AddressBookStorage_ResetEtags_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_AddressBook_i2pdclient_813fe33f58267b59(void);
+extern void _wrap_delete_AddressBook_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_AddressBook_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_AddressBook_StartResolvers_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_AddressBook_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_AddressBook_GetAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_AddressBook_GetFullAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_AddressBook_FindAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_AddressBook_LookupAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_AddressBook_InsertAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_AddressBook_InsertFullAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern _Bool _wrap_AddressBook_LoadHostsFromStream_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, _Bool arg3);
+extern void _wrap_AddressBook_DownloadComplete_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern uintptr_t _wrap_AddressBook_ToAddress__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_AddressBook_ToAddress__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern _Bool _wrap_AddressBook_GetEtag_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern uintptr_t _wrap_new_AddressBookSubscription_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_AddressBookSubscription_CheckUpdates_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_AddressBookSubscription_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_AddressResolver_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_AddressResolver_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_AddressResolver_AddAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_type_2 _wrap_BOB_COMMAND_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_3 _wrap_BOB_COMMAND_ZAP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_4 _wrap_BOB_COMMAND_QUIT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_5 _wrap_BOB_COMMAND_START_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_6 _wrap_BOB_COMMAND_STOP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_7 _wrap_BOB_COMMAND_SETNICK_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_8 _wrap_BOB_COMMAND_GETNICK_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_9 _wrap_BOB_COMMAND_NEWKEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_10 _wrap_BOB_COMMAND_GETKEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_11 _wrap_BOB_COMMAND_SETKEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_12 _wrap_BOB_COMMAND_GETDEST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_13 _wrap_BOB_COMMAND_OUTHOST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_14 _wrap_BOB_COMMAND_OUTPORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_15 _wrap_BOB_COMMAND_INHOST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_16 _wrap_BOB_COMMAND_INPORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_17 _wrap_BOB_COMMAND_QUIET_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_18 _wrap_BOB_COMMAND_LOOKUP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_19 _wrap_BOB_COMMAND_CLEAR_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_20 _wrap_BOB_COMMAND_LIST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_21 _wrap_BOB_COMMAND_OPTION_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_22 _wrap_BOB_COMMAND_STATUS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_23 _wrap_BOB_COMMAND_HELP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_24 _wrap_BOB_HELP_ZAP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_25 _wrap_BOB_HELP_QUIT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_26 _wrap_BOB_HELP_START_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_27 _wrap_BOB_HELP_STOP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_28 _wrap_BOB_HELP_SETNICK_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_29 _wrap_BOB_HELP_GETNICK_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_30 _wrap_BOB_HELP_NEWKEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_31 _wrap_BOB_HELP_GETKEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_32 _wrap_BOB_HELP_SETKEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_33 _wrap_BOB_HELP_GETDEST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_34 _wrap_BOB_HELP_OUTHOST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_35 _wrap_BOB_HELP_OUTPORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_36 _wrap_BOB_HELP_INHOST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_37 _wrap_BOB_HELP_INPORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_38 _wrap_BOB_HELP_QUIET_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_39 _wrap_BOB_HELP_LOOKUP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_40 _wrap_BOB_HELP_CLEAR_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_41 _wrap_BOB_HELP_LIST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_42 _wrap_BOB_HELP_OPTION_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_43 _wrap_BOB_HELP_STATUS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_44 _wrap_BOB_HELP_HELP_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_BOBI2PTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBI2PTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBI2PTunnel_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_BOBI2PTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_BOBI2PInboundTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_delete_BOBI2PInboundTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBI2PInboundTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBI2PInboundTunnel_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_BOBI2POutboundTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2, uintptr_t arg3, _Bool arg4);
+extern void _wrap_BOBI2POutboundTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBI2POutboundTunnel_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBI2POutboundTunnel_SetQuiet_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_BOBI2POutboundTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_BOBDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, swig_intgo arg5, swig_intgo arg6, _Bool arg7);
+extern void _wrap_delete_BOBDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBDestination_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBDestination_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBDestination_StopTunnels_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBDestination_CreateInboundTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2, uintptr_t arg3);
+extern void _wrap_BOBDestination_CreateOutboundTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, _Bool arg4);
+extern uintptr_t _wrap_BOBDestination_GetNickname_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBDestination_GetInHost_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBDestination_GetOutHost_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_intgo _wrap_BOBDestination_GetInPort_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_intgo _wrap_BOBDestination_GetOutPort_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_BOBDestination_GetQuiet_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBDestination_GetKeys_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBDestination_GetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_BOBCommandSession_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_BOBCommandSession_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBCommandSession_Terminate_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBCommandSession_GetSocket_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBCommandSession_SendVersion_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBCommandSession_ZapCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_45 arg2, swig_type_46 arg3);
+extern void _wrap_BOBCommandSession_QuitCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_47 arg2, swig_type_48 arg3);
+extern void _wrap_BOBCommandSession_StartCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_49 arg2, swig_type_50 arg3);
+extern void _wrap_BOBCommandSession_StopCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_51 arg2, swig_type_52 arg3);
+extern void _wrap_BOBCommandSession_SetNickCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_53 arg2, swig_type_54 arg3);
+extern void _wrap_BOBCommandSession_GetNickCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_55 arg2, swig_type_56 arg3);
+extern void _wrap_BOBCommandSession_NewkeysCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_57 arg2, swig_type_58 arg3);
+extern void _wrap_BOBCommandSession_SetkeysCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_59 arg2, swig_type_60 arg3);
+extern void _wrap_BOBCommandSession_GetkeysCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_61 arg2, swig_type_62 arg3);
+extern void _wrap_BOBCommandSession_GetdestCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_63 arg2, swig_type_64 arg3);
+extern void _wrap_BOBCommandSession_OuthostCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_65 arg2, swig_type_66 arg3);
+extern void _wrap_BOBCommandSession_OutportCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_67 arg2, swig_type_68 arg3);
+extern void _wrap_BOBCommandSession_InhostCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_69 arg2, swig_type_70 arg3);
+extern void _wrap_BOBCommandSession_InportCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_71 arg2, swig_type_72 arg3);
+extern void _wrap_BOBCommandSession_QuietCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_73 arg2, swig_type_74 arg3);
+extern void _wrap_BOBCommandSession_LookupCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_75 arg2, swig_type_76 arg3);
+extern void _wrap_BOBCommandSession_ClearCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_77 arg2, swig_type_78 arg3);
+extern void _wrap_BOBCommandSession_ListCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_79 arg2, swig_type_80 arg3);
+extern void _wrap_BOBCommandSession_OptionCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_81 arg2, swig_type_82 arg3);
+extern void _wrap_BOBCommandSession_StatusCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_83 arg2, swig_type_84 arg3);
+extern void _wrap_BOBCommandSession_HelpCommandHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_85 arg2, swig_type_86 arg3);
+extern uintptr_t _wrap_new_BOBCommandChannel_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern void _wrap_delete_BOBCommandChannel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBCommandChannel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBCommandChannel_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBCommandChannel_GetService_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_BOBCommandChannel_AddDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_BOBCommandChannel_DeleteDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_BOBCommandChannel_FindDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_BOBCommandChannel_GetCommandHandlers_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBCommandChannel_GetHelpStrings_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_BOBCommandChannel_GetDestinations_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_87 _wrap_I2P_TUNNELS_SECTION_TYPE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_88 _wrap_I2P_TUNNELS_SECTION_TYPE_CLIENT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_89 _wrap_I2P_TUNNELS_SECTION_TYPE_SERVER_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_90 _wrap_I2P_TUNNELS_SECTION_TYPE_HTTP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_91 _wrap_I2P_TUNNELS_SECTION_TYPE_IRC_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_92 _wrap_I2P_TUNNELS_SECTION_TYPE_UDPCLIENT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_93 _wrap_I2P_TUNNELS_SECTION_TYPE_UDPSERVER_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_94 _wrap_I2P_TUNNELS_SECTION_TYPE_SOCKS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_95 _wrap_I2P_TUNNELS_SECTION_TYPE_WEBSOCKS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_96 _wrap_I2P_TUNNELS_SECTION_TYPE_HTTPPROXY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_97 _wrap_I2P_CLIENT_TUNNEL_PORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_98 _wrap_I2P_CLIENT_TUNNEL_ADDRESS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_99 _wrap_I2P_CLIENT_TUNNEL_DESTINATION_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_100 _wrap_I2P_CLIENT_TUNNEL_KEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_101 _wrap_I2P_CLIENT_TUNNEL_SIGNATURE_TYPE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_102 _wrap_I2P_CLIENT_TUNNEL_CRYPTO_TYPE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_103 _wrap_I2P_CLIENT_TUNNEL_DESTINATION_PORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_104 _wrap_I2P_CLIENT_TUNNEL_MATCH_TUNNELS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_105 _wrap_I2P_CLIENT_TUNNEL_CONNECT_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_106 _wrap_I2P_SERVER_TUNNEL_HOST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_107 _wrap_I2P_SERVER_TUNNEL_HOST_OVERRIDE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_108 _wrap_I2P_SERVER_TUNNEL_PORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_109 _wrap_I2P_SERVER_TUNNEL_KEYS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_110 _wrap_I2P_SERVER_TUNNEL_SIGNATURE_TYPE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_111 _wrap_I2P_SERVER_TUNNEL_INPORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_112 _wrap_I2P_SERVER_TUNNEL_ACCESS_LIST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_113 _wrap_I2P_SERVER_TUNNEL_GZIP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_114 _wrap_I2P_SERVER_TUNNEL_WEBIRC_PASSWORD_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_115 _wrap_I2P_SERVER_TUNNEL_ADDRESS_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_116 _wrap_I2P_SERVER_TUNNEL_ENABLE_UNIQUE_LOCAL_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_ClientContext_i2pdclient_813fe33f58267b59(void);
+extern void _wrap_delete_ClientContext_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_ClientContext_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_ClientContext_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_ClientContext_ReloadConfig_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetSharedLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2, uintptr_t arg3, uintptr_t arg4);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2, uintptr_t arg3);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_3_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_4_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_5_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, _Bool arg3, uintptr_t arg4);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_6_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, _Bool arg3);
+extern uintptr_t _wrap_ClientContext_CreateNewLocalDestination__SWIG_7_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_ClientContext_CreateNewMatchedTunnelDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern uintptr_t _wrap_ClientContext_CreateNewMatchedTunnelDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_ClientContext_DeleteLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_ClientContext_FindLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern _Bool _wrap_ClientContext_LoadPrivateKeys__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern _Bool _wrap_ClientContext_LoadPrivateKeys__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern _Bool _wrap_ClientContext_LoadPrivateKeys__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern uintptr_t _wrap_ClientContext_GetAddressBook_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetBOBCommandChannel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetSAMBridge_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetI2CPServer_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetForwardInfosFor_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_ClientContext_GetDestinations_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetClientTunnels_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetServerTunnels_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetClientForwards_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetServerForwards_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetHttpProxy_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_ClientContext_GetSocksProxy_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_context_set_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_context_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_HTTPProxy__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, _Bool arg5, uintptr_t arg6);
+extern uintptr_t _wrap_new_HTTPProxy__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4);
+extern uintptr_t _wrap_new_HTTPProxy__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_delete_HTTPProxy_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_HTTPProxy_GetOutproxyURL_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_HTTPProxy_GetHelperSupport_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2CP_PROTOCOL_BYTE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_117 _wrap_I2CP_SESSION_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_118 _wrap_I2CP_HEADER_LENGTH_OFFSET_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_119 _wrap_I2CP_HEADER_TYPE_OFFSET_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_120 _wrap_I2CP_HEADER_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_GET_DATE_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_SET_DATE_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_CREATE_SESSION_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_RECONFIGURE_SESSION_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_SESSION_STATUS_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_DESTROY_SESSION_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_REQUEST_VARIABLE_LEASESET_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_CREATE_LEASESET_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_CREATE_LEASESET2_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_SEND_MESSAGE_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_SEND_MESSAGE_EXPIRES_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_MESSAGE_PAYLOAD_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_MESSAGE_STATUS_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_HOST_LOOKUP_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_HOST_REPLY_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_DEST_LOOKUP_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_DEST_REPLY_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_GET_BANDWIDTH_LIMITS_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_I2CP_BANDWIDTH_LIMITS_MESSAGE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eI2CPMessageStatusAccepted_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eI2CPMessageStatusGuaranteedSuccess_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eI2CPMessageStatusGuaranteedFailure_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eI2CPMessageStatusNoLeaseSet_i2pdclient_813fe33f58267b59(void);
+extern swig_type_121 _wrap_I2CP_PARAM_DONT_PUBLISH_LEASESET_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_122 _wrap_I2CP_PARAM_MESSAGE_RELIABILITY_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_I2CPDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, _Bool arg3, uintptr_t arg4);
+extern void _wrap_I2CPDestination_SetEncryptionPrivateKey_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2CPDestination_LeaseSetCreated_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_123 arg3);
+extern void _wrap_I2CPDestination_LeaseSet2Created_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_type_124 arg4);
+extern void _wrap_I2CPDestination_SendMsgTo_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_125 arg3, uintptr_t arg4, uintptr_t arg5);
+extern _Bool _wrap_I2CPDestination_Decrypt_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern uintptr_t _wrap_I2CPDestination_GetIdentity_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_I2CPDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_I2CPSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_delete_I2CPSession_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2CPSession_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2CPSession_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2CPSession_GetSessionID_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2CPSession_GetDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2CPSession_SendI2CPMessage_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_type_126 arg4);
+extern void _wrap_I2CPSession_SendMessagePayloadMessage_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_127 arg3);
+extern void _wrap_I2CPSession_SendMessageStatusMessage_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_I2CPSession_GetDateMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_128 arg3);
+extern void _wrap_I2CPSession_CreateSessionMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_129 arg3);
+extern void _wrap_I2CPSession_DestroySessionMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_130 arg3);
+extern void _wrap_I2CPSession_ReconfigureSessionMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_131 arg3);
+extern void _wrap_I2CPSession_CreateLeaseSetMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_132 arg3);
+extern void _wrap_I2CPSession_CreateLeaseSet2MessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_133 arg3);
+extern void _wrap_I2CPSession_SendMessageMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_134 arg3);
+extern void _wrap_I2CPSession_SendMessageExpiresMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_135 arg3);
+extern void _wrap_I2CPSession_HostLookupMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_136 arg3);
+extern void _wrap_I2CPSession_DestLookupMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_137 arg3);
+extern void _wrap_I2CPSession_GetBandwidthLimitsMessageHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_138 arg3);
+extern uintptr_t _wrap_new_I2CPServer_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern void _wrap_delete_I2CPServer_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2CPServer_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2CPServer_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2CPServer_GetService_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_I2CPServer_InsertSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2CPServer_RemoveSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern swig_voidp _wrap_I2CPServer_GetMessagesHandlers_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2CPServer_GetSessions_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_I2PService_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PService_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PService_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PService_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PService_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PService_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_I2PService_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PService_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PService_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PService_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_intgo arg4);
+extern void _wrap_I2PService_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_I2PService_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_intgo arg4);
+extern uintptr_t _wrap_I2PService_GetService_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PService_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PService_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_139 _wrap_I2PService_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PService_isUpdated_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2);
+extern _Bool _wrap_I2PService_isUpdated_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_I2PServiceHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_I2PServiceHandler_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServiceHandler_Handle_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServiceHandler_Terminate_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_140 _wrap_TCP_IP_PIPE_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_TCPIPPipe_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_delete_TCPIPPipe_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_TCPIPPipe_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_TCPIPPipe_Handle_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_TCPIPPipe_Terminate_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_delete_TCPIPAcceptor_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_TCPIPAcceptor_GetLocalEndpoint_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_141 _wrap_TCPIPAcceptor_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_TCPIPAcceptor_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_TCPIPAcceptor_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_TCPIPAcceptor_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_TCPIPAcceptor_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_TCPIPAcceptor_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_TCPIPAcceptor_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_TCPIPAcceptor_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_TCPIPAcceptor_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetTCPIPAcceptor_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetTCPIPAcceptor_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern swig_type_142 _wrap_I2P_TUNNEL_CONNECTION_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_I2P_TUNNEL_CONNECTION_MAX_IDLE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_I2P_TUNNEL_DESTINATION_REQUEST_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_143 _wrap_X_I2P_DEST_HASH_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_144 _wrap_X_I2P_DEST_B64_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_145 _wrap_X_I2P_DEST_B32_get_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_I2PTunnelConnection__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_intgo arg4);
+extern uintptr_t _wrap_new_I2PTunnelConnection__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern uintptr_t _wrap_new_I2PTunnelConnection__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern uintptr_t _wrap_new_I2PTunnelConnection__SWIG_3_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, _Bool arg5);
+extern uintptr_t _wrap_new_I2PTunnelConnection__SWIG_4_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern void _wrap_delete_I2PTunnelConnection_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PTunnelConnection_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_146 arg3);
+extern void _wrap_I2PTunnelConnection_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PTunnelConnection_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PTunnelConnection_Connect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2);
+extern void _wrap_I2PTunnelConnection_Connect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PTunnelConnection_Handle_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PTunnelConnection_Terminate_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_I2PClientTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_delete_I2PClientTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PClientTunnelConnectionHTTP_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, swig_type_147 arg2);
+extern void _wrap_I2PClientTunnelConnectionHTTP_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PClientTunnelConnectionHTTP_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PClientTunnelConnectionHTTP_Connect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern void _wrap_I2PClientTunnelConnectionHTTP_Connect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PClientTunnelConnectionHTTP_Handle_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PClientTunnelConnectionHTTP_Terminate_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_I2PServerTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PServerTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServerTunnelConnectionHTTP_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, swig_type_147 arg2);
+extern void _wrap_I2PServerTunnelConnectionHTTP_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelConnectionHTTP_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelConnectionHTTP_Connect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern void _wrap_I2PServerTunnelConnectionHTTP_Connect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelConnectionHTTP_Handle_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelConnectionHTTP_Terminate_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_I2PTunnelConnectionIRC_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PTunnelConnectionIRC_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PTunnelConnectionIRC_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, swig_type_147 arg2);
+extern void _wrap_I2PTunnelConnectionIRC_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PTunnelConnectionIRC_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PTunnelConnectionIRC_Connect__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern void _wrap_I2PTunnelConnectionIRC_Connect__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PTunnelConnectionIRC_Handle_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PTunnelConnectionIRC_Terminate_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_I2PClientTunnel__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_intgo arg4, uintptr_t arg5, swig_intgo arg6);
+extern uintptr_t _wrap_new_I2PClientTunnel__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_intgo arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PClientTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PClientTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PClientTunnel_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_148 _wrap_I2PClientTunnel_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PClientTunnel_GetLocalEndpoint_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PClientTunnel_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PClientTunnel_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PClientTunnel_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PClientTunnel_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PClientTunnel_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_I2PClientTunnel_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PClientTunnel_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PClientTunnel_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PClientTunnel_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_I2PClientTunnel_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PClientTunnel_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_I2PClientTunnel_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetI2PClientTunnel_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetI2PClientTunnel_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2P_UDP_SESSION_TIMEOUT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_149 _wrap_I2P_UDP_MAX_MTU_get_i2pdclient_813fe33f58267b59(void);
+extern void _wrap_UDPSession_m_Destination_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_m_Destination_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_IPSocket_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_IPSocket_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_Identity_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_Identity_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_FromEndpoint_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_FromEndpoint_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_SendEndpoint_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_SendEndpoint_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_LastActivity_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_LastActivity_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_LocalPort_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_LocalPort_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_RemotePort_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_RemotePort_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_UDPSession_m_Buffer_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_UDPSession_m_Buffer_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_UDPSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5, uintptr_t arg6);
+extern void _wrap_UDPSession_HandleReceived_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_UDPSession_Receive_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_UDPSession_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_Name_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_Name_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_LocalIdent_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_LocalIdent_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_RemoteIdent_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_RemoteIdent_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_CurrentIBGW_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_CurrentIBGW_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_CurrentOBEP_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_CurrentOBEP_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_LocalEndpoint_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_LocalEndpoint_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_RemoteEndpoint_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_RemoteEndpoint_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_DatagramSessionInfo_idle_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_DatagramSessionInfo_idle_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_DatagramSessionInfo_i2pdclient_813fe33f58267b59(void);
+extern void _wrap_delete_DatagramSessionInfo_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_I2PUDPServerTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PUDPServerTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PUDPServerTunnel_ExpireStale__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PUDPServerTunnel_ExpireStale__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PUDPServerTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_150 _wrap_I2PUDPServerTunnel_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PUDPServerTunnel_GetSessions_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PUDPServerTunnel_GetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PUDPServerTunnel_SetUniqueLocal__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2);
+extern void _wrap_I2PUDPServerTunnel_SetUniqueLocal__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_I2PUDPClientTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PUDPClientTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PUDPClientTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_151 _wrap_I2PUDPClientTunnel_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PUDPClientTunnel_GetSessions_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_I2PUDPClientTunnel_IsLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_I2PUDPClientTunnel_GetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PUDPClientTunnel_ExpireStale__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PUDPClientTunnel_ExpireStale__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_I2PServerTunnel__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, swig_intgo arg5, _Bool arg6);
+extern uintptr_t _wrap_new_I2PServerTunnel__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, swig_intgo arg5);
+extern uintptr_t _wrap_new_I2PServerTunnel__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4);
+extern void _wrap_I2PServerTunnel_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_SetAccessList_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PServerTunnel_SetUniqueLocal_i2pdclient_813fe33f58267b59(uintptr_t arg1, _Bool arg2);
+extern _Bool _wrap_I2PServerTunnel_IsUniqueLocal_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PServerTunnel_GetAddress_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_intgo _wrap_I2PServerTunnel_GetPort_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PServerTunnel_GetLocalPort_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_I2PServerTunnel_GetEndpoint_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_152 _wrap_I2PServerTunnel_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_I2PServerTunnel_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnel_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_I2PServerTunnel_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnel_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnel_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnel_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_I2PServerTunnel_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PServerTunnel_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_I2PServerTunnel_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetI2PServerTunnel_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetI2PServerTunnel_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_I2PServerTunnelHTTP__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5, swig_intgo arg6, _Bool arg7);
+extern uintptr_t _wrap_new_I2PServerTunnelHTTP__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5, swig_intgo arg6);
+extern uintptr_t _wrap_new_I2PServerTunnelHTTP__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PServerTunnelHTTP_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServerTunnelHTTP_Start_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelHTTP_Stop_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelHTTP_SetAccessList_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelHTTP_SetUniqueLocal_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_I2PServerTunnelHTTP_IsUniqueLocal_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelHTTP_GetAddress_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern swig_intgo _wrap_I2PServerTunnelHTTP_GetPort_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelHTTP_GetLocalPort_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelHTTP_GetEndpoint_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern swig_type_153 _wrap_I2PServerTunnelHTTP_GetName_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelHTTP_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelHTTP_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelHTTP_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelHTTP_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelHTTP_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_I2PServerTunnelHTTP_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelHTTP_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelHTTP_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelHTTP_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_I2PServerTunnelHTTP_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PServerTunnelHTTP_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_I2PServerTunnelHTTP_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetI2PServerTunnelHTTP_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetI2PServerTunnelHTTP_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_I2PServerTunnelIRC__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5, swig_intgo arg6, _Bool arg7);
+extern uintptr_t _wrap_new_I2PServerTunnelIRC__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5, swig_intgo arg6);
+extern uintptr_t _wrap_new_I2PServerTunnelIRC__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_delete_I2PServerTunnelIRC_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_I2PServerTunnelIRC_Start_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelIRC_Stop_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelIRC_SetAccessList_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelIRC_SetUniqueLocal_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_I2PServerTunnelIRC_IsUniqueLocal_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelIRC_GetAddress_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern swig_intgo _wrap_I2PServerTunnelIRC_GetPort_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelIRC_GetLocalPort_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelIRC_GetEndpoint_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern swig_type_154 _wrap_I2PServerTunnelIRC_GetName_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelIRC_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelIRC_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelIRC_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelIRC_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelIRC_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_I2PServerTunnelIRC_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_I2PServerTunnelIRC_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_I2PServerTunnelIRC_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_I2PServerTunnelIRC_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_I2PServerTunnelIRC_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_I2PServerTunnelIRC_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_I2PServerTunnelIRC_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetI2PServerTunnelIRC_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetI2PServerTunnelIRC_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_MatchedTunnelDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern uintptr_t _wrap_new_MatchedTunnelDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern _Bool _wrap_MatchedTunnelDestination_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_MatchedTunnelDestination_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern _Bool _wrap_MatchedTunnelDestination_SelectPeers_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, _Bool arg4);
+extern _Bool _wrap_MatchedTunnelDestination_OnBuildResult_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, _Bool arg3, uintptr_t arg4);
+extern void _wrap_delete_MatchedTunnelDestination_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_155 _wrap_SAM_SOCKET_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_SAM_SOCKET_CONNECTION_MAX_IDLE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_SAM_SESSION_READINESS_CHECK_INTERVAL_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_156 _wrap_SAM_HANDSHAKE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_157 _wrap_SAM_HANDSHAKE_REPLY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_158 _wrap_SAM_HANDSHAKE_NOVERSION_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_159 _wrap_SAM_HANDSHAKE_I2P_ERROR_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_160 _wrap_SAM_SESSION_CREATE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_161 _wrap_SAM_SESSION_CREATE_REPLY_OK_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_162 _wrap_SAM_SESSION_CREATE_DUPLICATED_ID_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_163 _wrap_SAM_SESSION_CREATE_DUPLICATED_DEST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_164 _wrap_SAM_SESSION_CREATE_INVALID_ID_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_165 _wrap_SAM_SESSION_STATUS_INVALID_KEY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_166 _wrap_SAM_SESSION_STATUS_I2P_ERROR_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_167 _wrap_SAM_STREAM_CONNECT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_168 _wrap_SAM_STREAM_STATUS_OK_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_169 _wrap_SAM_STREAM_STATUS_INVALID_ID_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_170 _wrap_SAM_STREAM_STATUS_INVALID_KEY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_171 _wrap_SAM_STREAM_STATUS_CANT_REACH_PEER_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_172 _wrap_SAM_STREAM_STATUS_I2P_ERROR_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_173 _wrap_SAM_STREAM_ACCEPT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_174 _wrap_SAM_DATAGRAM_SEND_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_175 _wrap_SAM_RAW_SEND_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_176 _wrap_SAM_DEST_GENERATE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_177 _wrap_SAM_DEST_REPLY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_178 _wrap_SAM_DEST_REPLY_I2P_ERROR_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_179 _wrap_SAM_NAMING_LOOKUP_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_180 _wrap_SAM_NAMING_REPLY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_181 _wrap_SAM_DATAGRAM_RECEIVED_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_182 _wrap_SAM_RAW_RECEIVED_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_183 _wrap_SAM_NAMING_REPLY_INVALID_KEY_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_184 _wrap_SAM_NAMING_REPLY_KEY_NOT_FOUND_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_185 _wrap_SAM_PARAM_MIN_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_186 _wrap_SAM_PARAM_MAX_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_187 _wrap_SAM_PARAM_STYLE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_188 _wrap_SAM_PARAM_ID_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_189 _wrap_SAM_PARAM_SILENT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_190 _wrap_SAM_PARAM_DESTINATION_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_191 _wrap_SAM_PARAM_NAME_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_192 _wrap_SAM_PARAM_SIGNATURE_TYPE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_193 _wrap_SAM_PARAM_CRYPTO_TYPE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_194 _wrap_SAM_PARAM_SIZE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_195 _wrap_SAM_VALUE_TRANSIENT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_196 _wrap_SAM_VALUE_STREAM_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_197 _wrap_SAM_VALUE_DATAGRAM_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_198 _wrap_SAM_VALUE_RAW_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_199 _wrap_SAM_VALUE_TRUE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_200 _wrap_SAM_VALUE_FALSE_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_201 _wrap_SAM_VALUE_HOST_get_i2pdclient_813fe33f58267b59(void);
+extern swig_type_202 _wrap_SAM_VALUE_PORT_get_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSocketTypeUnknown_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSocketTypeSession_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSocketTypeStream_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSocketTypeAcceptor_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSocketTypeTerminated_i2pdclient_813fe33f58267b59(void);
+extern uintptr_t _wrap_new_SAMSocket_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_delete_SAMSocket_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_SAMSocket_GetSocket_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSocket_ReceiveHandshake_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSocket_SetSocketType_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SAMSocket_GetSocketType_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSocket_Terminate_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_type_203 arg2);
+extern _Bool _wrap_SAMSocket_IsSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_eSAMSessionTypeUnknown_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSessionTypeStream_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSessionTypeDatagram_i2pdclient_813fe33f58267b59(void);
+extern swig_intgo _wrap_eSAMSessionTypeRaw_i2pdclient_813fe33f58267b59(void);
+extern void _wrap_SAMSession_m_Bridge_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SAMSession_m_Bridge_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSession_localDestination_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SAMSession_localDestination_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSession_UDPEndpoint_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SAMSession_UDPEndpoint_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSession_Name_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SAMSession_Name_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSession_Type_set_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_SAMSession_Type_get_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_SAMSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4);
+extern void _wrap_delete_SAMSession_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMSession_CloseStreams_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_SAMBridge_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern void _wrap_delete_SAMBridge_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMBridge_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SAMBridge_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_SAMBridge_GetService_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_SAMBridge_CreateSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, uintptr_t arg4, uintptr_t arg5);
+extern void _wrap_SAMBridge_CloseSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SAMBridge_FindSession_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_SAMBridge_ListSockets_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_SAMBridge_SendTo_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_type_204 arg3, uintptr_t arg4);
+extern void _wrap_SAMBridge_RemoveSocket_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2);
+extern _Bool _wrap_SAMBridge_ResolveSignatureType_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern uintptr_t _wrap_SAMBridge_GetSessions_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_SOCKSServer__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, _Bool arg4, uintptr_t arg5, uintptr_t arg6, uintptr_t arg7);
+extern uintptr_t _wrap_new_SOCKSServer__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, swig_intgo arg3, _Bool arg4, uintptr_t arg5, uintptr_t arg6);
+extern void _wrap_delete_SOCKSServer_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_SOCKSServer_SetUpstreamProxy_i2pdclient_813fe33f58267b59(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern void _wrap_SOCKSServer_Start_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SOCKSServer_Stop_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_SOCKSServer_GetLocalEndpoint_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern swig_type_205 _wrap_SOCKSServer_GetName_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SOCKSServer_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_SOCKSServer_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_SOCKSServer_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SOCKSServer_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_SOCKSServer_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_SOCKSServer_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_SOCKSServer_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SOCKSServer_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_SOCKSServer_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_SOCKSServer_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_SOCKSServer_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_SOCKSServer_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetSOCKSServer_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetSOCKSServer_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_new_WebsocketServer_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2);
+extern void _wrap_delete_WebsocketServer_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_WebsocketServer_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_WebsocketServer_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_WebsocketServer_ToListener_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_new_WebSocks_i2pdclient_813fe33f58267b59(uintptr_t arg1, swig_intgo arg2, uintptr_t arg3);
+extern void _wrap_delete_WebSocks_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_WebSocks_Start_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_WebSocks_Stop_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern uintptr_t _wrap_WebSocks_GetLocalEndpoint_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern swig_type_206 _wrap_WebSocks_GetName_i2pdclient_813fe33f58267b59(uintptr_t arg1);
+extern void _wrap_WebSocks_AddHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_WebSocks_RemoveHandler_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_WebSocks_ClearHandlers_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_WebSocks_SetConnectTimeout_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_WebSocks_AddReadyCallback_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern uintptr_t _wrap_WebSocks_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern uintptr_t _wrap_WebSocks_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_WebSocks_SetLocalDestination_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1);
+extern void _wrap_WebSocks_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern void _wrap_WebSocks_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2);
+extern void _wrap_WebSocks_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, uintptr_t arg1, uintptr_t arg2, swig_intgo arg3);
+extern uintptr_t _wrap_WebSocks_GetService_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+extern void _wrap_SetWebSocks_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base, _Bool arg1);
+extern _Bool _wrap_GetWebSocks_IsUpdated_i2pdclient_813fe33f58267b59(uintptr_t _swig_base);
+#undef intgo
+*/
+import "C"
+
 import "unsafe"
+import _ "runtime/cgo"
 import "sync"
-
-
-type _ syscall.Sockaddr
-
-
 
 
 type _ unsafe.Pointer
@@ -36,61 +968,7233 @@ type _swig_memberptr *byte
 
 type _ sync.Mutex
 
-func SwigCgocall()
-func SwigCgocallDone()
-func SwigCgocallBack()
-func SwigCgocallBackDone()
 
-//extern go.i2pdclient__wrap_Swig_free_i2pdclient_813fe33f58267b59
-func _swig_wrap_Swig_free(base uintptr)
+type swig_gostring struct { p uintptr; n int }
+func swigCopyString(s string) string {
+  p := *(*swig_gostring)(unsafe.Pointer(&s))
+  r := string((*[0x7fffffff]byte)(unsafe.Pointer(p.p))[:p.n])
+  Swig_free(p.p)
+  return r
+}
 
 func Swig_free(arg1 uintptr) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_Swig_free(arg1)
+	_swig_i_0 := arg1
+	C._wrap_Swig_free_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
 }
-
-//extern go.i2pdclient__wrap_Swig_malloc_i2pdclient_813fe33f58267b59
-func _swig_wrap_Swig_malloc(base int) (_ uintptr)
 
 func Swig_malloc(arg1 int) (_swig_ret uintptr) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_Swig_malloc(arg1)
+	var swig_r uintptr
+	_swig_i_0 := arg1
+	swig_r = (uintptr)(C._wrap_Swig_malloc_i2pdclient_813fe33f58267b59(C.swig_intgo(_swig_i_0)))
+	return swig_r
 }
 
-//extern go.i2pdclient__wrap_i2p_set_i2pdclient_813fe33f58267b59
-func _swig_wrap_i2p_set(base uintptr)
-
-func SetI2p(arg1 Namespace) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	_swig_wrap_i2p_set(arg1.Swigcptr())
+func GetINITIAL_SUBSCRIPTION_UPDATE_TIMEOUT() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_INITIAL_SUBSCRIPTION_UPDATE_TIMEOUT_get_i2pdclient_813fe33f58267b59())
+	return swig_r
 }
 
-//extern go.i2pdclient__wrap_i2p_get_i2pdclient_813fe33f58267b59
-func _swig_wrap_i2p_get() (base SwigcptrNamespace)
+func GetINITIAL_SUBSCRIPTION_RETRY_TIMEOUT() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_INITIAL_SUBSCRIPTION_RETRY_TIMEOUT_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
 
-func GetI2p() (_swig_ret Namespace) {
-	defer SwigCgocallDone()
-	SwigCgocall()
-	return _swig_wrap_i2p_get()
+func GetCONTINIOUS_SUBSCRIPTION_UPDATE_TIMEOUT() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_CONTINIOUS_SUBSCRIPTION_UPDATE_TIMEOUT_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetCONTINIOUS_SUBSCRIPTION_RETRY_TIMEOUT() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_CONTINIOUS_SUBSCRIPTION_RETRY_TIMEOUT_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetCONTINIOUS_SUBSCRIPTION_MAX_NUM_RETRIES() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_CONTINIOUS_SUBSCRIPTION_MAX_NUM_RETRIES_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetSUBSCRIPTION_REQUEST_TIMEOUT() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_SUBSCRIPTION_REQUEST_TIMEOUT_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetADDRESS_RESOLVER_DATAGRAM_PORT() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_ADDRESS_RESOLVER_DATAGRAM_PORT_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetADDRESS_RESPONSE_DATAGRAM_PORT() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_ADDRESS_RESPONSE_DATAGRAM_PORT_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetB33_ADDRESS_THRESHOLD() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_B33_ADDRESS_THRESHOLD_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+type SwigcptrAddress uintptr
+
+func (p SwigcptrAddress) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAddress) SwigIsAddress() {
+}
+
+func _swig_getAddress_eAddressIndentHash_Address() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_eAddressIndentHash_Address_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var AddressEAddressIndentHash int = _swig_getAddress_eAddressIndentHash_Address()
+func _swig_getAddress_eAddressBlindedPublicKey_Address() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_eAddressBlindedPublicKey_Address_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var AddressEAddressBlindedPublicKey int = _swig_getAddress_eAddressBlindedPublicKey_Address()
+func _swig_getAddress_eAddressInvalid_Address() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_eAddressInvalid_Address_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var AddressEAddressInvalid int = _swig_getAddress_eAddressInvalid_Address()
+func (arg1 SwigcptrAddress) SetAddressType(arg2 int) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_Address_addressType_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddress) GetAddressType() (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	swig_r = (int)(C._wrap_Address_addressType_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddress) SetIdentHash(arg2 I2p_data_IdentHash) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_Address_identHash_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddress) GetIdentHash() (_swig_ret I2p_data_IdentHash) {
+	var swig_r I2p_data_IdentHash
+	_swig_i_0 := arg1
+	swig_r = (I2p_data_IdentHash)(SwigcptrI2p_data_IdentHash(C._wrap_Address_identHash_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddress) SetBlindedPublicKey(arg2 Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_Address_blindedPublicKey_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddress) GetBlindedPublicKey() (_swig_ret Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_(C._wrap_Address_blindedPublicKey_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAddress__SWIG_0(arg1 Std_string) (_swig_ret Address) {
+	var swig_r Address
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (Address)(SwigcptrAddress(C._wrap_new_Address__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAddress__SWIG_1(arg1 I2p_data_IdentHash) (_swig_ret Address) {
+	var swig_r Address
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (Address)(SwigcptrAddress(C._wrap_new_Address__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAddress(a ...interface{}) Address {
+	argc := len(a)
+	if argc == 1 {
+		if _, ok := a[0].(SwigcptrStd_string); !ok {
+			goto check_1
+		}
+		return NewAddress__SWIG_0(a[0].(Std_string))
+	}
+check_1:
+	if argc == 1 {
+		return NewAddress__SWIG_1(a[0].(I2p_data_IdentHash))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrAddress) IsIdentHash() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_Address_IsIdentHash_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddress) IsValid() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_Address_IsValid_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func DeleteAddress(arg1 Address) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_Address_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type Address interface {
+	Swigcptr() uintptr
+	SwigIsAddress()
+	SetAddressType(arg2 int)
+	GetAddressType() (_swig_ret int)
+	SetIdentHash(arg2 I2p_data_IdentHash)
+	GetIdentHash() (_swig_ret I2p_data_IdentHash)
+	SetBlindedPublicKey(arg2 Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_)
+	GetBlindedPublicKey() (_swig_ret Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_)
+	IsIdentHash() (_swig_ret bool)
+	IsValid() (_swig_ret bool)
+}
+
+func GetB32Address(arg1 I2p_data_IdentHash) (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_GetB32Address_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type SwigcptrAddressBookStorage uintptr
+
+func (p SwigcptrAddressBookStorage) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAddressBookStorage) SwigIsAddressBookStorage() {
+}
+
+func DeleteAddressBookStorage(arg1 AddressBookStorage) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_AddressBookStorage_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrAddressBookStorage) GetAddress(arg2 I2p_data_IdentHash) (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_(C._wrap_AddressBookStorage_GetAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookStorage) AddAddress(arg2 Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_AddressBookStorage_AddAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddressBookStorage) RemoveAddress(arg2 I2p_data_IdentHash) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_AddressBookStorage_RemoveAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddressBookStorage) Init() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_AddressBookStorage_Init_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookStorage) Load(arg2 Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (int)(C._wrap_AddressBookStorage_Load_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookStorage) LoadLocal(arg2 Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (int)(C._wrap_AddressBookStorage_LoadLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookStorage) Save(arg2 Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (int)(C._wrap_AddressBookStorage_Save_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookStorage) SaveEtag(arg2 I2p_data_IdentHash, arg3 Std_string, arg4 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	C._wrap_AddressBookStorage_SaveEtag_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3))
+}
+
+func (arg1 SwigcptrAddressBookStorage) GetEtag(arg2 I2p_data_IdentHash, arg3 Std_string, arg4 Std_string) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (bool)(C._wrap_AddressBookStorage_GetEtag_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookStorage) ResetEtags() {
+	_swig_i_0 := arg1
+	C._wrap_AddressBookStorage_ResetEtags_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type AddressBookStorage interface {
+	Swigcptr() uintptr
+	SwigIsAddressBookStorage()
+	GetAddress(arg2 I2p_data_IdentHash) (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)
+	AddAddress(arg2 Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)
+	RemoveAddress(arg2 I2p_data_IdentHash)
+	Init() (_swig_ret bool)
+	Load(arg2 Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) (_swig_ret int)
+	LoadLocal(arg2 Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) (_swig_ret int)
+	Save(arg2 Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) (_swig_ret int)
+	SaveEtag(arg2 I2p_data_IdentHash, arg3 Std_string, arg4 Std_string)
+	GetEtag(arg2 I2p_data_IdentHash, arg3 Std_string, arg4 Std_string) (_swig_ret bool)
+	ResetEtags()
+}
+
+type SwigcptrAddressBook uintptr
+
+func (p SwigcptrAddressBook) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAddressBook) SwigIsAddressBook() {
+}
+
+func NewAddressBook() (_swig_ret AddressBook) {
+	var swig_r AddressBook
+	swig_r = (AddressBook)(SwigcptrAddressBook(C._wrap_new_AddressBook_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func DeleteAddressBook(arg1 AddressBook) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_AddressBook_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrAddressBook) Start() {
+	_swig_i_0 := arg1
+	C._wrap_AddressBook_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrAddressBook) StartResolvers() {
+	_swig_i_0 := arg1
+	C._wrap_AddressBook_StartResolvers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrAddressBook) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_AddressBook_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrAddressBook) GetAddress(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_(C._wrap_AddressBook_GetAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBook) GetFullAddress(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_(C._wrap_AddressBook_GetFullAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBook) FindAddress(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_(C._wrap_AddressBook_FindAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBook) LookupAddress(arg2 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_AddressBook_LookupAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddressBook) InsertAddress(arg2 Std_string, arg3 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_AddressBook_InsertAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+func (arg1 SwigcptrAddressBook) InsertFullAddress(arg2 Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_AddressBook_InsertFullAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAddressBook) LoadHostsFromStream(arg2 Std_istream, arg3 bool) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	swig_r = (bool)(C._wrap_AddressBook_LoadHostsFromStream_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C._Bool(_swig_i_2)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBook) DownloadComplete(arg2 bool, arg3 I2p_data_IdentHash, arg4 Std_string, arg5 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	C._wrap_AddressBook_DownloadComplete_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))
+}
+
+func (arg1 SwigcptrAddressBook) ToAddress__SWIG_0(arg2 I2p_data_IdentHash) (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_AddressBook_ToAddress__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBook) ToAddress__SWIG_1(arg2 Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_AddressBook_ToAddress__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (p SwigcptrAddressBook) ToAddress(a ...interface{}) Std_string {
+	argc := len(a)
+	if argc == 1 {
+		if _, ok := a[0].(SwigcptrI2p_data_IdentHash); !ok {
+			goto check_1
+		}
+		return p.ToAddress__SWIG_0(a[0].(I2p_data_IdentHash))
+	}
+check_1:
+	if argc == 1 {
+		return p.ToAddress__SWIG_1(a[0].(Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrAddressBook) GetEtag(arg2 I2p_data_IdentHash, arg3 Std_string, arg4 Std_string) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (bool)(C._wrap_AddressBook_GetEtag_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	return swig_r
+}
+
+type AddressBook interface {
+	Swigcptr() uintptr
+	SwigIsAddressBook()
+	Start()
+	StartResolvers()
+	Stop()
+	GetAddress(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_)
+	GetFullAddress(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)
+	FindAddress(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_)
+	LookupAddress(arg2 Std_string)
+	InsertAddress(arg2 Std_string, arg3 Std_string)
+	InsertFullAddress(arg2 Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)
+	LoadHostsFromStream(arg2 Std_istream, arg3 bool) (_swig_ret bool)
+	DownloadComplete(arg2 bool, arg3 I2p_data_IdentHash, arg4 Std_string, arg5 Std_string)
+	ToAddress(a ...interface{}) Std_string
+	GetEtag(arg2 I2p_data_IdentHash, arg3 Std_string, arg4 Std_string) (_swig_ret bool)
+}
+
+type SwigcptrAddressBookSubscription uintptr
+
+func (p SwigcptrAddressBookSubscription) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAddressBookSubscription) SwigIsAddressBookSubscription() {
+}
+
+func NewAddressBookSubscription(arg1 AddressBook, arg2 Std_string) (_swig_ret AddressBookSubscription) {
+	var swig_r AddressBookSubscription
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (AddressBookSubscription)(SwigcptrAddressBookSubscription(C._wrap_new_AddressBookSubscription_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAddressBookSubscription) CheckUpdates() {
+	_swig_i_0 := arg1
+	C._wrap_AddressBookSubscription_CheckUpdates_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func DeleteAddressBookSubscription(arg1 AddressBookSubscription) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_AddressBookSubscription_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type AddressBookSubscription interface {
+	Swigcptr() uintptr
+	SwigIsAddressBookSubscription()
+	CheckUpdates()
+}
+
+type SwigcptrAddressResolver uintptr
+
+func (p SwigcptrAddressResolver) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAddressResolver) SwigIsAddressResolver() {
+}
+
+func NewAddressResolver(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret AddressResolver) {
+	var swig_r AddressResolver
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (AddressResolver)(SwigcptrAddressResolver(C._wrap_new_AddressResolver_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func DeleteAddressResolver(arg1 AddressResolver) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_AddressResolver_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrAddressResolver) AddAddress(arg2 Std_string, arg3 I2p_data_IdentHash) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_AddressResolver_AddAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+type AddressResolver interface {
+	Swigcptr() uintptr
+	SwigIsAddressResolver()
+	AddAddress(arg2 Std_string, arg3 I2p_data_IdentHash)
+}
+
+func GetBOB_COMMAND_BUFFER_SIZE() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_BOB_COMMAND_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetBOB_COMMAND_ZAP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_ZAP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_QUIT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_QUIT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_START() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_START_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_STOP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_STOP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_SETNICK() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_SETNICK_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_GETNICK() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_GETNICK_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_NEWKEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_NEWKEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_GETKEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_GETKEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_SETKEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_SETKEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_GETDEST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_GETDEST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_OUTHOST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_OUTHOST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_OUTPORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_OUTPORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_INHOST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_INHOST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_INPORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_INPORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_QUIET() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_QUIET_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_LOOKUP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_LOOKUP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_CLEAR() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_CLEAR_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_LIST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_LIST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_OPTION() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_OPTION_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_STATUS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_STATUS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_COMMAND_HELP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_COMMAND_HELP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_ZAP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_ZAP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_QUIT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_QUIT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_START() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_START_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_STOP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_STOP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_SETNICK() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_SETNICK_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_GETNICK() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_GETNICK_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_NEWKEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_NEWKEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_GETKEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_GETKEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_SETKEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_SETKEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_GETDEST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_GETDEST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_OUTHOST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_OUTHOST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_OUTPORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_OUTPORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_INHOST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_INHOST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_INPORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_INPORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_QUIET() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_QUIET_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_LOOKUP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_LOOKUP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_CLEAR() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_CLEAR_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_LIST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_LIST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_OPTION() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_OPTION_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_STATUS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_STATUS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetBOB_HELP_HELP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_BOB_HELP_HELP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+type SwigcptrBOBI2PTunnel uintptr
+
+func (p SwigcptrBOBI2PTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrBOBI2PTunnel) SwigIsBOBI2PTunnel() {
+}
+
+func NewBOBI2PTunnel(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret BOBI2PTunnel) {
+	var swig_r BOBI2PTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (BOBI2PTunnel)(SwigcptrBOBI2PTunnel(C._wrap_new_BOBI2PTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBI2PTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2PTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBI2PTunnel) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2PTunnel_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func DeleteBOBI2PTunnel(arg1 BOBI2PTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_BOBI2PTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type BOBI2PTunnel interface {
+	Swigcptr() uintptr
+	SwigIsBOBI2PTunnel()
+	Start()
+	Stop()
+}
+
+type SwigcptrBOBI2PInboundTunnel uintptr
+
+func (p SwigcptrBOBI2PInboundTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrBOBI2PInboundTunnel) SwigIsBOBI2PInboundTunnel() {
+}
+
+func NewBOBI2PInboundTunnel(arg1 Boost_asio_ip_tcp_endpoint, arg2 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret BOBI2PInboundTunnel) {
+	var swig_r BOBI2PInboundTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (BOBI2PInboundTunnel)(SwigcptrBOBI2PInboundTunnel(C._wrap_new_BOBI2PInboundTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func DeleteBOBI2PInboundTunnel(arg1 BOBI2PInboundTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_BOBI2PInboundTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBI2PInboundTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2PInboundTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBI2PInboundTunnel) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2PInboundTunnel_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrBOBI2PInboundTunnel) SwigIsBOBI2PTunnel() {
+}
+
+func (p SwigcptrBOBI2PInboundTunnel) SwigGetBOBI2PTunnel() BOBI2PTunnel {
+	return SwigcptrBOBI2PTunnel(p.Swigcptr())
+}
+
+type BOBI2PInboundTunnel interface {
+	Swigcptr() uintptr
+	SwigIsBOBI2PInboundTunnel()
+	Start()
+	Stop()
+	SwigIsBOBI2PTunnel()
+	SwigGetBOBI2PTunnel() BOBI2PTunnel
+}
+
+type SwigcptrBOBI2POutboundTunnel uintptr
+
+func (p SwigcptrBOBI2POutboundTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrBOBI2POutboundTunnel) SwigIsBOBI2POutboundTunnel() {
+}
+
+func NewBOBI2POutboundTunnel(arg1 Std_string, arg2 int, arg3 Std_shared_ptr_Sl_ClientDestination_Sg_, arg4 bool) (_swig_ret BOBI2POutboundTunnel) {
+	var swig_r BOBI2POutboundTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	swig_r = (BOBI2POutboundTunnel)(SwigcptrBOBI2POutboundTunnel(C._wrap_new_BOBI2POutboundTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.uintptr_t(_swig_i_2), C._Bool(_swig_i_3))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBI2POutboundTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2POutboundTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBI2POutboundTunnel) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2POutboundTunnel_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBI2POutboundTunnel) SetQuiet() {
+	_swig_i_0 := arg1
+	C._wrap_BOBI2POutboundTunnel_SetQuiet_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func DeleteBOBI2POutboundTunnel(arg1 BOBI2POutboundTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_BOBI2POutboundTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrBOBI2POutboundTunnel) SwigIsBOBI2PTunnel() {
+}
+
+func (p SwigcptrBOBI2POutboundTunnel) SwigGetBOBI2PTunnel() BOBI2PTunnel {
+	return SwigcptrBOBI2PTunnel(p.Swigcptr())
+}
+
+type BOBI2POutboundTunnel interface {
+	Swigcptr() uintptr
+	SwigIsBOBI2POutboundTunnel()
+	Start()
+	Stop()
+	SetQuiet()
+	SwigIsBOBI2PTunnel()
+	SwigGetBOBI2PTunnel() BOBI2PTunnel
+}
+
+type SwigcptrBOBDestination uintptr
+
+func (p SwigcptrBOBDestination) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrBOBDestination) SwigIsBOBDestination() {
+}
+
+func NewBOBDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_, arg2 Std_string, arg3 Std_string, arg4 Std_string, arg5 int, arg6 int, arg7 bool) (_swig_ret BOBDestination) {
+	var swig_r BOBDestination
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5
+	_swig_i_5 := arg6
+	_swig_i_6 := arg7
+	swig_r = (BOBDestination)(SwigcptrBOBDestination(C._wrap_new_BOBDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.swig_intgo(_swig_i_4), C.swig_intgo(_swig_i_5), C._Bool(_swig_i_6))))
+	return swig_r
+}
+
+func DeleteBOBDestination(arg1 BOBDestination) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_BOBDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBDestination) Start() {
+	_swig_i_0 := arg1
+	C._wrap_BOBDestination_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBDestination) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_BOBDestination_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBDestination) StopTunnels() {
+	_swig_i_0 := arg1
+	C._wrap_BOBDestination_StopTunnels_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBDestination) CreateInboundTunnel(arg2 int, arg3 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_BOBDestination_CreateInboundTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+func (arg1 SwigcptrBOBDestination) CreateOutboundTunnel(arg2 Std_string, arg3 int, arg4 bool) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4
+	C._wrap_BOBDestination_CreateOutboundTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3))
+}
+
+func (arg1 SwigcptrBOBDestination) GetNickname() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_BOBDestination_GetNickname_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetInHost() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_BOBDestination_GetInHost_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetOutHost() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_BOBDestination_GetOutHost_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetInPort() (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	swig_r = (int)(C._wrap_BOBDestination_GetInPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetOutPort() (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	swig_r = (int)(C._wrap_BOBDestination_GetOutPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetQuiet() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_BOBDestination_GetQuiet_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetKeys() (_swig_ret I2p_data_PrivateKeys) {
+	var swig_r I2p_data_PrivateKeys
+	_swig_i_0 := arg1
+	swig_r = (I2p_data_PrivateKeys)(SwigcptrI2p_data_PrivateKeys(C._wrap_BOBDestination_GetKeys_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBDestination) GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_BOBDestination_GetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type BOBDestination interface {
+	Swigcptr() uintptr
+	SwigIsBOBDestination()
+	Start()
+	Stop()
+	StopTunnels()
+	CreateInboundTunnel(arg2 int, arg3 Std_string)
+	CreateOutboundTunnel(arg2 Std_string, arg3 int, arg4 bool)
+	GetNickname() (_swig_ret Std_string)
+	GetInHost() (_swig_ret Std_string)
+	GetOutHost() (_swig_ret Std_string)
+	GetInPort() (_swig_ret int)
+	GetOutPort() (_swig_ret int)
+	GetQuiet() (_swig_ret bool)
+	GetKeys() (_swig_ret I2p_data_PrivateKeys)
+	GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_)
+}
+
+type SwigcptrBOBCommandSession uintptr
+
+func (p SwigcptrBOBCommandSession) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrBOBCommandSession) SwigIsBOBCommandSession() {
+}
+
+func NewBOBCommandSession(arg1 BOBCommandChannel) (_swig_ret BOBCommandSession) {
+	var swig_r BOBCommandSession
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (BOBCommandSession)(SwigcptrBOBCommandSession(C._wrap_new_BOBCommandSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func DeleteBOBCommandSession(arg1 BOBCommandSession) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_BOBCommandSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBCommandSession) Terminate() {
+	_swig_i_0 := arg1
+	C._wrap_BOBCommandSession_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBCommandSession) GetSocket() (_swig_ret Boost_asio_ip_tcp_socket) {
+	var swig_r Boost_asio_ip_tcp_socket
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_tcp_socket)(SwigcptrBoost_asio_ip_tcp_socket(C._wrap_BOBCommandSession_GetSocket_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBCommandSession) SendVersion() {
+	_swig_i_0 := arg1
+	C._wrap_BOBCommandSession_SendVersion_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBCommandSession) ZapCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_ZapCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_45)(unsafe.Pointer(&_swig_i_1)), C.swig_type_46(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) QuitCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_QuitCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_47)(unsafe.Pointer(&_swig_i_1)), C.swig_type_48(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) StartCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_StartCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_49)(unsafe.Pointer(&_swig_i_1)), C.swig_type_50(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) StopCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_StopCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_51)(unsafe.Pointer(&_swig_i_1)), C.swig_type_52(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) SetNickCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_SetNickCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_53)(unsafe.Pointer(&_swig_i_1)), C.swig_type_54(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) GetNickCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_GetNickCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_55)(unsafe.Pointer(&_swig_i_1)), C.swig_type_56(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) NewkeysCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_NewkeysCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_57)(unsafe.Pointer(&_swig_i_1)), C.swig_type_58(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) SetkeysCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_SetkeysCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_59)(unsafe.Pointer(&_swig_i_1)), C.swig_type_60(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) GetkeysCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_GetkeysCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_61)(unsafe.Pointer(&_swig_i_1)), C.swig_type_62(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) GetdestCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_GetdestCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_63)(unsafe.Pointer(&_swig_i_1)), C.swig_type_64(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) OuthostCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_OuthostCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_65)(unsafe.Pointer(&_swig_i_1)), C.swig_type_66(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) OutportCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_OutportCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_67)(unsafe.Pointer(&_swig_i_1)), C.swig_type_68(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) InhostCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_InhostCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_69)(unsafe.Pointer(&_swig_i_1)), C.swig_type_70(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) InportCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_InportCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_71)(unsafe.Pointer(&_swig_i_1)), C.swig_type_72(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) QuietCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_QuietCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_73)(unsafe.Pointer(&_swig_i_1)), C.swig_type_74(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) LookupCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_LookupCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_75)(unsafe.Pointer(&_swig_i_1)), C.swig_type_76(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) ClearCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_ClearCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_77)(unsafe.Pointer(&_swig_i_1)), C.swig_type_78(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) ListCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_ListCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_79)(unsafe.Pointer(&_swig_i_1)), C.swig_type_80(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) OptionCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_OptionCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_81)(unsafe.Pointer(&_swig_i_1)), C.swig_type_82(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) StatusCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_StatusCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_83)(unsafe.Pointer(&_swig_i_1)), C.swig_type_84(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrBOBCommandSession) HelpCommandHandler(arg2 string, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	C._wrap_BOBCommandSession_HelpCommandHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_85)(unsafe.Pointer(&_swig_i_1)), C.swig_type_86(_swig_i_2))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+type BOBCommandSession interface {
+	Swigcptr() uintptr
+	SwigIsBOBCommandSession()
+	Terminate()
+	GetSocket() (_swig_ret Boost_asio_ip_tcp_socket)
+	SendVersion()
+	ZapCommandHandler(arg2 string, arg3 int64)
+	QuitCommandHandler(arg2 string, arg3 int64)
+	StartCommandHandler(arg2 string, arg3 int64)
+	StopCommandHandler(arg2 string, arg3 int64)
+	SetNickCommandHandler(arg2 string, arg3 int64)
+	GetNickCommandHandler(arg2 string, arg3 int64)
+	NewkeysCommandHandler(arg2 string, arg3 int64)
+	SetkeysCommandHandler(arg2 string, arg3 int64)
+	GetkeysCommandHandler(arg2 string, arg3 int64)
+	GetdestCommandHandler(arg2 string, arg3 int64)
+	OuthostCommandHandler(arg2 string, arg3 int64)
+	OutportCommandHandler(arg2 string, arg3 int64)
+	InhostCommandHandler(arg2 string, arg3 int64)
+	InportCommandHandler(arg2 string, arg3 int64)
+	QuietCommandHandler(arg2 string, arg3 int64)
+	LookupCommandHandler(arg2 string, arg3 int64)
+	ClearCommandHandler(arg2 string, arg3 int64)
+	ListCommandHandler(arg2 string, arg3 int64)
+	OptionCommandHandler(arg2 string, arg3 int64)
+	StatusCommandHandler(arg2 string, arg3 int64)
+	HelpCommandHandler(arg2 string, arg3 int64)
+}
+
+type SwigcptrBOBCommandChannel uintptr
+
+func (p SwigcptrBOBCommandChannel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrBOBCommandChannel) SwigIsBOBCommandChannel() {
+}
+
+func NewBOBCommandChannel(arg1 Std_string, arg2 int) (_swig_ret BOBCommandChannel) {
+	var swig_r BOBCommandChannel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	swig_r = (BOBCommandChannel)(SwigcptrBOBCommandChannel(C._wrap_new_BOBCommandChannel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
+	return swig_r
+}
+
+func DeleteBOBCommandChannel(arg1 BOBCommandChannel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_BOBCommandChannel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBCommandChannel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_BOBCommandChannel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBCommandChannel) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_BOBCommandChannel_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrBOBCommandChannel) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_BOBCommandChannel_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBCommandChannel) AddDestination(arg2 Std_string, arg3 BOBDestination) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_BOBCommandChannel_AddDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+func (arg1 SwigcptrBOBCommandChannel) DeleteDestination(arg2 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_BOBCommandChannel_DeleteDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrBOBCommandChannel) FindDestination(arg2 Std_string) (_swig_ret BOBDestination) {
+	var swig_r BOBDestination
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (BOBDestination)(SwigcptrBOBDestination(C._wrap_BOBCommandChannel_FindDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBCommandChannel) GetCommandHandlers() (_swig_ret Std_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_) {
+	var swig_r Std_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_)(SwigcptrStd_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_(C._wrap_BOBCommandChannel_GetCommandHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBCommandChannel) GetHelpStrings() (_swig_ret Std_map_Sl_std_string_Sc_std_string_Sg_) {
+	var swig_r Std_map_Sl_std_string_Sc_std_string_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_std_string_Sc_std_string_Sg_)(SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_(C._wrap_BOBCommandChannel_GetHelpStrings_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrBOBCommandChannel) GetDestinations() (_swig_ret Std_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_) {
+	var swig_r Std_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_)(SwigcptrStd_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_(C._wrap_BOBCommandChannel_GetDestinations_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type BOBCommandChannel interface {
+	Swigcptr() uintptr
+	SwigIsBOBCommandChannel()
+	Start()
+	Stop()
+	GetService() (_swig_ret Boost_asio_io_service)
+	AddDestination(arg2 Std_string, arg3 BOBDestination)
+	DeleteDestination(arg2 Std_string)
+	FindDestination(arg2 Std_string) (_swig_ret BOBDestination)
+	GetCommandHandlers() (_swig_ret Std_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_)
+	GetHelpStrings() (_swig_ret Std_map_Sl_std_string_Sc_std_string_Sg_)
+	GetDestinations() (_swig_ret Std_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_)
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_CLIENT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_CLIENT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_SERVER() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_SERVER_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_HTTP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_HTTP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_IRC() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_IRC_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_UDPCLIENT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_UDPCLIENT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_UDPSERVER() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_UDPSERVER_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_SOCKS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_SOCKS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_WEBSOCKS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_WEBSOCKS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_TUNNELS_SECTION_TYPE_HTTPPROXY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_TUNNELS_SECTION_TYPE_HTTPPROXY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_PORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_PORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_ADDRESS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_ADDRESS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_DESTINATION() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_DESTINATION_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_KEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_KEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_SIGNATURE_TYPE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_SIGNATURE_TYPE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_CRYPTO_TYPE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_CRYPTO_TYPE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_DESTINATION_PORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_DESTINATION_PORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_MATCH_TUNNELS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_MATCH_TUNNELS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_CLIENT_TUNNEL_CONNECT_TIMEOUT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_CLIENT_TUNNEL_CONNECT_TIMEOUT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_HOST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_HOST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_HOST_OVERRIDE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_HOST_OVERRIDE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_PORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_PORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_KEYS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_KEYS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_SIGNATURE_TYPE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_SIGNATURE_TYPE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_INPORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_INPORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_ACCESS_LIST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_ACCESS_LIST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_GZIP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_GZIP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_WEBIRC_PASSWORD() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_WEBIRC_PASSWORD_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_ADDRESS() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_ADDRESS_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2P_SERVER_TUNNEL_ENABLE_UNIQUE_LOCAL() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2P_SERVER_TUNNEL_ENABLE_UNIQUE_LOCAL_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+type SwigcptrClientContext uintptr
+
+func (p SwigcptrClientContext) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrClientContext) SwigIsClientContext() {
+}
+
+func NewClientContext() (_swig_ret ClientContext) {
+	var swig_r ClientContext
+	swig_r = (ClientContext)(SwigcptrClientContext(C._wrap_new_ClientContext_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func DeleteClientContext(arg1 ClientContext) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_ClientContext_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrClientContext) Start() {
+	_swig_i_0 := arg1
+	C._wrap_ClientContext_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrClientContext) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_ClientContext_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrClientContext) ReloadConfig() {
+	_swig_i_0 := arg1
+	C._wrap_ClientContext_ReloadConfig_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrClientContext) GetSharedLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_GetSharedLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_0(arg2 bool, arg3 I2p_data_SigningKeyType, arg4 I2p_data_CryptoKeyType, arg5 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_1(arg2 bool, arg3 I2p_data_SigningKeyType, arg4 I2p_data_CryptoKeyType) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_2(arg2 bool, arg3 I2p_data_SigningKeyType) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_3(arg2 bool) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_3_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_4() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_4_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_5(arg2 I2p_data_PrivateKeys, arg3 bool, arg4 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_5_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C._Bool(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_6(arg2 I2p_data_PrivateKeys, arg3 bool) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_6_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C._Bool(_swig_i_2))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewLocalDestination__SWIG_7(arg2 I2p_data_PrivateKeys) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewLocalDestination__SWIG_7_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (p SwigcptrClientContext) CreateNewLocalDestination(a ...interface{}) Std_shared_ptr_Sl_ClientDestination_Sg_ {
+	argc := len(a)
+	if argc == 0 {
+		return p.CreateNewLocalDestination__SWIG_4()
+	}
+	if argc == 1 {
+		if _, ok := a[0].(SwigcptrI2p_data_PrivateKeys); !ok {
+			goto check_2
+		}
+		return p.CreateNewLocalDestination__SWIG_7(a[0].(I2p_data_PrivateKeys))
+	}
+check_2:
+	if argc == 1 {
+		return p.CreateNewLocalDestination__SWIG_3(a[0].(bool))
+	}
+	if argc == 2 {
+		if _, ok := a[0].(SwigcptrI2p_data_PrivateKeys); !ok {
+			goto check_4
+		}
+		if _, ok := a[1].(bool); !ok {
+			goto check_4
+		}
+		return p.CreateNewLocalDestination__SWIG_6(a[0].(I2p_data_PrivateKeys), a[1].(bool))
+	}
+check_4:
+	if argc == 2 {
+		return p.CreateNewLocalDestination__SWIG_2(a[0].(bool), a[1].(I2p_data_SigningKeyType))
+	}
+	if argc == 3 {
+		if _, ok := a[0].(SwigcptrI2p_data_PrivateKeys); !ok {
+			goto check_6
+		}
+		if _, ok := a[1].(bool); !ok {
+			goto check_6
+		}
+		if _, ok := a[2].(SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_); !ok {
+			goto check_6
+		}
+		return p.CreateNewLocalDestination__SWIG_5(a[0].(I2p_data_PrivateKeys), a[1].(bool), a[2].(Std_map_Sl_std_string_Sc_std_string_Sg_))
+	}
+check_6:
+	if argc == 3 {
+		return p.CreateNewLocalDestination__SWIG_1(a[0].(bool), a[1].(I2p_data_SigningKeyType), a[2].(I2p_data_CryptoKeyType))
+	}
+	if argc == 4 {
+		return p.CreateNewLocalDestination__SWIG_0(a[0].(bool), a[1].(I2p_data_SigningKeyType), a[2].(I2p_data_CryptoKeyType), a[3].(Std_map_Sl_std_string_Sc_std_string_Sg_))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrClientContext) CreateNewMatchedTunnelDestination__SWIG_0(arg2 I2p_data_PrivateKeys, arg3 Std_string, arg4 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewMatchedTunnelDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) CreateNewMatchedTunnelDestination__SWIG_1(arg2 I2p_data_PrivateKeys, arg3 Std_string) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_CreateNewMatchedTunnelDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func (p SwigcptrClientContext) CreateNewMatchedTunnelDestination(a ...interface{}) Std_shared_ptr_Sl_ClientDestination_Sg_ {
+	argc := len(a)
+	if argc == 2 {
+		return p.CreateNewMatchedTunnelDestination__SWIG_1(a[0].(I2p_data_PrivateKeys), a[1].(Std_string))
+	}
+	if argc == 3 {
+		return p.CreateNewMatchedTunnelDestination__SWIG_0(a[0].(I2p_data_PrivateKeys), a[1].(Std_string), a[2].(Std_map_Sl_std_string_Sc_std_string_Sg_))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrClientContext) DeleteLocalDestination(arg2 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_ClientContext_DeleteLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrClientContext) FindLocalDestination(arg2 I2p_data_IdentHash) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_ClientContext_FindLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) LoadPrivateKeys__SWIG_0(arg2 I2p_data_PrivateKeys, arg3 Std_string, arg4 I2p_data_SigningKeyType, arg5 I2p_data_CryptoKeyType) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (bool)(C._wrap_ClientContext_LoadPrivateKeys__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4)))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) LoadPrivateKeys__SWIG_1(arg2 I2p_data_PrivateKeys, arg3 Std_string, arg4 I2p_data_SigningKeyType) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (bool)(C._wrap_ClientContext_LoadPrivateKeys__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) LoadPrivateKeys__SWIG_2(arg2 I2p_data_PrivateKeys, arg3 Std_string) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (bool)(C._wrap_ClientContext_LoadPrivateKeys__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func (p SwigcptrClientContext) LoadPrivateKeys(a ...interface{}) bool {
+	argc := len(a)
+	if argc == 2 {
+		return p.LoadPrivateKeys__SWIG_2(a[0].(I2p_data_PrivateKeys), a[1].(Std_string))
+	}
+	if argc == 3 {
+		return p.LoadPrivateKeys__SWIG_1(a[0].(I2p_data_PrivateKeys), a[1].(Std_string), a[2].(I2p_data_SigningKeyType))
+	}
+	if argc == 4 {
+		return p.LoadPrivateKeys__SWIG_0(a[0].(I2p_data_PrivateKeys), a[1].(Std_string), a[2].(I2p_data_SigningKeyType), a[3].(I2p_data_CryptoKeyType))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrClientContext) GetAddressBook() (_swig_ret AddressBook) {
+	var swig_r AddressBook
+	_swig_i_0 := arg1
+	swig_r = (AddressBook)(SwigcptrAddressBook(C._wrap_ClientContext_GetAddressBook_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetBOBCommandChannel() (_swig_ret BOBCommandChannel) {
+	var swig_r BOBCommandChannel
+	_swig_i_0 := arg1
+	swig_r = (BOBCommandChannel)(SwigcptrBOBCommandChannel(C._wrap_ClientContext_GetBOBCommandChannel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetSAMBridge() (_swig_ret SAMBridge) {
+	var swig_r SAMBridge
+	_swig_i_0 := arg1
+	swig_r = (SAMBridge)(SwigcptrSAMBridge(C._wrap_ClientContext_GetSAMBridge_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetI2CPServer() (_swig_ret I2CPServer) {
+	var swig_r I2CPServer
+	_swig_i_0 := arg1
+	swig_r = (I2CPServer)(SwigcptrI2CPServer(C._wrap_ClientContext_GetI2CPServer_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetForwardInfosFor(arg2 I2p_data_IdentHash) (_swig_ret Std_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_) {
+	var swig_r Std_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_)(SwigcptrStd_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_(C._wrap_ClientContext_GetForwardInfosFor_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetDestinations() (_swig_ret Std_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_) {
+	var swig_r Std_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_)(SwigcptrStd_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_(C._wrap_ClientContext_GetDestinations_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetClientTunnels() (_swig_ret Std_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_) {
+	var swig_r Std_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_)(SwigcptrStd_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_(C._wrap_ClientContext_GetClientTunnels_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetServerTunnels() (_swig_ret Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_) {
+	var swig_r Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_)(SwigcptrStd_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_(C._wrap_ClientContext_GetServerTunnels_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetClientForwards() (_swig_ret Std_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_) {
+	var swig_r Std_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_)(SwigcptrStd_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_(C._wrap_ClientContext_GetClientForwards_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetServerForwards() (_swig_ret Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_) {
+	var swig_r Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_)(SwigcptrStd_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_(C._wrap_ClientContext_GetServerForwards_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetHttpProxy() (_swig_ret HTTPProxy) {
+	var swig_r HTTPProxy
+	_swig_i_0 := arg1
+	swig_r = (HTTPProxy)(SwigcptrHTTPProxy(C._wrap_ClientContext_GetHttpProxy_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrClientContext) GetSocksProxy() (_swig_ret SOCKSServer) {
+	var swig_r SOCKSServer
+	_swig_i_0 := arg1
+	swig_r = (SOCKSServer)(SwigcptrSOCKSServer(C._wrap_ClientContext_GetSocksProxy_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type ClientContext interface {
+	Swigcptr() uintptr
+	SwigIsClientContext()
+	Start()
+	Stop()
+	ReloadConfig()
+	GetSharedLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateNewLocalDestination(a ...interface{}) Std_shared_ptr_Sl_ClientDestination_Sg_
+	CreateNewMatchedTunnelDestination(a ...interface{}) Std_shared_ptr_Sl_ClientDestination_Sg_
+	DeleteLocalDestination(arg2 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	FindLocalDestination(arg2 I2p_data_IdentHash) (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_)
+	LoadPrivateKeys(a ...interface{}) bool
+	GetAddressBook() (_swig_ret AddressBook)
+	GetBOBCommandChannel() (_swig_ret BOBCommandChannel)
+	GetSAMBridge() (_swig_ret SAMBridge)
+	GetI2CPServer() (_swig_ret I2CPServer)
+	GetForwardInfosFor(arg2 I2p_data_IdentHash) (_swig_ret Std_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_)
+	GetDestinations() (_swig_ret Std_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_)
+	GetClientTunnels() (_swig_ret Std_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_)
+	GetServerTunnels() (_swig_ret Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_)
+	GetClientForwards() (_swig_ret Std_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_)
+	GetServerForwards() (_swig_ret Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_)
+	GetHttpProxy() (_swig_ret HTTPProxy)
+	GetSocksProxy() (_swig_ret SOCKSServer)
+}
+
+func SetContext(arg1 ClientContext) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_context_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func GetContext() (_swig_ret ClientContext) {
+	var swig_r ClientContext
+	swig_r = (ClientContext)(SwigcptrClientContext(C._wrap_context_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+type SwigcptrHTTPProxy uintptr
+
+func (p SwigcptrHTTPProxy) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrHTTPProxy) SwigIsHTTPProxy() {
+}
+
+func NewHTTPProxy__SWIG_0(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_string, arg5 bool, arg6 Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_) (_swig_ret HTTPProxy) {
+	var swig_r HTTPProxy
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5
+	_swig_i_5 := arg6.Swigcptr()
+	swig_r = (HTTPProxy)(SwigcptrHTTPProxy(C._wrap_new_HTTPProxy__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C._Bool(_swig_i_4), C.uintptr_t(_swig_i_5))))
+	return swig_r
+}
+
+func NewHTTPProxy__SWIG_1(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_) (_swig_ret HTTPProxy) {
+	var swig_r HTTPProxy
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (HTTPProxy)(SwigcptrHTTPProxy(C._wrap_new_HTTPProxy__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func NewHTTPProxy__SWIG_2(arg1 Std_string, arg2 Std_string, arg3 int) (_swig_ret HTTPProxy) {
+	var swig_r HTTPProxy
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	swig_r = (HTTPProxy)(SwigcptrHTTPProxy(C._wrap_new_HTTPProxy__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))))
+	return swig_r
+}
+
+func NewHTTPProxy(a ...interface{}) HTTPProxy {
+	argc := len(a)
+	if argc == 3 {
+		return NewHTTPProxy__SWIG_2(a[0].(Std_string), a[1].(Std_string), a[2].(int))
+	}
+	if argc == 4 {
+		return NewHTTPProxy__SWIG_1(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_))
+	}
+	if argc == 6 {
+		return NewHTTPProxy__SWIG_0(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_string), a[4].(bool), a[5].(Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_))
+	}
+	panic("No match for overloaded function call")
+}
+
+func DeleteHTTPProxy(arg1 HTTPProxy) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_HTTPProxy_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrHTTPProxy) GetOutproxyURL() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_HTTPProxy_GetOutproxyURL_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrHTTPProxy) GetHelperSupport() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_HTTPProxy_GetHelperSupport_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+type HTTPProxy interface {
+	Swigcptr() uintptr
+	SwigIsHTTPProxy()
+	GetOutproxyURL() (_swig_ret Std_string)
+	GetHelperSupport() (_swig_ret bool)
+}
+
+func GetI2CP_PROTOCOL_BYTE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_PROTOCOL_BYTE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_SESSION_BUFFER_SIZE() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_I2CP_SESSION_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetI2CP_HEADER_LENGTH_OFFSET() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_I2CP_HEADER_LENGTH_OFFSET_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetI2CP_HEADER_TYPE_OFFSET() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_I2CP_HEADER_TYPE_OFFSET_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetI2CP_HEADER_SIZE() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_I2CP_HEADER_SIZE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetI2CP_GET_DATE_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_GET_DATE_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_SET_DATE_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_SET_DATE_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_CREATE_SESSION_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_CREATE_SESSION_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_RECONFIGURE_SESSION_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_RECONFIGURE_SESSION_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_SESSION_STATUS_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_SESSION_STATUS_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_DESTROY_SESSION_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_DESTROY_SESSION_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_REQUEST_VARIABLE_LEASESET_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_REQUEST_VARIABLE_LEASESET_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_CREATE_LEASESET_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_CREATE_LEASESET_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_CREATE_LEASESET2_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_CREATE_LEASESET2_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_SEND_MESSAGE_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_SEND_MESSAGE_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_SEND_MESSAGE_EXPIRES_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_SEND_MESSAGE_EXPIRES_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_MESSAGE_PAYLOAD_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_MESSAGE_PAYLOAD_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_MESSAGE_STATUS_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_MESSAGE_STATUS_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_HOST_LOOKUP_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_HOST_LOOKUP_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_HOST_REPLY_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_HOST_REPLY_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_DEST_LOOKUP_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_DEST_LOOKUP_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_DEST_REPLY_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_DEST_REPLY_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_GET_BANDWIDTH_LIMITS_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_GET_BANDWIDTH_LIMITS_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2CP_BANDWIDTH_LIMITS_MESSAGE() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_I2CP_BANDWIDTH_LIMITS_MESSAGE_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+type I2pClientI2CPMessageStatus int
+func _swig_geteI2CPMessageStatusAccepted() (_swig_ret I2pClientI2CPMessageStatus) {
+	var swig_r I2pClientI2CPMessageStatus
+	swig_r = (I2pClientI2CPMessageStatus)(C._wrap_eI2CPMessageStatusAccepted_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var EI2CPMessageStatusAccepted I2pClientI2CPMessageStatus = _swig_geteI2CPMessageStatusAccepted()
+func _swig_geteI2CPMessageStatusGuaranteedSuccess() (_swig_ret I2pClientI2CPMessageStatus) {
+	var swig_r I2pClientI2CPMessageStatus
+	swig_r = (I2pClientI2CPMessageStatus)(C._wrap_eI2CPMessageStatusGuaranteedSuccess_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var EI2CPMessageStatusGuaranteedSuccess I2pClientI2CPMessageStatus = _swig_geteI2CPMessageStatusGuaranteedSuccess()
+func _swig_geteI2CPMessageStatusGuaranteedFailure() (_swig_ret I2pClientI2CPMessageStatus) {
+	var swig_r I2pClientI2CPMessageStatus
+	swig_r = (I2pClientI2CPMessageStatus)(C._wrap_eI2CPMessageStatusGuaranteedFailure_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var EI2CPMessageStatusGuaranteedFailure I2pClientI2CPMessageStatus = _swig_geteI2CPMessageStatusGuaranteedFailure()
+func _swig_geteI2CPMessageStatusNoLeaseSet() (_swig_ret I2pClientI2CPMessageStatus) {
+	var swig_r I2pClientI2CPMessageStatus
+	swig_r = (I2pClientI2CPMessageStatus)(C._wrap_eI2CPMessageStatusNoLeaseSet_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var EI2CPMessageStatusNoLeaseSet I2pClientI2CPMessageStatus = _swig_geteI2CPMessageStatusNoLeaseSet()
+func GetI2CP_PARAM_DONT_PUBLISH_LEASESET() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2CP_PARAM_DONT_PUBLISH_LEASESET_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetI2CP_PARAM_MESSAGE_RELIABILITY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2CP_PARAM_MESSAGE_RELIABILITY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+type SwigcptrI2CPDestination uintptr
+
+func (p SwigcptrI2CPDestination) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2CPDestination) SwigIsI2CPDestination() {
+}
+
+func NewI2CPDestination(arg1 Std_shared_ptr_Sl_i2p_client_I2CPSession_Sg_, arg2 Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_, arg3 bool, arg4 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret I2CPDestination) {
+	var swig_r I2CPDestination
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (I2CPDestination)(SwigcptrI2CPDestination(C._wrap_new_I2CPDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C._Bool(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPDestination) SetEncryptionPrivateKey(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2CPDestination_SetEncryptionPrivateKey_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2CPDestination) LeaseSetCreated(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPDestination_LeaseSetCreated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_123(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPDestination) LeaseSet2Created(arg2 Uint8_t, arg3 Uint8_t, arg4 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	C._wrap_I2CPDestination_LeaseSet2Created_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_type_124(_swig_i_3))
+}
+
+func (arg1 SwigcptrI2CPDestination) SendMsgTo(arg2 Uint8_t, arg3 int64, arg4 I2p_data_IdentHash, arg5 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	C._wrap_I2CPDestination_SendMsgTo_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_125(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))
+}
+
+func (arg1 SwigcptrI2CPDestination) Decrypt(arg2 Uint8_t, arg3 Uint8_t, arg4 BN_CTX) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (bool)(C._wrap_I2CPDestination_Decrypt_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPDestination) GetIdentity() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_(C._wrap_I2CPDestination_GetIdentity_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func DeleteI2CPDestination(arg1 I2CPDestination) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2CPDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type I2CPDestination interface {
+	Swigcptr() uintptr
+	SwigIsI2CPDestination()
+	SetEncryptionPrivateKey(arg2 Uint8_t)
+	LeaseSetCreated(arg2 Uint8_t, arg3 int64)
+	LeaseSet2Created(arg2 Uint8_t, arg3 Uint8_t, arg4 int64)
+	SendMsgTo(arg2 Uint8_t, arg3 int64, arg4 I2p_data_IdentHash, arg5 Uint32_t)
+	Decrypt(arg2 Uint8_t, arg3 Uint8_t, arg4 BN_CTX) (_swig_ret bool)
+	GetIdentity() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_)
+}
+
+type SwigcptrI2CPSession uintptr
+
+func (p SwigcptrI2CPSession) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2CPSession) SwigIsI2CPSession() {
+}
+
+func NewI2CPSession(arg1 I2CPServer, arg2 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_) (_swig_ret I2CPSession) {
+	var swig_r I2CPSession
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (I2CPSession)(SwigcptrI2CPSession(C._wrap_new_I2CPSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func DeleteI2CPSession(arg1 I2CPSession) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2CPSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2CPSession) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2CPSession_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2CPSession) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_I2CPSession_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2CPSession) GetSessionID() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_I2CPSession_GetSessionID_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPSession) GetDestination() (_swig_ret Std_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_(C._wrap_I2CPSession_GetDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPSession) SendI2CPMessage(arg2 Uint8_t, arg3 Uint8_t, arg4 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	C._wrap_I2CPSession_SendI2CPMessage_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_type_126(_swig_i_3))
+}
+
+func (arg1 SwigcptrI2CPSession) SendMessagePayloadMessage(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_SendMessagePayloadMessage_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_127(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) SendMessageStatusMessage(arg2 Uint32_t, arg3 I2pClientI2CPMessageStatus) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_SendMessageStatusMessage_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) GetDateMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_GetDateMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_128(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) CreateSessionMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_CreateSessionMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_129(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) DestroySessionMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_DestroySessionMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_130(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) ReconfigureSessionMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_ReconfigureSessionMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_131(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) CreateLeaseSetMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_CreateLeaseSetMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_132(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) CreateLeaseSet2MessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_CreateLeaseSet2MessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_133(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) SendMessageMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_SendMessageMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_134(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) SendMessageExpiresMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_SendMessageExpiresMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_135(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) HostLookupMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_HostLookupMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_136(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) DestLookupMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_DestLookupMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_137(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2CPSession) GetBandwidthLimitsMessageHandler(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2CPSession_GetBandwidthLimitsMessageHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_138(_swig_i_2))
+}
+
+type I2CPSession interface {
+	Swigcptr() uintptr
+	SwigIsI2CPSession()
+	Start()
+	Stop()
+	GetSessionID() (_swig_ret Uint16_t)
+	GetDestination() (_swig_ret Std_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_)
+	SendI2CPMessage(arg2 Uint8_t, arg3 Uint8_t, arg4 int64)
+	SendMessagePayloadMessage(arg2 Uint8_t, arg3 int64)
+	SendMessageStatusMessage(arg2 Uint32_t, arg3 I2pClientI2CPMessageStatus)
+	GetDateMessageHandler(arg2 Uint8_t, arg3 int64)
+	CreateSessionMessageHandler(arg2 Uint8_t, arg3 int64)
+	DestroySessionMessageHandler(arg2 Uint8_t, arg3 int64)
+	ReconfigureSessionMessageHandler(arg2 Uint8_t, arg3 int64)
+	CreateLeaseSetMessageHandler(arg2 Uint8_t, arg3 int64)
+	CreateLeaseSet2MessageHandler(arg2 Uint8_t, arg3 int64)
+	SendMessageMessageHandler(arg2 Uint8_t, arg3 int64)
+	SendMessageExpiresMessageHandler(arg2 Uint8_t, arg3 int64)
+	HostLookupMessageHandler(arg2 Uint8_t, arg3 int64)
+	DestLookupMessageHandler(arg2 Uint8_t, arg3 int64)
+	GetBandwidthLimitsMessageHandler(arg2 Uint8_t, arg3 int64)
+}
+
+type SwigcptrI2CPServer uintptr
+
+func (p SwigcptrI2CPServer) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2CPServer) SwigIsI2CPServer() {
+}
+
+func NewI2CPServer(arg1 Std_string, arg2 int) (_swig_ret I2CPServer) {
+	var swig_r I2CPServer
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	swig_r = (I2CPServer)(SwigcptrI2CPServer(C._wrap_new_I2CPServer_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
+	return swig_r
+}
+
+func DeleteI2CPServer(arg1 I2CPServer) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2CPServer_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2CPServer) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2CPServer_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2CPServer) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_I2CPServer_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2CPServer) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_I2CPServer_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPServer) InsertSession(arg2 Std_shared_ptr_Sl_i2p_client_I2CPSession_Sg_) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (bool)(C._wrap_I2CPServer_InsertSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPServer) RemoveSession(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2CPServer_RemoveSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2CPServer) GetMessagesHandlers() (_swig_ret *_swig_memberptr) {
+	var swig_r *_swig_memberptr
+	_swig_i_0 := arg1
+	swig_r = (*_swig_memberptr)(C._wrap_I2CPServer_GetMessagesHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2CPServer) GetSessions() (_swig_ret Std_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_) {
+	var swig_r Std_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_)(SwigcptrStd_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_(C._wrap_I2CPServer_GetSessions_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type I2CPServer interface {
+	Swigcptr() uintptr
+	SwigIsI2CPServer()
+	Start()
+	Stop()
+	GetService() (_swig_ret Boost_asio_io_service)
+	InsertSession(arg2 Std_shared_ptr_Sl_i2p_client_I2CPSession_Sg_) (_swig_ret bool)
+	RemoveSession(arg2 Uint16_t)
+	GetMessagesHandlers() (_swig_ret *_swig_memberptr)
+	GetSessions() (_swig_ret Std_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_)
+}
+
+type SwigcptrI2PService uintptr
+
+func (p SwigcptrI2PService) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PService) SwigIsI2PService() {
+}
+
+func DeleteI2PService(arg1 I2PService) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PService) AddHandler(arg2 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PService_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PService) RemoveHandler(arg2 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PService_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PService) ClearHandlers() {
+	_swig_i_0 := arg1
+	C._wrap_I2PService_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PService) SetConnectTimeout(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PService_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PService) AddReadyCallback(arg2 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PService_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PService) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PService_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PService) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_I2PService_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (p SwigcptrI2PService) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrI2PService) SetLocalDestination(arg2 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PService_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PService) CreateStream__SWIG_0(arg2 StreamRequestComplete, arg3 Std_string, arg4 int) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	C._wrap_I2PService_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_intgo(_swig_i_3))
+}
+
+func (arg1 SwigcptrI2PService) CreateStream__SWIG_1(arg2 StreamRequestComplete, arg3 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_I2PService_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2PService) CreateStream__SWIG_2(arg2 StreamRequestComplete, arg3 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg4 int) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	C._wrap_I2PService_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_intgo(_swig_i_3))
+}
+
+func (p SwigcptrI2PService) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrI2PService) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_I2PService_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PService) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2PService_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PService) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_I2PService_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PService) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_I2PService_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (arg1 SwigcptrI2PService) SetIsUpdated(arg2 bool) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_I2PService_isUpdated_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PService) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_I2PService_isUpdated_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+type I2PService interface {
+	Swigcptr() uintptr
+	SwigIsI2PService()
+	AddHandler(arg2 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg2 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg2 Uint32_t)
+	AddReadyCallback(arg2 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg2 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	Start()
+	Stop()
+	GetName() (_swig_ret string)
+	SetIsUpdated(arg2 bool)
+	GetIsUpdated() (_swig_ret bool)
+}
+
+type SwigcptrI2PServiceHandler uintptr
+
+func (p SwigcptrI2PServiceHandler) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PServiceHandler) SwigIsI2PServiceHandler() {
+}
+
+func NewI2PServiceHandler(arg1 I2PService) (_swig_ret I2PServiceHandler) {
+	var swig_r I2PServiceHandler
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (I2PServiceHandler)(SwigcptrI2PServiceHandler(C._wrap_new_I2PServiceHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func DeleteI2PServiceHandler(arg1 I2PServiceHandler) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PServiceHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PServiceHandler) Handle() {
+	_swig_i_0 := arg1
+	C._wrap_I2PServiceHandler_Handle_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PServiceHandler) Terminate() {
+	_swig_i_0 := arg1
+	C._wrap_I2PServiceHandler_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type I2PServiceHandler interface {
+	Swigcptr() uintptr
+	SwigIsI2PServiceHandler()
+	Handle()
+	Terminate()
+}
+
+func GetTCP_IP_PIPE_BUFFER_SIZE() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_TCP_IP_PIPE_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+type SwigcptrTCPIPPipe uintptr
+
+func (p SwigcptrTCPIPPipe) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrTCPIPPipe) SwigIsTCPIPPipe() {
+}
+
+func NewTCPIPPipe(arg1 I2PService, arg2 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg3 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_) (_swig_ret TCPIPPipe) {
+	var swig_r TCPIPPipe
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (TCPIPPipe)(SwigcptrTCPIPPipe(C._wrap_new_TCPIPPipe_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func DeleteTCPIPPipe(arg1 TCPIPPipe) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_TCPIPPipe_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrTCPIPPipe) Start() {
+	_swig_i_0 := arg1
+	C._wrap_TCPIPPipe_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPPipe) Handle() {
+	C._wrap_TCPIPPipe_Handle_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrTCPIPPipe) Terminate() {
+	C._wrap_TCPIPPipe_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrTCPIPPipe) SwigIsI2PServiceHandler() {
+}
+
+func (p SwigcptrTCPIPPipe) SwigGetI2PServiceHandler() I2PServiceHandler {
+	return SwigcptrI2PServiceHandler(p.Swigcptr())
+}
+
+type TCPIPPipe interface {
+	Swigcptr() uintptr
+	SwigIsTCPIPPipe()
+	Start()
+	Handle()
+	Terminate()
+	SwigIsI2PServiceHandler()
+	SwigGetI2PServiceHandler() I2PServiceHandler
+}
+
+type SwigcptrTCPIPAcceptor uintptr
+
+func (p SwigcptrTCPIPAcceptor) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrTCPIPAcceptor) SwigIsTCPIPAcceptor() {
+}
+
+func DeleteTCPIPAcceptor(arg1 TCPIPAcceptor) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_TCPIPAcceptor_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrTCPIPAcceptor) Start() {
+	_swig_i_0 := arg1
+	C._wrap_TCPIPAcceptor_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrTCPIPAcceptor) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_TCPIPAcceptor_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrTCPIPAcceptor) GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_TCPIPAcceptor_GetLocalEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrTCPIPAcceptor) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_TCPIPAcceptor_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_TCPIPAcceptor_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_TCPIPAcceptor_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) ClearHandlers() {
+	C._wrap_TCPIPAcceptor_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_TCPIPAcceptor_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_TCPIPAcceptor_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_TCPIPAcceptor_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_TCPIPAcceptor_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrTCPIPAcceptor) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_TCPIPAcceptor_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_TCPIPAcceptor_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_TCPIPAcceptor_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_TCPIPAcceptor_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrTCPIPAcceptor) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_TCPIPAcceptor_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetTCPIPAcceptor_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrTCPIPAcceptor) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetTCPIPAcceptor_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrTCPIPAcceptor) SwigIsI2PService() {
+}
+
+func (p SwigcptrTCPIPAcceptor) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type TCPIPAcceptor interface {
+	Swigcptr() uintptr
+	SwigIsTCPIPAcceptor()
+	Start()
+	Stop()
+	GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	GetName() (_swig_ret string)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
+}
+
+func GetI2P_TUNNEL_CONNECTION_BUFFER_SIZE() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_I2P_TUNNEL_CONNECTION_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetI2P_TUNNEL_CONNECTION_MAX_IDLE() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_I2P_TUNNEL_CONNECTION_MAX_IDLE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetI2P_TUNNEL_DESTINATION_REQUEST_TIMEOUT() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_I2P_TUNNEL_DESTINATION_REQUEST_TIMEOUT_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetX_I2P_DEST_HASH() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_X_I2P_DEST_HASH_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetX_I2P_DEST_B64() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_X_I2P_DEST_B64_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetX_I2P_DEST_B32() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_X_I2P_DEST_B32_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+type SwigcptrI2PTunnelConnection uintptr
+
+func (p SwigcptrI2PTunnelConnection) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PTunnelConnection) SwigIsI2PTunnelConnection() {
+}
+
+func NewI2PTunnelConnection__SWIG_0(arg1 I2PService, arg2 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg3 Std_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_, arg4 int) (_swig_ret I2PTunnelConnection) {
+	var swig_r I2PTunnelConnection
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	swig_r = (I2PTunnelConnection)(SwigcptrI2PTunnelConnection(C._wrap_new_I2PTunnelConnection__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_intgo(_swig_i_3))))
+	return swig_r
+}
+
+func NewI2PTunnelConnection__SWIG_1(arg1 I2PService, arg2 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg3 Std_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_) (_swig_ret I2PTunnelConnection) {
+	var swig_r I2PTunnelConnection
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (I2PTunnelConnection)(SwigcptrI2PTunnelConnection(C._wrap_new_I2PTunnelConnection__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func NewI2PTunnelConnection__SWIG_2(arg1 I2PService, arg2 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg3 Std_shared_ptr_Sl_i2p_stream_Stream_Sg_) (_swig_ret I2PTunnelConnection) {
+	var swig_r I2PTunnelConnection
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (I2PTunnelConnection)(SwigcptrI2PTunnelConnection(C._wrap_new_I2PTunnelConnection__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func NewI2PTunnelConnection__SWIG_3(arg1 I2PService, arg2 Std_shared_ptr_Sl_i2p_stream_Stream_Sg_, arg3 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg4 Boost_asio_ip_tcp_endpoint, arg5 bool) (_swig_ret I2PTunnelConnection) {
+	var swig_r I2PTunnelConnection
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5
+	swig_r = (I2PTunnelConnection)(SwigcptrI2PTunnelConnection(C._wrap_new_I2PTunnelConnection__SWIG_3_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C._Bool(_swig_i_4))))
+	return swig_r
+}
+
+func NewI2PTunnelConnection__SWIG_4(arg1 I2PService, arg2 Std_shared_ptr_Sl_i2p_stream_Stream_Sg_, arg3 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg4 Boost_asio_ip_tcp_endpoint) (_swig_ret I2PTunnelConnection) {
+	var swig_r I2PTunnelConnection
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (I2PTunnelConnection)(SwigcptrI2PTunnelConnection(C._wrap_new_I2PTunnelConnection__SWIG_4_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func NewI2PTunnelConnection(a ...interface{}) I2PTunnelConnection {
+	argc := len(a)
+	if argc == 3 {
+		if _, ok := a[2].(SwigcptrStd_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_); !ok {
+			goto check_1
+		}
+		return NewI2PTunnelConnection__SWIG_1(a[0].(I2PService), a[1].(Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_), a[2].(Std_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_))
+	}
+check_1:
+	if argc == 3 {
+		return NewI2PTunnelConnection__SWIG_2(a[0].(I2PService), a[1].(Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_), a[2].(Std_shared_ptr_Sl_i2p_stream_Stream_Sg_))
+	}
+	if argc == 4 {
+		if _, ok := a[1].(SwigcptrStd_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_); !ok {
+			goto check_3
+		}
+		if _, ok := a[2].(SwigcptrStd_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_); !ok {
+			goto check_3
+		}
+		if _, ok := a[3].(int); !ok {
+			goto check_3
+		}
+		return NewI2PTunnelConnection__SWIG_0(a[0].(I2PService), a[1].(Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_), a[2].(Std_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_), a[3].(int))
+	}
+check_3:
+	if argc == 4 {
+		return NewI2PTunnelConnection__SWIG_4(a[0].(I2PService), a[1].(Std_shared_ptr_Sl_i2p_stream_Stream_Sg_), a[2].(Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_), a[3].(Boost_asio_ip_tcp_endpoint))
+	}
+	if argc == 5 {
+		return NewI2PTunnelConnection__SWIG_3(a[0].(I2PService), a[1].(Std_shared_ptr_Sl_i2p_stream_Stream_Sg_), a[2].(Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_), a[3].(Boost_asio_ip_tcp_endpoint), a[4].(bool))
+	}
+	panic("No match for overloaded function call")
+}
+
+func DeleteI2PTunnelConnection(arg1 I2PTunnelConnection) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PTunnelConnection_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PTunnelConnection) I2PConnect__SWIG_0(arg2 Uint8_t, arg3 int64) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PTunnelConnection_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_146(_swig_i_2))
+}
+
+func (arg1 SwigcptrI2PTunnelConnection) I2PConnect__SWIG_1(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PTunnelConnection_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PTunnelConnection) I2PConnect__SWIG_2() {
+	_swig_i_0 := arg1
+	C._wrap_I2PTunnelConnection_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrI2PTunnelConnection) I2PConnect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.I2PConnect__SWIG_2()
+		return
+	}
+	if argc == 1 {
+		p.I2PConnect__SWIG_1(a[0].(Uint8_t))
+		return
+	}
+	if argc == 2 {
+		p.I2PConnect__SWIG_0(a[0].(Uint8_t), a[1].(int64))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrI2PTunnelConnection) Connect__SWIG_0(arg2 bool) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_I2PTunnelConnection_Connect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PTunnelConnection) Connect__SWIG_1() {
+	_swig_i_0 := arg1
+	C._wrap_I2PTunnelConnection_Connect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrI2PTunnelConnection) Connect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.Connect__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.Connect__SWIG_0(a[0].(bool))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PTunnelConnection) Handle() {
+	C._wrap_I2PTunnelConnection_Handle_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PTunnelConnection) Terminate() {
+	C._wrap_I2PTunnelConnection_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PTunnelConnection) SwigIsI2PServiceHandler() {
+}
+
+func (p SwigcptrI2PTunnelConnection) SwigGetI2PServiceHandler() I2PServiceHandler {
+	return SwigcptrI2PServiceHandler(p.Swigcptr())
+}
+
+type I2PTunnelConnection interface {
+	Swigcptr() uintptr
+	SwigIsI2PTunnelConnection()
+	I2PConnect(a ...interface{})
+	Connect(a ...interface{})
+	Handle()
+	Terminate()
+	SwigIsI2PServiceHandler()
+	SwigGetI2PServiceHandler() I2PServiceHandler
+}
+
+type SwigcptrI2PClientTunnelConnectionHTTP uintptr
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) SwigIsI2PClientTunnelConnectionHTTP() {
+}
+
+func NewI2PClientTunnelConnectionHTTP(arg1 I2PService, arg2 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg3 Std_shared_ptr_Sl_i2p_stream_Stream_Sg_) (_swig_ret I2PClientTunnelConnectionHTTP) {
+	var swig_r I2PClientTunnelConnectionHTTP
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (I2PClientTunnelConnectionHTTP)(SwigcptrI2PClientTunnelConnectionHTTP(C._wrap_new_I2PClientTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func DeleteI2PClientTunnelConnectionHTTP(arg1 I2PClientTunnelConnectionHTTP) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PClientTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) I2PConnect__SWIG_0(arg1 Uint8_t, arg2 int64) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	C._wrap_I2PClientTunnelConnectionHTTP_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.swig_type_147(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) I2PConnect__SWIG_1(arg1 Uint8_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PClientTunnelConnectionHTTP_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) I2PConnect__SWIG_2() {
+	C._wrap_I2PClientTunnelConnectionHTTP_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) I2PConnect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.I2PConnect__SWIG_2()
+		return
+	}
+	if argc == 1 {
+		p.I2PConnect__SWIG_1(a[0].(Uint8_t))
+		return
+	}
+	if argc == 2 {
+		p.I2PConnect__SWIG_0(a[0].(Uint8_t), a[1].(int64))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) Connect__SWIG_0(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_I2PClientTunnelConnectionHTTP_Connect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) Connect__SWIG_1() {
+	C._wrap_I2PClientTunnelConnectionHTTP_Connect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) Connect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.Connect__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.Connect__SWIG_0(a[0].(bool))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) Handle() {
+	C._wrap_I2PClientTunnelConnectionHTTP_Handle_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PClientTunnelConnectionHTTP) Terminate() {
+	C._wrap_I2PClientTunnelConnectionHTTP_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) SwigIsI2PTunnelConnection() {
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) SwigGetI2PTunnelConnection() I2PTunnelConnection {
+	return SwigcptrI2PTunnelConnection(p.Swigcptr())
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) SwigIsI2PServiceHandler() {
+}
+
+func (p SwigcptrI2PClientTunnelConnectionHTTP) SwigGetI2PServiceHandler() I2PServiceHandler {
+	return SwigcptrI2PServiceHandler(p.Swigcptr())
+}
+
+type I2PClientTunnelConnectionHTTP interface {
+	Swigcptr() uintptr
+	SwigIsI2PClientTunnelConnectionHTTP()
+	I2PConnect(a ...interface{})
+	Connect(a ...interface{})
+	Handle()
+	Terminate()
+	SwigIsI2PTunnelConnection()
+	SwigGetI2PTunnelConnection() I2PTunnelConnection
+	SwigIsI2PServiceHandler()
+	SwigGetI2PServiceHandler() I2PServiceHandler
+}
+
+type SwigcptrI2PServerTunnelConnectionHTTP uintptr
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) SwigIsI2PServerTunnelConnectionHTTP() {
+}
+
+func NewI2PServerTunnelConnectionHTTP(arg1 I2PService, arg2 Std_shared_ptr_Sl_i2p_stream_Stream_Sg_, arg3 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg4 Boost_asio_ip_tcp_endpoint, arg5 Std_string) (_swig_ret I2PServerTunnelConnectionHTTP) {
+	var swig_r I2PServerTunnelConnectionHTTP
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PServerTunnelConnectionHTTP)(SwigcptrI2PServerTunnelConnectionHTTP(C._wrap_new_I2PServerTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func DeleteI2PServerTunnelConnectionHTTP(arg1 I2PServerTunnelConnectionHTTP) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PServerTunnelConnectionHTTP_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) I2PConnect__SWIG_0(arg1 Uint8_t, arg2 int64) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	C._wrap_I2PServerTunnelConnectionHTTP_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.swig_type_147(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) I2PConnect__SWIG_1(arg1 Uint8_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelConnectionHTTP_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) I2PConnect__SWIG_2() {
+	C._wrap_I2PServerTunnelConnectionHTTP_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) I2PConnect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.I2PConnect__SWIG_2()
+		return
+	}
+	if argc == 1 {
+		p.I2PConnect__SWIG_1(a[0].(Uint8_t))
+		return
+	}
+	if argc == 2 {
+		p.I2PConnect__SWIG_0(a[0].(Uint8_t), a[1].(int64))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) Connect__SWIG_0(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_I2PServerTunnelConnectionHTTP_Connect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) Connect__SWIG_1() {
+	C._wrap_I2PServerTunnelConnectionHTTP_Connect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) Connect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.Connect__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.Connect__SWIG_0(a[0].(bool))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) Handle() {
+	C._wrap_I2PServerTunnelConnectionHTTP_Handle_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelConnectionHTTP) Terminate() {
+	C._wrap_I2PServerTunnelConnectionHTTP_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) SwigIsI2PTunnelConnection() {
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) SwigGetI2PTunnelConnection() I2PTunnelConnection {
+	return SwigcptrI2PTunnelConnection(p.Swigcptr())
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) SwigIsI2PServiceHandler() {
+}
+
+func (p SwigcptrI2PServerTunnelConnectionHTTP) SwigGetI2PServiceHandler() I2PServiceHandler {
+	return SwigcptrI2PServiceHandler(p.Swigcptr())
+}
+
+type I2PServerTunnelConnectionHTTP interface {
+	Swigcptr() uintptr
+	SwigIsI2PServerTunnelConnectionHTTP()
+	I2PConnect(a ...interface{})
+	Connect(a ...interface{})
+	Handle()
+	Terminate()
+	SwigIsI2PTunnelConnection()
+	SwigGetI2PTunnelConnection() I2PTunnelConnection
+	SwigIsI2PServiceHandler()
+	SwigGetI2PServiceHandler() I2PServiceHandler
+}
+
+type SwigcptrI2PTunnelConnectionIRC uintptr
+
+func (p SwigcptrI2PTunnelConnectionIRC) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) SwigIsI2PTunnelConnectionIRC() {
+}
+
+func NewI2PTunnelConnectionIRC(arg1 I2PService, arg2 Std_shared_ptr_Sl_i2p_stream_Stream_Sg_, arg3 Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_, arg4 Boost_asio_ip_tcp_endpoint, arg5 Std_string) (_swig_ret I2PTunnelConnectionIRC) {
+	var swig_r I2PTunnelConnectionIRC
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PTunnelConnectionIRC)(SwigcptrI2PTunnelConnectionIRC(C._wrap_new_I2PTunnelConnectionIRC_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func DeleteI2PTunnelConnectionIRC(arg1 I2PTunnelConnectionIRC) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PTunnelConnectionIRC_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) I2PConnect__SWIG_0(arg1 Uint8_t, arg2 int64) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	C._wrap_I2PTunnelConnectionIRC_I2PConnect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.swig_type_147(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) I2PConnect__SWIG_1(arg1 Uint8_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PTunnelConnectionIRC_I2PConnect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) I2PConnect__SWIG_2() {
+	C._wrap_I2PTunnelConnectionIRC_I2PConnect__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) I2PConnect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.I2PConnect__SWIG_2()
+		return
+	}
+	if argc == 1 {
+		p.I2PConnect__SWIG_1(a[0].(Uint8_t))
+		return
+	}
+	if argc == 2 {
+		p.I2PConnect__SWIG_0(a[0].(Uint8_t), a[1].(int64))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) Connect__SWIG_0(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_I2PTunnelConnectionIRC_Connect__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) Connect__SWIG_1() {
+	C._wrap_I2PTunnelConnectionIRC_Connect__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) Connect(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.Connect__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.Connect__SWIG_0(a[0].(bool))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) Handle() {
+	C._wrap_I2PTunnelConnectionIRC_Handle_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PTunnelConnectionIRC) Terminate() {
+	C._wrap_I2PTunnelConnectionIRC_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) SwigIsI2PTunnelConnection() {
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) SwigGetI2PTunnelConnection() I2PTunnelConnection {
+	return SwigcptrI2PTunnelConnection(p.Swigcptr())
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) SwigIsI2PServiceHandler() {
+}
+
+func (p SwigcptrI2PTunnelConnectionIRC) SwigGetI2PServiceHandler() I2PServiceHandler {
+	return SwigcptrI2PServiceHandler(p.Swigcptr())
+}
+
+type I2PTunnelConnectionIRC interface {
+	Swigcptr() uintptr
+	SwigIsI2PTunnelConnectionIRC()
+	I2PConnect(a ...interface{})
+	Connect(a ...interface{})
+	Handle()
+	Terminate()
+	SwigIsI2PTunnelConnection()
+	SwigGetI2PTunnelConnection() I2PTunnelConnection
+	SwigIsI2PServiceHandler()
+	SwigGetI2PServiceHandler() I2PServiceHandler
+}
+
+type SwigcptrI2PClientTunnel uintptr
+
+func (p SwigcptrI2PClientTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PClientTunnel) SwigIsI2PClientTunnel() {
+}
+
+func NewI2PClientTunnel__SWIG_0(arg1 Std_string, arg2 Std_string, arg3 Std_string, arg4 int, arg5 Std_shared_ptr_Sl_ClientDestination_Sg_, arg6 int) (_swig_ret I2PClientTunnel) {
+	var swig_r I2PClientTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6
+	swig_r = (I2PClientTunnel)(SwigcptrI2PClientTunnel(C._wrap_new_I2PClientTunnel__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_intgo(_swig_i_3), C.uintptr_t(_swig_i_4), C.swig_intgo(_swig_i_5))))
+	return swig_r
+}
+
+func NewI2PClientTunnel__SWIG_1(arg1 Std_string, arg2 Std_string, arg3 Std_string, arg4 int, arg5 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret I2PClientTunnel) {
+	var swig_r I2PClientTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PClientTunnel)(SwigcptrI2PClientTunnel(C._wrap_new_I2PClientTunnel__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.swig_intgo(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func NewI2PClientTunnel(a ...interface{}) I2PClientTunnel {
+	argc := len(a)
+	if argc == 5 {
+		return NewI2PClientTunnel__SWIG_1(a[0].(Std_string), a[1].(Std_string), a[2].(Std_string), a[3].(int), a[4].(Std_shared_ptr_Sl_ClientDestination_Sg_))
+	}
+	if argc == 6 {
+		return NewI2PClientTunnel__SWIG_0(a[0].(Std_string), a[1].(Std_string), a[2].(Std_string), a[3].(int), a[4].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[5].(int))
+	}
+	panic("No match for overloaded function call")
+}
+
+func DeleteI2PClientTunnel(arg1 I2PClientTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PClientTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PClientTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2PClientTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PClientTunnel) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_I2PClientTunnel_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PClientTunnel) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_I2PClientTunnel_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_I2PClientTunnel_GetLocalEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PClientTunnel_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PClientTunnel_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) ClearHandlers() {
+	C._wrap_I2PClientTunnel_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PClientTunnel_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PClientTunnel_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PClientTunnel_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_I2PClientTunnel_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrI2PClientTunnel) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PClientTunnel_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PClientTunnel_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PClientTunnel_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PClientTunnel_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrI2PClientTunnel) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_I2PClientTunnel_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetI2PClientTunnel_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PClientTunnel) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetI2PClientTunnel_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrI2PClientTunnel) SwigIsTCPIPAcceptor() {
+}
+
+func (p SwigcptrI2PClientTunnel) SwigGetTCPIPAcceptor() TCPIPAcceptor {
+	return SwigcptrTCPIPAcceptor(p.Swigcptr())
+}
+
+func (p SwigcptrI2PClientTunnel) SwigIsI2PService() {
+}
+
+func (p SwigcptrI2PClientTunnel) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type I2PClientTunnel interface {
+	Swigcptr() uintptr
+	SwigIsI2PClientTunnel()
+	Start()
+	Stop()
+	GetName() (_swig_ret string)
+	GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsTCPIPAcceptor()
+	SwigGetTCPIPAcceptor() TCPIPAcceptor
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
+}
+
+func GetI2P_UDP_SESSION_TIMEOUT() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_I2P_UDP_SESSION_TIMEOUT_get_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func GetI2P_UDP_MAX_MTU() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_I2P_UDP_MAX_MTU_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+type SwigcptrUDPSession uintptr
+
+func (p SwigcptrUDPSession) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrUDPSession) SwigIsUDPSession() {
+}
+
+func (arg1 SwigcptrUDPSession) SetM_Destination(arg2 I2p_datagram_DatagramDestination) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_m_Destination_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetM_Destination() (_swig_ret I2p_datagram_DatagramDestination) {
+	var swig_r I2p_datagram_DatagramDestination
+	_swig_i_0 := arg1
+	swig_r = (I2p_datagram_DatagramDestination)(SwigcptrI2p_datagram_DatagramDestination(C._wrap_UDPSession_m_Destination_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetIPSocket(arg2 Boost_asio_ip_udp_socket) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_IPSocket_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetIPSocket() (_swig_ret Boost_asio_ip_udp_socket) {
+	var swig_r Boost_asio_ip_udp_socket
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_udp_socket)(SwigcptrBoost_asio_ip_udp_socket(C._wrap_UDPSession_IPSocket_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetIdentity(arg2 I2p_data_IdentHash) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_Identity_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetIdentity() (_swig_ret I2p_data_IdentHash) {
+	var swig_r I2p_data_IdentHash
+	_swig_i_0 := arg1
+	swig_r = (I2p_data_IdentHash)(SwigcptrI2p_data_IdentHash(C._wrap_UDPSession_Identity_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetFromEndpoint(arg2 Boost_asio_ip_udp_endpoint) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_FromEndpoint_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetFromEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint) {
+	var swig_r Boost_asio_ip_udp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_udp_endpoint)(SwigcptrBoost_asio_ip_udp_endpoint(C._wrap_UDPSession_FromEndpoint_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetSendEndpoint(arg2 Boost_asio_ip_udp_endpoint) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_SendEndpoint_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetSendEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint) {
+	var swig_r Boost_asio_ip_udp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_udp_endpoint)(SwigcptrBoost_asio_ip_udp_endpoint(C._wrap_UDPSession_SendEndpoint_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetLastActivity(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_LastActivity_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetLastActivity() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_UDPSession_LastActivity_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetLocalPort(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_LocalPort_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetLocalPort() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_UDPSession_LocalPort_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetRemotePort(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_RemotePort_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetRemotePort() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_UDPSession_RemotePort_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) SetM_Buffer(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_UDPSession_m_Buffer_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrUDPSession) GetM_Buffer() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_UDPSession_m_Buffer_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewUDPSession(arg1 Boost_asio_ip_udp_endpoint, arg2 Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_, arg3 Boost_asio_ip_udp_endpoint, arg4 I2p_data_IdentHash, arg5 Uint16_t, arg6 Uint16_t) (_swig_ret UDPSession) {
+	var swig_r UDPSession
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6.Swigcptr()
+	swig_r = (UDPSession)(SwigcptrUDPSession(C._wrap_new_UDPSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4), C.uintptr_t(_swig_i_5))))
+	return swig_r
+}
+
+func (arg1 SwigcptrUDPSession) HandleReceived(arg2 Boost_system_error_code, arg3 Std_size_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_UDPSession_HandleReceived_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+func (arg1 SwigcptrUDPSession) Receive() {
+	_swig_i_0 := arg1
+	C._wrap_UDPSession_Receive_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func DeleteUDPSession(arg1 UDPSession) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_UDPSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type UDPSession interface {
+	Swigcptr() uintptr
+	SwigIsUDPSession()
+	SetM_Destination(arg2 I2p_datagram_DatagramDestination)
+	GetM_Destination() (_swig_ret I2p_datagram_DatagramDestination)
+	SetIPSocket(arg2 Boost_asio_ip_udp_socket)
+	GetIPSocket() (_swig_ret Boost_asio_ip_udp_socket)
+	SetIdentity(arg2 I2p_data_IdentHash)
+	GetIdentity() (_swig_ret I2p_data_IdentHash)
+	SetFromEndpoint(arg2 Boost_asio_ip_udp_endpoint)
+	GetFromEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint)
+	SetSendEndpoint(arg2 Boost_asio_ip_udp_endpoint)
+	GetSendEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint)
+	SetLastActivity(arg2 Uint64_t)
+	GetLastActivity() (_swig_ret Uint64_t)
+	SetLocalPort(arg2 Uint16_t)
+	GetLocalPort() (_swig_ret Uint16_t)
+	SetRemotePort(arg2 Uint16_t)
+	GetRemotePort() (_swig_ret Uint16_t)
+	SetM_Buffer(arg2 Uint8_t)
+	GetM_Buffer() (_swig_ret Uint8_t)
+	HandleReceived(arg2 Boost_system_error_code, arg3 Std_size_t)
+	Receive()
+}
+
+type SwigcptrDatagramSessionInfo uintptr
+
+func (p SwigcptrDatagramSessionInfo) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrDatagramSessionInfo) SwigIsDatagramSessionInfo() {
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetName(arg2 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_Name_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetName() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_DatagramSessionInfo_Name_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetLocalIdent(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_LocalIdent_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetLocalIdent() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_(C._wrap_DatagramSessionInfo_LocalIdent_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetRemoteIdent(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_RemoteIdent_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetRemoteIdent() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_(C._wrap_DatagramSessionInfo_RemoteIdent_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetCurrentIBGW(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_CurrentIBGW_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetCurrentIBGW() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_(C._wrap_DatagramSessionInfo_CurrentIBGW_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetCurrentOBEP(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_CurrentOBEP_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetCurrentOBEP() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_(C._wrap_DatagramSessionInfo_CurrentOBEP_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetLocalEndpoint(arg2 Boost_asio_ip_udp_endpoint) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_LocalEndpoint_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetLocalEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint) {
+	var swig_r Boost_asio_ip_udp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_udp_endpoint)(SwigcptrBoost_asio_ip_udp_endpoint(C._wrap_DatagramSessionInfo_LocalEndpoint_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetRemoteEndpoint(arg2 Boost_asio_ip_udp_endpoint) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_RemoteEndpoint_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetRemoteEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint) {
+	var swig_r Boost_asio_ip_udp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_udp_endpoint)(SwigcptrBoost_asio_ip_udp_endpoint(C._wrap_DatagramSessionInfo_RemoteEndpoint_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) SetIdle(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_DatagramSessionInfo_idle_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrDatagramSessionInfo) GetIdle() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_DatagramSessionInfo_idle_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewDatagramSessionInfo() (_swig_ret DatagramSessionInfo) {
+	var swig_r DatagramSessionInfo
+	swig_r = (DatagramSessionInfo)(SwigcptrDatagramSessionInfo(C._wrap_new_DatagramSessionInfo_i2pdclient_813fe33f58267b59()))
+	return swig_r
+}
+
+func DeleteDatagramSessionInfo(arg1 DatagramSessionInfo) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_DatagramSessionInfo_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type DatagramSessionInfo interface {
+	Swigcptr() uintptr
+	SwigIsDatagramSessionInfo()
+	SetName(arg2 Std_string)
+	GetName() (_swig_ret Std_string)
+	SetLocalIdent(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	GetLocalIdent() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	SetRemoteIdent(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	GetRemoteIdent() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	SetCurrentIBGW(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	GetCurrentIBGW() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	SetCurrentOBEP(arg2 Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	GetCurrentOBEP() (_swig_ret Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_)
+	SetLocalEndpoint(arg2 Boost_asio_ip_udp_endpoint)
+	GetLocalEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint)
+	SetRemoteEndpoint(arg2 Boost_asio_ip_udp_endpoint)
+	GetRemoteEndpoint() (_swig_ret Boost_asio_ip_udp_endpoint)
+	SetIdle(arg2 Uint64_t)
+	GetIdle() (_swig_ret Uint64_t)
+}
+
+type SwigcptrI2PUDPServerTunnel uintptr
+
+func (p SwigcptrI2PUDPServerTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PUDPServerTunnel) SwigIsI2PUDPServerTunnel() {
+}
+
+func NewI2PUDPServerTunnel(arg1 Std_string, arg2 Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_, arg3 Boost_asio_ip_address, arg4 Boost_asio_ip_udp_endpoint, arg5 Uint16_t) (_swig_ret I2PUDPServerTunnel) {
+	var swig_r I2PUDPServerTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PUDPServerTunnel)(SwigcptrI2PUDPServerTunnel(C._wrap_new_I2PUDPServerTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func DeleteI2PUDPServerTunnel(arg1 I2PUDPServerTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PUDPServerTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) ExpireStale__SWIG_0(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PUDPServerTunnel_ExpireStale__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) ExpireStale__SWIG_1() {
+	_swig_i_0 := arg1
+	C._wrap_I2PUDPServerTunnel_ExpireStale__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrI2PUDPServerTunnel) ExpireStale(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.ExpireStale__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.ExpireStale__SWIG_0(a[0].(Uint64_t))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2PUDPServerTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_I2PUDPServerTunnel_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) GetSessions() (_swig_ret Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_) {
+	var swig_r Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_)(SwigcptrStd_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_(C._wrap_I2PUDPServerTunnel_GetSessions_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PUDPServerTunnel_GetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) SetUniqueLocal__SWIG_0(arg2 bool) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_I2PUDPServerTunnel_SetUniqueLocal__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PUDPServerTunnel) SetUniqueLocal__SWIG_1() {
+	_swig_i_0 := arg1
+	C._wrap_I2PUDPServerTunnel_SetUniqueLocal__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrI2PUDPServerTunnel) SetUniqueLocal(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.SetUniqueLocal__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.SetUniqueLocal__SWIG_0(a[0].(bool))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+type I2PUDPServerTunnel interface {
+	Swigcptr() uintptr
+	SwigIsI2PUDPServerTunnel()
+	ExpireStale(a ...interface{})
+	Start()
+	GetName() (_swig_ret string)
+	GetSessions() (_swig_ret Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_)
+	GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_)
+	SetUniqueLocal(a ...interface{})
+}
+
+type SwigcptrI2PUDPClientTunnel uintptr
+
+func (p SwigcptrI2PUDPClientTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PUDPClientTunnel) SwigIsI2PUDPClientTunnel() {
+}
+
+func NewI2PUDPClientTunnel(arg1 Std_string, arg2 Std_string, arg3 Boost_asio_ip_udp_endpoint, arg4 Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_, arg5 Uint16_t) (_swig_ret I2PUDPClientTunnel) {
+	var swig_r I2PUDPClientTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PUDPClientTunnel)(SwigcptrI2PUDPClientTunnel(C._wrap_new_I2PUDPClientTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func DeleteI2PUDPClientTunnel(arg1 I2PUDPClientTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PUDPClientTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2PUDPClientTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_I2PUDPClientTunnel_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) GetSessions() (_swig_ret Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_) {
+	var swig_r Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_)(SwigcptrStd_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_(C._wrap_I2PUDPClientTunnel_GetSessions_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) IsLocalDestination(arg2 I2p_data_IdentHash) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (bool)(C._wrap_I2PUDPClientTunnel_IsLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PUDPClientTunnel_GetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) ExpireStale__SWIG_0(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PUDPClientTunnel_ExpireStale__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PUDPClientTunnel) ExpireStale__SWIG_1() {
+	_swig_i_0 := arg1
+	C._wrap_I2PUDPClientTunnel_ExpireStale__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (p SwigcptrI2PUDPClientTunnel) ExpireStale(a ...interface{}) {
+	argc := len(a)
+	if argc == 0 {
+		p.ExpireStale__SWIG_1()
+		return
+	}
+	if argc == 1 {
+		p.ExpireStale__SWIG_0(a[0].(Uint64_t))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+type I2PUDPClientTunnel interface {
+	Swigcptr() uintptr
+	SwigIsI2PUDPClientTunnel()
+	Start()
+	GetName() (_swig_ret string)
+	GetSessions() (_swig_ret Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_)
+	IsLocalDestination(arg2 I2p_data_IdentHash) (_swig_ret bool)
+	GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_)
+	ExpireStale(a ...interface{})
+}
+
+type SwigcptrI2PServerTunnel uintptr
+
+func (p SwigcptrI2PServerTunnel) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PServerTunnel) SwigIsI2PServerTunnel() {
+}
+
+func NewI2PServerTunnel__SWIG_0(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 int, arg6 bool) (_swig_ret I2PServerTunnel) {
+	var swig_r I2PServerTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5
+	_swig_i_5 := arg6
+	swig_r = (I2PServerTunnel)(SwigcptrI2PServerTunnel(C._wrap_new_I2PServerTunnel__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.swig_intgo(_swig_i_4), C._Bool(_swig_i_5))))
+	return swig_r
+}
+
+func NewI2PServerTunnel__SWIG_1(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 int) (_swig_ret I2PServerTunnel) {
+	var swig_r I2PServerTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5
+	swig_r = (I2PServerTunnel)(SwigcptrI2PServerTunnel(C._wrap_new_I2PServerTunnel__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.swig_intgo(_swig_i_4))))
+	return swig_r
+}
+
+func NewI2PServerTunnel__SWIG_2(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret I2PServerTunnel) {
+	var swig_r I2PServerTunnel
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (I2PServerTunnel)(SwigcptrI2PServerTunnel(C._wrap_new_I2PServerTunnel__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func NewI2PServerTunnel(a ...interface{}) I2PServerTunnel {
+	argc := len(a)
+	if argc == 4 {
+		return NewI2PServerTunnel__SWIG_2(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_))
+	}
+	if argc == 5 {
+		return NewI2PServerTunnel__SWIG_1(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(int))
+	}
+	if argc == 6 {
+		return NewI2PServerTunnel__SWIG_0(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(int), a[5].(bool))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrI2PServerTunnel) Start() {
+	_swig_i_0 := arg1
+	C._wrap_I2PServerTunnel_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PServerTunnel) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_I2PServerTunnel_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrI2PServerTunnel) SetAccessList(arg2 Std_set_Sl_i2p_data_IdentHash_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PServerTunnel_SetAccessList_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PServerTunnel) SetUniqueLocal(arg2 bool) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_I2PServerTunnel_SetUniqueLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C._Bool(_swig_i_1))
+}
+
+func (arg1 SwigcptrI2PServerTunnel) IsUniqueLocal() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_I2PServerTunnel_IsUniqueLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PServerTunnel) GetAddress() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_I2PServerTunnel_GetAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PServerTunnel) GetPort() (_swig_ret int) {
+	var swig_r int
+	_swig_i_0 := arg1
+	swig_r = (int)(C._wrap_I2PServerTunnel_GetPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PServerTunnel) GetLocalPort() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_I2PServerTunnel_GetLocalPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PServerTunnel) GetEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_I2PServerTunnel_GetEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrI2PServerTunnel) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_I2PServerTunnel_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func DeleteI2PServerTunnel(arg1 I2PServerTunnel) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PServerTunnel_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnel_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnel_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) ClearHandlers() {
+	C._wrap_I2PServerTunnel_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnel_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnel_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PServerTunnel_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_I2PServerTunnel_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrI2PServerTunnel) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnel_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PServerTunnel_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PServerTunnel_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PServerTunnel_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrI2PServerTunnel) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_I2PServerTunnel_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetI2PServerTunnel_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnel) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetI2PServerTunnel_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrI2PServerTunnel) SwigIsI2PService() {
+}
+
+func (p SwigcptrI2PServerTunnel) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type I2PServerTunnel interface {
+	Swigcptr() uintptr
+	SwigIsI2PServerTunnel()
+	Start()
+	Stop()
+	SetAccessList(arg2 Std_set_Sl_i2p_data_IdentHash_Sg_)
+	SetUniqueLocal(arg2 bool)
+	IsUniqueLocal() (_swig_ret bool)
+	GetAddress() (_swig_ret Std_string)
+	GetPort() (_swig_ret int)
+	GetLocalPort() (_swig_ret Uint16_t)
+	GetEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	GetName() (_swig_ret string)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
+}
+
+type SwigcptrI2PServerTunnelHTTP uintptr
+
+func (p SwigcptrI2PServerTunnelHTTP) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) SwigIsI2PServerTunnelHTTP() {
+}
+
+func NewI2PServerTunnelHTTP__SWIG_0(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 Std_string, arg6 int, arg7 bool) (_swig_ret I2PServerTunnelHTTP) {
+	var swig_r I2PServerTunnelHTTP
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6
+	_swig_i_6 := arg7
+	swig_r = (I2PServerTunnelHTTP)(SwigcptrI2PServerTunnelHTTP(C._wrap_new_I2PServerTunnelHTTP__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4), C.swig_intgo(_swig_i_5), C._Bool(_swig_i_6))))
+	return swig_r
+}
+
+func NewI2PServerTunnelHTTP__SWIG_1(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 Std_string, arg6 int) (_swig_ret I2PServerTunnelHTTP) {
+	var swig_r I2PServerTunnelHTTP
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6
+	swig_r = (I2PServerTunnelHTTP)(SwigcptrI2PServerTunnelHTTP(C._wrap_new_I2PServerTunnelHTTP__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4), C.swig_intgo(_swig_i_5))))
+	return swig_r
+}
+
+func NewI2PServerTunnelHTTP__SWIG_2(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 Std_string) (_swig_ret I2PServerTunnelHTTP) {
+	var swig_r I2PServerTunnelHTTP
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PServerTunnelHTTP)(SwigcptrI2PServerTunnelHTTP(C._wrap_new_I2PServerTunnelHTTP__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func NewI2PServerTunnelHTTP(a ...interface{}) I2PServerTunnelHTTP {
+	argc := len(a)
+	if argc == 5 {
+		return NewI2PServerTunnelHTTP__SWIG_2(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(Std_string))
+	}
+	if argc == 6 {
+		return NewI2PServerTunnelHTTP__SWIG_1(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(Std_string), a[5].(int))
+	}
+	if argc == 7 {
+		return NewI2PServerTunnelHTTP__SWIG_0(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(Std_string), a[5].(int), a[6].(bool))
+	}
+	panic("No match for overloaded function call")
+}
+
+func DeleteI2PServerTunnelHTTP(arg1 I2PServerTunnelHTTP) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PServerTunnelHTTP_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) Start() {
+	C._wrap_I2PServerTunnelHTTP_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) Stop() {
+	C._wrap_I2PServerTunnelHTTP_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) SetAccessList(arg1 Std_set_Sl_i2p_data_IdentHash_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_SetAccessList_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) SetUniqueLocal(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_I2PServerTunnelHTTP_SetUniqueLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) IsUniqueLocal() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_I2PServerTunnelHTTP_IsUniqueLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetAddress() (_swig_ret Std_string) {
+	var swig_r Std_string
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_I2PServerTunnelHTTP_GetAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetPort() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_I2PServerTunnelHTTP_GetPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetLocalPort() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_I2PServerTunnelHTTP_GetLocalPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_I2PServerTunnelHTTP_GetEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetName() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2PServerTunnelHTTP_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) ClearHandlers() {
+	C._wrap_I2PServerTunnelHTTP_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PServerTunnelHTTP_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_I2PServerTunnelHTTP_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PServerTunnelHTTP_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PServerTunnelHTTP_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PServerTunnelHTTP_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_I2PServerTunnelHTTP_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetI2PServerTunnelHTTP_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelHTTP) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetI2PServerTunnelHTTP_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) SwigIsI2PServerTunnel() {
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) SwigGetI2PServerTunnel() I2PServerTunnel {
+	return SwigcptrI2PServerTunnel(p.Swigcptr())
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) SwigIsI2PService() {
+}
+
+func (p SwigcptrI2PServerTunnelHTTP) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type I2PServerTunnelHTTP interface {
+	Swigcptr() uintptr
+	SwigIsI2PServerTunnelHTTP()
+	Start()
+	Stop()
+	SetAccessList(arg1 Std_set_Sl_i2p_data_IdentHash_Sg_)
+	SetUniqueLocal(arg1 bool)
+	IsUniqueLocal() (_swig_ret bool)
+	GetAddress() (_swig_ret Std_string)
+	GetPort() (_swig_ret int)
+	GetLocalPort() (_swig_ret Uint16_t)
+	GetEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	GetName() (_swig_ret string)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsI2PServerTunnel()
+	SwigGetI2PServerTunnel() I2PServerTunnel
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
+}
+
+type SwigcptrI2PServerTunnelIRC uintptr
+
+func (p SwigcptrI2PServerTunnelIRC) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrI2PServerTunnelIRC) SwigIsI2PServerTunnelIRC() {
+}
+
+func NewI2PServerTunnelIRC__SWIG_0(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 Std_string, arg6 int, arg7 bool) (_swig_ret I2PServerTunnelIRC) {
+	var swig_r I2PServerTunnelIRC
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6
+	_swig_i_6 := arg7
+	swig_r = (I2PServerTunnelIRC)(SwigcptrI2PServerTunnelIRC(C._wrap_new_I2PServerTunnelIRC__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4), C.swig_intgo(_swig_i_5), C._Bool(_swig_i_6))))
+	return swig_r
+}
+
+func NewI2PServerTunnelIRC__SWIG_1(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 Std_string, arg6 int) (_swig_ret I2PServerTunnelIRC) {
+	var swig_r I2PServerTunnelIRC
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6
+	swig_r = (I2PServerTunnelIRC)(SwigcptrI2PServerTunnelIRC(C._wrap_new_I2PServerTunnelIRC__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4), C.swig_intgo(_swig_i_5))))
+	return swig_r
+}
+
+func NewI2PServerTunnelIRC__SWIG_2(arg1 Std_string, arg2 Std_string, arg3 int, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_, arg5 Std_string) (_swig_ret I2PServerTunnelIRC) {
+	var swig_r I2PServerTunnelIRC
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (I2PServerTunnelIRC)(SwigcptrI2PServerTunnelIRC(C._wrap_new_I2PServerTunnelIRC__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func NewI2PServerTunnelIRC(a ...interface{}) I2PServerTunnelIRC {
+	argc := len(a)
+	if argc == 5 {
+		return NewI2PServerTunnelIRC__SWIG_2(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(Std_string))
+	}
+	if argc == 6 {
+		return NewI2PServerTunnelIRC__SWIG_1(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(Std_string), a[5].(int))
+	}
+	if argc == 7 {
+		return NewI2PServerTunnelIRC__SWIG_0(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(Std_shared_ptr_Sl_ClientDestination_Sg_), a[4].(Std_string), a[5].(int), a[6].(bool))
+	}
+	panic("No match for overloaded function call")
+}
+
+func DeleteI2PServerTunnelIRC(arg1 I2PServerTunnelIRC) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_I2PServerTunnelIRC_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) Start() {
+	C._wrap_I2PServerTunnelIRC_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) Stop() {
+	C._wrap_I2PServerTunnelIRC_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) SetAccessList(arg1 Std_set_Sl_i2p_data_IdentHash_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_SetAccessList_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) SetUniqueLocal(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_I2PServerTunnelIRC_SetUniqueLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) IsUniqueLocal() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_I2PServerTunnelIRC_IsUniqueLocal_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetAddress() (_swig_ret Std_string) {
+	var swig_r Std_string
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_I2PServerTunnelIRC_GetAddress_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetPort() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_I2PServerTunnelIRC_GetPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetLocalPort() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_I2PServerTunnelIRC_GetLocalPort_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_I2PServerTunnelIRC_GetEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetName() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_I2PServerTunnelIRC_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) ClearHandlers() {
+	C._wrap_I2PServerTunnelIRC_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_I2PServerTunnelIRC_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_I2PServerTunnelIRC_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrI2PServerTunnelIRC) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PServerTunnelIRC_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_I2PServerTunnelIRC_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_I2PServerTunnelIRC_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrI2PServerTunnelIRC) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_I2PServerTunnelIRC_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetI2PServerTunnelIRC_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrI2PServerTunnelIRC) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetI2PServerTunnelIRC_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrI2PServerTunnelIRC) SwigIsI2PServerTunnel() {
+}
+
+func (p SwigcptrI2PServerTunnelIRC) SwigGetI2PServerTunnel() I2PServerTunnel {
+	return SwigcptrI2PServerTunnel(p.Swigcptr())
+}
+
+func (p SwigcptrI2PServerTunnelIRC) SwigIsI2PService() {
+}
+
+func (p SwigcptrI2PServerTunnelIRC) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type I2PServerTunnelIRC interface {
+	Swigcptr() uintptr
+	SwigIsI2PServerTunnelIRC()
+	Start()
+	Stop()
+	SetAccessList(arg1 Std_set_Sl_i2p_data_IdentHash_Sg_)
+	SetUniqueLocal(arg1 bool)
+	IsUniqueLocal() (_swig_ret bool)
+	GetAddress() (_swig_ret Std_string)
+	GetPort() (_swig_ret int)
+	GetLocalPort() (_swig_ret Uint16_t)
+	GetEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	GetName() (_swig_ret string)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsI2PServerTunnel()
+	SwigGetI2PServerTunnel() I2PServerTunnel
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
+}
+
+type SwigcptrMatchedTunnelDestination uintptr
+
+func (p SwigcptrMatchedTunnelDestination) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrMatchedTunnelDestination) SwigIsMatchedTunnelDestination() {
+}
+
+func NewMatchedTunnelDestination__SWIG_0(arg1 I2p_data_PrivateKeys, arg2 Std_string, arg3 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret MatchedTunnelDestination) {
+	var swig_r MatchedTunnelDestination
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (MatchedTunnelDestination)(SwigcptrMatchedTunnelDestination(C._wrap_new_MatchedTunnelDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func NewMatchedTunnelDestination__SWIG_1(arg1 I2p_data_PrivateKeys, arg2 Std_string) (_swig_ret MatchedTunnelDestination) {
+	var swig_r MatchedTunnelDestination
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (MatchedTunnelDestination)(SwigcptrMatchedTunnelDestination(C._wrap_new_MatchedTunnelDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func NewMatchedTunnelDestination(a ...interface{}) MatchedTunnelDestination {
+	argc := len(a)
+	if argc == 2 {
+		return NewMatchedTunnelDestination__SWIG_1(a[0].(I2p_data_PrivateKeys), a[1].(Std_string))
+	}
+	if argc == 3 {
+		return NewMatchedTunnelDestination__SWIG_0(a[0].(I2p_data_PrivateKeys), a[1].(Std_string), a[2].(Std_map_Sl_std_string_Sc_std_string_Sg_))
+	}
+	panic("No match for overloaded function call")
+}
+
+func (arg1 SwigcptrMatchedTunnelDestination) Start() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_MatchedTunnelDestination_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrMatchedTunnelDestination) Stop() (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	swig_r = (bool)(C._wrap_MatchedTunnelDestination_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrMatchedTunnelDestination) SelectPeers(arg2 I2p_tunnel_Path, arg3 int, arg4 bool) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4
+	swig_r = (bool)(C._wrap_MatchedTunnelDestination_SelectPeers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3)))
+	return swig_r
+}
+
+func (arg1 SwigcptrMatchedTunnelDestination) OnBuildResult(arg2 I2p_tunnel_Path, arg3 bool, arg4 I2p_tunnel_TunnelBuildResult) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (bool)(C._wrap_MatchedTunnelDestination_OnBuildResult_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C._Bool(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	return swig_r
+}
+
+func DeleteMatchedTunnelDestination(arg1 MatchedTunnelDestination) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_MatchedTunnelDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type MatchedTunnelDestination interface {
+	Swigcptr() uintptr
+	SwigIsMatchedTunnelDestination()
+	Start() (_swig_ret bool)
+	Stop() (_swig_ret bool)
+	SelectPeers(arg2 I2p_tunnel_Path, arg3 int, arg4 bool) (_swig_ret bool)
+	OnBuildResult(arg2 I2p_tunnel_Path, arg3 bool, arg4 I2p_tunnel_TunnelBuildResult) (_swig_ret bool)
+}
+
+func GetSAM_SOCKET_BUFFER_SIZE() (_swig_ret int64) {
+	var swig_r int64
+	swig_r = (int64)(C._wrap_SAM_SOCKET_BUFFER_SIZE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetSAM_SOCKET_CONNECTION_MAX_IDLE() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_SAM_SOCKET_CONNECTION_MAX_IDLE_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetSAM_SESSION_READINESS_CHECK_INTERVAL() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_SAM_SESSION_READINESS_CHECK_INTERVAL_get_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+func GetSAM_HANDSHAKE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_HANDSHAKE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_HANDSHAKE_REPLY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_HANDSHAKE_REPLY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_HANDSHAKE_NOVERSION() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_HANDSHAKE_NOVERSION_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_HANDSHAKE_I2P_ERROR() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_HANDSHAKE_I2P_ERROR_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_CREATE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_CREATE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_CREATE_REPLY_OK() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_CREATE_REPLY_OK_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_CREATE_DUPLICATED_ID() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_CREATE_DUPLICATED_ID_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_CREATE_DUPLICATED_DEST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_CREATE_DUPLICATED_DEST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_CREATE_INVALID_ID() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_CREATE_INVALID_ID_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_STATUS_INVALID_KEY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_STATUS_INVALID_KEY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_SESSION_STATUS_I2P_ERROR() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_SESSION_STATUS_I2P_ERROR_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_CONNECT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_CONNECT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_STATUS_OK() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_STATUS_OK_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_STATUS_INVALID_ID() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_STATUS_INVALID_ID_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_STATUS_INVALID_KEY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_STATUS_INVALID_KEY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_STATUS_CANT_REACH_PEER() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_STATUS_CANT_REACH_PEER_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_STATUS_I2P_ERROR() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_STATUS_I2P_ERROR_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_STREAM_ACCEPT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_STREAM_ACCEPT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_DATAGRAM_SEND() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_DATAGRAM_SEND_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_RAW_SEND() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_RAW_SEND_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_DEST_GENERATE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_DEST_GENERATE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_DEST_REPLY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_DEST_REPLY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_DEST_REPLY_I2P_ERROR() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_DEST_REPLY_I2P_ERROR_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_NAMING_LOOKUP() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_NAMING_LOOKUP_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_NAMING_REPLY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_NAMING_REPLY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_DATAGRAM_RECEIVED() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_DATAGRAM_RECEIVED_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_RAW_RECEIVED() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_RAW_RECEIVED_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_NAMING_REPLY_INVALID_KEY() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_NAMING_REPLY_INVALID_KEY_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_NAMING_REPLY_KEY_NOT_FOUND() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_NAMING_REPLY_KEY_NOT_FOUND_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_MIN() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_MIN_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_MAX() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_MAX_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_STYLE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_STYLE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_ID() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_ID_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_SILENT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_SILENT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_DESTINATION() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_DESTINATION_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_NAME() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_NAME_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_SIGNATURE_TYPE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_SIGNATURE_TYPE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_CRYPTO_TYPE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_CRYPTO_TYPE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_PARAM_SIZE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_PARAM_SIZE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_TRANSIENT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_TRANSIENT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_STREAM() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_STREAM_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_DATAGRAM() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_DATAGRAM_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_RAW() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_RAW_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_TRUE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_TRUE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_FALSE() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_FALSE_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_HOST() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_HOST_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func GetSAM_VALUE_PORT() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SAM_VALUE_PORT_get_i2pdclient_813fe33f58267b59()
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+type I2pClientSAMSocketType int
+func _swig_geteSAMSocketTypeUnknown() (_swig_ret I2pClientSAMSocketType) {
+	var swig_r I2pClientSAMSocketType
+	swig_r = (I2pClientSAMSocketType)(C._wrap_eSAMSocketTypeUnknown_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSocketTypeUnknown I2pClientSAMSocketType = _swig_geteSAMSocketTypeUnknown()
+func _swig_geteSAMSocketTypeSession() (_swig_ret I2pClientSAMSocketType) {
+	var swig_r I2pClientSAMSocketType
+	swig_r = (I2pClientSAMSocketType)(C._wrap_eSAMSocketTypeSession_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSocketTypeSession I2pClientSAMSocketType = _swig_geteSAMSocketTypeSession()
+func _swig_geteSAMSocketTypeStream() (_swig_ret I2pClientSAMSocketType) {
+	var swig_r I2pClientSAMSocketType
+	swig_r = (I2pClientSAMSocketType)(C._wrap_eSAMSocketTypeStream_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSocketTypeStream I2pClientSAMSocketType = _swig_geteSAMSocketTypeStream()
+func _swig_geteSAMSocketTypeAcceptor() (_swig_ret I2pClientSAMSocketType) {
+	var swig_r I2pClientSAMSocketType
+	swig_r = (I2pClientSAMSocketType)(C._wrap_eSAMSocketTypeAcceptor_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSocketTypeAcceptor I2pClientSAMSocketType = _swig_geteSAMSocketTypeAcceptor()
+func _swig_geteSAMSocketTypeTerminated() (_swig_ret I2pClientSAMSocketType) {
+	var swig_r I2pClientSAMSocketType
+	swig_r = (I2pClientSAMSocketType)(C._wrap_eSAMSocketTypeTerminated_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSocketTypeTerminated I2pClientSAMSocketType = _swig_geteSAMSocketTypeTerminated()
+type SwigcptrSAMSocket uintptr
+
+func (p SwigcptrSAMSocket) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrSAMSocket) SwigIsSAMSocket() {
+}
+
+func NewSAMSocket(arg1 SAMBridge) (_swig_ret SAMSocket) {
+	var swig_r SAMSocket
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (SAMSocket)(SwigcptrSAMSocket(C._wrap_new_SAMSocket_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func DeleteSAMSocket(arg1 SAMSocket) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_SAMSocket_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSAMSocket) GetSocket() (_swig_ret Boost_asio_ip_tcp_socket) {
+	var swig_r Boost_asio_ip_tcp_socket
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_tcp_socket)(SwigcptrBoost_asio_ip_tcp_socket(C._wrap_SAMSocket_GetSocket_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMSocket) ReceiveHandshake() {
+	_swig_i_0 := arg1
+	C._wrap_SAMSocket_ReceiveHandshake_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSAMSocket) SetSocketType(arg2 I2pClientSAMSocketType) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_SAMSocket_SetSocketType_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMSocket) GetSocketType() (_swig_ret I2pClientSAMSocketType) {
+	var swig_r I2pClientSAMSocketType
+	_swig_i_0 := arg1
+	swig_r = (I2pClientSAMSocketType)(C._wrap_SAMSocket_GetSocketType_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMSocket) Terminate(arg2 string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_SAMSocket_Terminate_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), *(*C.swig_type_203)(unsafe.Pointer(&_swig_i_1)))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrSAMSocket) IsSession(arg2 Std_string) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (bool)(C._wrap_SAMSocket_IsSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+type SAMSocket interface {
+	Swigcptr() uintptr
+	SwigIsSAMSocket()
+	GetSocket() (_swig_ret Boost_asio_ip_tcp_socket)
+	ReceiveHandshake()
+	SetSocketType(arg2 I2pClientSAMSocketType)
+	GetSocketType() (_swig_ret I2pClientSAMSocketType)
+	Terminate(arg2 string)
+	IsSession(arg2 Std_string) (_swig_ret bool)
+}
+
+type I2pClientSAMSessionType int
+func _swig_geteSAMSessionTypeUnknown() (_swig_ret I2pClientSAMSessionType) {
+	var swig_r I2pClientSAMSessionType
+	swig_r = (I2pClientSAMSessionType)(C._wrap_eSAMSessionTypeUnknown_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSessionTypeUnknown I2pClientSAMSessionType = _swig_geteSAMSessionTypeUnknown()
+func _swig_geteSAMSessionTypeStream() (_swig_ret I2pClientSAMSessionType) {
+	var swig_r I2pClientSAMSessionType
+	swig_r = (I2pClientSAMSessionType)(C._wrap_eSAMSessionTypeStream_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSessionTypeStream I2pClientSAMSessionType = _swig_geteSAMSessionTypeStream()
+func _swig_geteSAMSessionTypeDatagram() (_swig_ret I2pClientSAMSessionType) {
+	var swig_r I2pClientSAMSessionType
+	swig_r = (I2pClientSAMSessionType)(C._wrap_eSAMSessionTypeDatagram_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSessionTypeDatagram I2pClientSAMSessionType = _swig_geteSAMSessionTypeDatagram()
+func _swig_geteSAMSessionTypeRaw() (_swig_ret I2pClientSAMSessionType) {
+	var swig_r I2pClientSAMSessionType
+	swig_r = (I2pClientSAMSessionType)(C._wrap_eSAMSessionTypeRaw_i2pdclient_813fe33f58267b59())
+	return swig_r
+}
+
+var ESAMSessionTypeRaw I2pClientSAMSessionType = _swig_geteSAMSessionTypeRaw()
+type SwigcptrSAMSession uintptr
+
+func (p SwigcptrSAMSession) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrSAMSession) SwigIsSAMSession() {
+}
+
+func (arg1 SwigcptrSAMSession) SetM_Bridge(arg2 SAMBridge) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SAMSession_m_Bridge_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMSession) GetM_Bridge() (_swig_ret SAMBridge) {
+	var swig_r SAMBridge
+	_swig_i_0 := arg1
+	swig_r = (SAMBridge)(SwigcptrSAMBridge(C._wrap_SAMSession_m_Bridge_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMSession) SetLocalDestination(arg2 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SAMSession_localDestination_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMSession) GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_SAMSession_localDestination_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMSession) SetUDPEndpoint(arg2 Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SAMSession_UDPEndpoint_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMSession) GetUDPEndpoint() (_swig_ret Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_) {
+	var swig_r Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_)(SwigcptrStd_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_(C._wrap_SAMSession_UDPEndpoint_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMSession) SetName(arg2 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SAMSession_Name_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMSession) GetName() (_swig_ret Std_string) {
+	var swig_r Std_string
+	_swig_i_0 := arg1
+	swig_r = (Std_string)(SwigcptrStd_string(C._wrap_SAMSession_Name_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMSession) SetType(arg2 I2pClientSAMSessionType) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_SAMSession_Type_set_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMSession) GetType() (_swig_ret I2pClientSAMSessionType) {
+	var swig_r I2pClientSAMSessionType
+	_swig_i_0 := arg1
+	swig_r = (I2pClientSAMSessionType)(C._wrap_SAMSession_Type_get_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func NewSAMSession(arg1 SAMBridge, arg2 Std_string, arg3 I2pClientSAMSessionType, arg4 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret SAMSession) {
+	var swig_r SAMSession
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (SAMSession)(SwigcptrSAMSession(C._wrap_new_SAMSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3))))
+	return swig_r
+}
+
+func DeleteSAMSession(arg1 SAMSession) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_SAMSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSAMSession) CloseStreams() {
+	_swig_i_0 := arg1
+	C._wrap_SAMSession_CloseStreams_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+type SAMSession interface {
+	Swigcptr() uintptr
+	SwigIsSAMSession()
+	SetM_Bridge(arg2 SAMBridge)
+	GetM_Bridge() (_swig_ret SAMBridge)
+	SetLocalDestination(arg2 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	GetLocalDestination() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_)
+	SetUDPEndpoint(arg2 Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_)
+	GetUDPEndpoint() (_swig_ret Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_)
+	SetName(arg2 Std_string)
+	GetName() (_swig_ret Std_string)
+	SetType(arg2 I2pClientSAMSessionType)
+	GetType() (_swig_ret I2pClientSAMSessionType)
+	CloseStreams()
+}
+
+type SwigcptrSAMBridge uintptr
+
+func (p SwigcptrSAMBridge) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrSAMBridge) SwigIsSAMBridge() {
+}
+
+func NewSAMBridge(arg1 Std_string, arg2 int) (_swig_ret SAMBridge) {
+	var swig_r SAMBridge
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	swig_r = (SAMBridge)(SwigcptrSAMBridge(C._wrap_new_SAMBridge_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
+	return swig_r
+}
+
+func DeleteSAMBridge(arg1 SAMBridge) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_SAMBridge_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSAMBridge) Start() {
+	_swig_i_0 := arg1
+	C._wrap_SAMBridge_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSAMBridge) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_SAMBridge_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSAMBridge) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_SAMBridge_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMBridge) CreateSession(arg2 Std_string, arg3 I2pClientSAMSessionType, arg4 Std_string, arg5 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_client_SAMSession_Sg_(C._wrap_SAMBridge_CreateSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMBridge) CloseSession(arg2 Std_string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SAMBridge_CloseSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMBridge) FindSession(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_) {
+	var swig_r Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_)(SwigcptrStd_shared_ptr_Sl_i2p_client_SAMSession_Sg_(C._wrap_SAMBridge_FindSession_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMBridge) ListSockets(arg2 Std_string) (_swig_ret Std_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_) {
+	var swig_r Std_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Std_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_)(SwigcptrStd_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_(C._wrap_SAMBridge_ListSockets_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMBridge) SendTo(arg2 Uint8_t, arg3 int64, arg4 Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	C._wrap_SAMBridge_SendTo_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_type_204(_swig_i_2), C.uintptr_t(_swig_i_3))
+}
+
+func (arg1 SwigcptrSAMBridge) RemoveSocket(arg2 Std_shared_ptr_Sl_i2p_client_SAMSocket_Sg_) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SAMBridge_RemoveSocket_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrSAMBridge) ResolveSignatureType(arg2 Std_string, arg3 I2p_data_SigningKeyType) (_swig_ret bool) {
+	var swig_r bool
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (bool)(C._wrap_SAMBridge_ResolveSignatureType_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func (arg1 SwigcptrSAMBridge) GetSessions() (_swig_ret Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_) {
+	var swig_r Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_
+	_swig_i_0 := arg1
+	swig_r = (Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_)(SwigcptrStd_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_(C._wrap_SAMBridge_GetSessions_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type SAMBridge interface {
+	Swigcptr() uintptr
+	SwigIsSAMBridge()
+	Start()
+	Stop()
+	GetService() (_swig_ret Boost_asio_io_service)
+	CreateSession(arg2 Std_string, arg3 I2pClientSAMSessionType, arg4 Std_string, arg5 Std_map_Sl_std_string_Sc_std_string_Sg_) (_swig_ret Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_)
+	CloseSession(arg2 Std_string)
+	FindSession(arg2 Std_string) (_swig_ret Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_)
+	ListSockets(arg2 Std_string) (_swig_ret Std_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_)
+	SendTo(arg2 Uint8_t, arg3 int64, arg4 Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_)
+	RemoveSocket(arg2 Std_shared_ptr_Sl_i2p_client_SAMSocket_Sg_)
+	ResolveSignatureType(arg2 Std_string, arg3 I2p_data_SigningKeyType) (_swig_ret bool)
+	GetSessions() (_swig_ret Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_)
+}
+
+type SwigcptrSOCKSServer uintptr
+
+func (p SwigcptrSOCKSServer) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrSOCKSServer) SwigIsSOCKSServer() {
+}
+
+func NewSOCKSServer__SWIG_0(arg1 Std_string, arg2 Std_string, arg3 int, arg4 bool, arg5 Std_string, arg6 Uint16_t, arg7 Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_) (_swig_ret SOCKSServer) {
+	var swig_r SOCKSServer
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6.Swigcptr()
+	_swig_i_6 := arg7.Swigcptr()
+	swig_r = (SOCKSServer)(SwigcptrSOCKSServer(C._wrap_new_SOCKSServer__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3), C.uintptr_t(_swig_i_4), C.uintptr_t(_swig_i_5), C.uintptr_t(_swig_i_6))))
+	return swig_r
+}
+
+func NewSOCKSServer__SWIG_1(arg1 Std_string, arg2 Std_string, arg3 int, arg4 bool, arg5 Std_string, arg6 Uint16_t) (_swig_ret SOCKSServer) {
+	var swig_r SOCKSServer
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4
+	_swig_i_4 := arg5.Swigcptr()
+	_swig_i_5 := arg6.Swigcptr()
+	swig_r = (SOCKSServer)(SwigcptrSOCKSServer(C._wrap_new_SOCKSServer__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2), C._Bool(_swig_i_3), C.uintptr_t(_swig_i_4), C.uintptr_t(_swig_i_5))))
+	return swig_r
+}
+
+func NewSOCKSServer(a ...interface{}) SOCKSServer {
+	argc := len(a)
+	if argc == 6 {
+		return NewSOCKSServer__SWIG_1(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(bool), a[4].(Std_string), a[5].(Uint16_t))
+	}
+	if argc == 7 {
+		return NewSOCKSServer__SWIG_0(a[0].(Std_string), a[1].(Std_string), a[2].(int), a[3].(bool), a[4].(Std_string), a[5].(Uint16_t), a[6].(Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_))
+	}
+	panic("No match for overloaded function call")
+}
+
+func DeleteSOCKSServer(arg1 SOCKSServer) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_SOCKSServer_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrSOCKSServer) SetUpstreamProxy(arg2 Std_string, arg3 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	C._wrap_SOCKSServer_SetUpstreamProxy_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2))
+}
+
+func (_swig_base SwigcptrSOCKSServer) Start() {
+	C._wrap_SOCKSServer_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrSOCKSServer) Stop() {
+	C._wrap_SOCKSServer_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrSOCKSServer) GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_SOCKSServer_GetLocalEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrSOCKSServer) GetName() (_swig_ret string) {
+	var swig_r string
+	swig_r_p := C._wrap_SOCKSServer_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (_swig_base SwigcptrSOCKSServer) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_SOCKSServer_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrSOCKSServer) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_SOCKSServer_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrSOCKSServer) ClearHandlers() {
+	C._wrap_SOCKSServer_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrSOCKSServer) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_SOCKSServer_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrSOCKSServer) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_SOCKSServer_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrSOCKSServer) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_SOCKSServer_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrSOCKSServer) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_SOCKSServer_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrSOCKSServer) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrSOCKSServer) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_SOCKSServer_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrSOCKSServer) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_SOCKSServer_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrSOCKSServer) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_SOCKSServer_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrSOCKSServer) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_SOCKSServer_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrSOCKSServer) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrSOCKSServer) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_SOCKSServer_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrSOCKSServer) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetSOCKSServer_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrSOCKSServer) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetSOCKSServer_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrSOCKSServer) SwigIsTCPIPAcceptor() {
+}
+
+func (p SwigcptrSOCKSServer) SwigGetTCPIPAcceptor() TCPIPAcceptor {
+	return SwigcptrTCPIPAcceptor(p.Swigcptr())
+}
+
+func (p SwigcptrSOCKSServer) SwigIsI2PService() {
+}
+
+func (p SwigcptrSOCKSServer) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type SOCKSServer interface {
+	Swigcptr() uintptr
+	SwigIsSOCKSServer()
+	SetUpstreamProxy(arg2 Std_string, arg3 Uint16_t)
+	Start()
+	Stop()
+	GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	GetName() (_swig_ret string)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsTCPIPAcceptor()
+	SwigGetTCPIPAcceptor() TCPIPAcceptor
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
+}
+
+type SwigcptrWebsocketServer uintptr
+
+func (p SwigcptrWebsocketServer) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrWebsocketServer) SwigIsWebsocketServer() {
+}
+
+func NewWebsocketServer(arg1 Std_string, arg2 int) (_swig_ret WebsocketServer) {
+	var swig_r WebsocketServer
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	swig_r = (WebsocketServer)(SwigcptrWebsocketServer(C._wrap_new_WebsocketServer_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))))
+	return swig_r
+}
+
+func DeleteWebsocketServer(arg1 WebsocketServer) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_WebsocketServer_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrWebsocketServer) Start() {
+	_swig_i_0 := arg1
+	C._wrap_WebsocketServer_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrWebsocketServer) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_WebsocketServer_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrWebsocketServer) ToListener() (_swig_ret EventListener) {
+	var swig_r EventListener
+	_swig_i_0 := arg1
+	swig_r = (EventListener)(SwigcptrEventListener(C._wrap_WebsocketServer_ToListener_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+type WebsocketServer interface {
+	Swigcptr() uintptr
+	SwigIsWebsocketServer()
+	Start()
+	Stop()
+	ToListener() (_swig_ret EventListener)
+}
+
+type SwigcptrWebSocks uintptr
+
+func (p SwigcptrWebSocks) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrWebSocks) SwigIsWebSocks() {
+}
+
+func NewWebSocks(arg1 Std_string, arg2 int, arg3 Std_shared_ptr_Sl_ClientDestination_Sg_) (_swig_ret WebSocks) {
+	var swig_r WebSocks
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (WebSocks)(SwigcptrWebSocks(C._wrap_new_WebSocks_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.uintptr_t(_swig_i_2))))
+	return swig_r
+}
+
+func DeleteWebSocks(arg1 WebSocks) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_WebSocks_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrWebSocks) Start() {
+	_swig_i_0 := arg1
+	C._wrap_WebSocks_Start_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrWebSocks) Stop() {
+	_swig_i_0 := arg1
+	C._wrap_WebSocks_Stop_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+}
+
+func (arg1 SwigcptrWebSocks) GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint) {
+	var swig_r Boost_asio_ip_tcp_endpoint
+	_swig_i_0 := arg1
+	swig_r = (Boost_asio_ip_tcp_endpoint)(SwigcptrBoost_asio_ip_tcp_endpoint(C._wrap_WebSocks_GetLocalEndpoint_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrWebSocks) GetName() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_WebSocks_GetName_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func (_swig_base SwigcptrWebSocks) AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_WebSocks_AddHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrWebSocks) RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_WebSocks_RemoveHandler_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrWebSocks) ClearHandlers() {
+	C._wrap_WebSocks_ClearHandlers_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))
+}
+
+func (_swig_base SwigcptrWebSocks) SetConnectTimeout(arg1 Uint32_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_WebSocks_SetConnectTimeout_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrWebSocks) AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_WebSocks_AddReadyCallback_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrWebSocks) GetLocalDestination__SWIG_0() (_swig_ret Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_(C._wrap_WebSocks_GetLocalDestination__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrWebSocks) GetLocalDestination__SWIG_1() (_swig_ret Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_) {
+	var swig_r Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_
+	swig_r = (Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_)(SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_(C._wrap_WebSocks_GetLocalDestination__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (p SwigcptrWebSocks) GetLocalDestination(a ...interface{}) interface{} {
+	argc := len(a)
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_0()
+	}
+	if argc == 0 {
+		return p.GetLocalDestination__SWIG_1()
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrWebSocks) SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_WebSocks_SetLocalDestination_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0))
+}
+
+func (_swig_base SwigcptrWebSocks) CreateStream__SWIG_0(arg1 StreamRequestComplete, arg2 Std_string, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_WebSocks_CreateStream__SWIG_0_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (_swig_base SwigcptrWebSocks) CreateStream__SWIG_1(arg1 StreamRequestComplete, arg2 Std_string) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_WebSocks_CreateStream__SWIG_1_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (_swig_base SwigcptrWebSocks) CreateStream__SWIG_2(arg1 StreamRequestComplete, arg2 Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_, arg3 int) {
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	C._wrap_WebSocks_CreateStream__SWIG_2_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_intgo(_swig_i_2))
+}
+
+func (p SwigcptrWebSocks) CreateStream(a ...interface{}) {
+	argc := len(a)
+	if argc == 2 {
+		p.CreateStream__SWIG_1(a[0].(StreamRequestComplete), a[1].(Std_string))
+		return
+	}
+	if argc == 3 {
+		if _, ok := a[1].(SwigcptrStd_string); !ok {
+			goto check_2
+		}
+		p.CreateStream__SWIG_0(a[0].(StreamRequestComplete), a[1].(Std_string), a[2].(int))
+		return
+	}
+check_2:
+	if argc == 3 {
+		p.CreateStream__SWIG_2(a[0].(StreamRequestComplete), a[1].(Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_), a[2].(int))
+		return
+	}
+	panic("No match for overloaded function call")
+}
+
+func (_swig_base SwigcptrWebSocks) GetService() (_swig_ret Boost_asio_io_service) {
+	var swig_r Boost_asio_io_service
+	swig_r = (Boost_asio_io_service)(SwigcptrBoost_asio_io_service(C._wrap_WebSocks_GetService_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base))))
+	return swig_r
+}
+
+func (_swig_base SwigcptrWebSocks) SetIsUpdated(arg1 bool) {
+	_swig_i_0 := arg1
+	C._wrap_SetWebSocks_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base), C._Bool(_swig_i_0))
+}
+
+func (_swig_base SwigcptrWebSocks) GetIsUpdated() (_swig_ret bool) {
+	var swig_r bool
+	swig_r = (bool)(C._wrap_GetWebSocks_IsUpdated_i2pdclient_813fe33f58267b59(C.uintptr_t(_swig_base)))
+	return swig_r
+}
+
+func (p SwigcptrWebSocks) SwigIsI2PService() {
+}
+
+func (p SwigcptrWebSocks) SwigGetI2PService() I2PService {
+	return SwigcptrI2PService(p.Swigcptr())
+}
+
+type WebSocks interface {
+	Swigcptr() uintptr
+	SwigIsWebSocks()
+	Start()
+	Stop()
+	GetLocalEndpoint() (_swig_ret Boost_asio_ip_tcp_endpoint)
+	GetName() (_swig_ret string)
+	AddHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	RemoveHandler(arg1 Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_)
+	ClearHandlers()
+	SetConnectTimeout(arg1 Uint32_t)
+	AddReadyCallback(arg1 Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_)
+	GetLocalDestination(a ...interface{}) interface{}
+	SetLocalDestination(arg1 Std_shared_ptr_Sl_ClientDestination_Sg_)
+	CreateStream(a ...interface{})
+	GetService() (_swig_ret Boost_asio_io_service)
+	SetIsUpdated(arg1 bool)
+	GetIsUpdated() (_swig_ret bool)
+	SwigIsI2PService()
+	SwigGetI2PService() I2PService
 }
 
 
-type SwigcptrVoid uintptr
-type Void interface {
+type SwigcptrStd_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_ uintptr
+type Std_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_ interface {
 	Swigcptr() uintptr;
 }
-func (p SwigcptrVoid) Swigcptr() uintptr {
+func (p SwigcptrStd_map_Sl_uint16_t_Sc_std_shared_ptr_Sl_i2p_client_I2CPSession_Sg__Sg_) Swigcptr() uintptr {
 	return uintptr(p)
 }
 
-type SwigcptrNamespace uintptr
-type Namespace interface {
+type SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_ uintptr
+type Std_map_Sl_std_string_Sc_std_string_Sg_ interface {
 	Swigcptr() uintptr;
 }
-func (p SwigcptrNamespace) Swigcptr() uintptr {
+func (p SwigcptrStd_map_Sl_std_string_Sc_std_string_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_Address_SS_const_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_ uintptr
+type Std_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_boost_asio_ip_udp_endpoint_Sc_std_shared_ptr_Sl_I2PUDPClientTunnel_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_ uintptr
+type Std_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_boost_asio_ip_tcp_endpoint_Sc_std_shared_ptr_Sl_I2PService_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_ uintptr
+type Std_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_function_Sl_void_Sp_boost_system_error_code_SS_const_SA__SP__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_ uintptr
+type Std_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_vector_Sl_std_shared_ptr_Sl_i2p_client_DatagramSessionInfo_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_asio_ip_udp_endpoint uintptr
+type Boost_asio_ip_udp_endpoint interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_asio_ip_udp_endpoint) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_asio_ip_tcp_endpoint uintptr
+type Boost_asio_ip_tcp_endpoint interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_asio_ip_tcp_endpoint) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_tunnel_TunnelBuildResult uintptr
+type I2p_tunnel_TunnelBuildResult interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_tunnel_TunnelBuildResult) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_stream_Stream_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_stream_Stream_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_stream_Stream_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_ uintptr
+type Std_shared_ptr_Sl_ClientDestination_SS_const_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_ClientDestination_SS_const_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_ClientDestination_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_ClientDestination_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_ClientDestination_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_ uintptr
+type Std_shared_ptr_Sl_ClientDestination_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_ClientDestination_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint8_t uintptr
+type Uint8_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint8_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_asio_io_service uintptr
+type Boost_asio_io_service interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_asio_io_service) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_ uintptr
+type Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PUDPServerTunnel_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_ uintptr
+type Std_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_std_pair_Sl_i2p_data_IdentHash_Sc_int_Sg__Sc_std_shared_ptr_Sl_I2PServerTunnel_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_ uintptr
+type Std_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_vector_Sl_std_shared_ptr_Sl_DatagramSessionInfo_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint32_t uintptr
+type Uint32_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint32_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBN_CTX uintptr
+type BN_CTX interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBN_CTX) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStreamRequestComplete uintptr
+type StreamRequestComplete interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStreamRequestComplete) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_ uintptr
+type Std_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_boost_asio_ip_tcp_socket_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_SAMSocket_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_SAMSocket_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_SAMSocket_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_tunnel_Path uintptr
+type I2p_tunnel_Path interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_tunnel_Path) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_string uintptr
+type Std_string interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_string) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_datagram_DatagramDestination uintptr
+type I2p_datagram_DatagramDestination interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_datagram_DatagramDestination) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_ uintptr
+type Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_Address_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_ uintptr
+type Std_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_std_string_Sc_std_shared_ptr_Sl_i2p_client_SAMSession_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_data_BlindedPublicKey_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_I2CPSession_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_I2CPSession_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_I2CPSession_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_SAMSession_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_SAMSession_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_SAMSession_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_asio_ip_udp_socket uintptr
+type Boost_asio_ip_udp_socket interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_asio_ip_udp_socket) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_asio_ip_tcp_socket uintptr
+type Boost_asio_ip_tcp_socket interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_asio_ip_tcp_socket) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_ uintptr
+type Std_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_list_Sl_std_shared_ptr_Sl_i2p_client_SAMSocket_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint16_t uintptr
+type Uint16_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint16_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrUint64_t uintptr
+type Uint64_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrUint64_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_ uintptr
+type Std_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_boost_asio_ip_udp_endpoint_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_ uintptr
+type Std_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_i2p_data_IdentHash_Sc_std_shared_ptr_Sl_ClientDestination_Sg__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_asio_ip_address uintptr
+type Boost_asio_ip_address interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_asio_ip_address) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_ uintptr
+type Std_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_std_string_Sc_i2p_client_BOBDestination_Sm__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_data_IdentityEx_SS_const_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrBoost_system_error_code uintptr
+type Boost_system_error_code interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrBoost_system_error_code) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_size_t uintptr
+type Std_size_t interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_size_t) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_istream uintptr
+type Std_istream interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_istream) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_I2CPDestination_SS_const_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_ uintptr
+type Std_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_map_Sl_std_string_Sc_void_Sp_BOBCommandSession__Sm__SP__Sp_char_SS_const_Sm__Sc_size_t_SP__Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_client_I2PServiceHandler_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_data_PrivateKeys uintptr
+type I2p_data_PrivateKeys interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_data_PrivateKeys) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_data_IdentHash_SS_const_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_set_Sl_i2p_data_IdentHash_Sg_ uintptr
+type Std_set_Sl_i2p_data_IdentHash_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_set_Sl_i2p_data_IdentHash_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrEventListener uintptr
+type EventListener interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrEventListener) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrStd_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_ uintptr
+type Std_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_ interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrStd_shared_ptr_Sl_i2p_data_LeaseSet_SS_const_Sg_) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_data_IdentHash uintptr
+type I2p_data_IdentHash interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_data_IdentHash) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_data_SigningKeyType uintptr
+type I2p_data_SigningKeyType interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_data_SigningKeyType) Swigcptr() uintptr {
+	return uintptr(p)
+}
+
+type SwigcptrI2p_data_CryptoKeyType uintptr
+type I2p_data_CryptoKeyType interface {
+	Swigcptr() uintptr;
+}
+func (p SwigcptrI2p_data_CryptoKeyType) Swigcptr() uintptr {
 	return uintptr(p)
 }
 
