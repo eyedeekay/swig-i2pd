@@ -9,7 +9,7 @@ SWIG_OPTS= -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -
 
 swig-libi2pd:
 	@echo $(SWIG)
-	rm -rf ../i2pd/libi2pd/libi2pd_wrap.cxx ../i2pd/libi2pd/libi2pd.go ../i2pd/libi2pd/binding.go
+	rm -rf ../i2pd/libi2pd/libi2pd_wrap.* ../i2pd/libi2pd/libi2pd.go
 	cd ../i2pd/libi2pd/ && $(SWIG) $(SWIG_OPTS) libi2pd.i
 
 swig-libi2pd_client:

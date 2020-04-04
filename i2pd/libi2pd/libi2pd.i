@@ -34,7 +34,7 @@ namespace std {
 
 %{
 /* Includes the header in the wrapper code */
-#include "api.h"
+/*#include "api.h"
 #include "Base.h"
 #include "Blinding.h"
 #include "BloomFilter.h"
@@ -87,7 +87,7 @@ namespace std {
 #include "Tunnel.h"
 #include "TunnelPool.h"
 #include "util.h"
-#include "version.h"
+#include "version.h"*/
 %}
 
 /* Parse the header file to generate wrappers */
@@ -146,4 +146,4 @@ namespace std {
 %include "util.h"
 %include "version.h"
 
-%template(DatagramSession) std::enable_shared_from_this< DatagramSession >;
+%template(DatagramSession) std::enable_shared_from_this< i2p::datagram::DatagramSession >;
