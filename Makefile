@@ -10,6 +10,7 @@ SWIG?=`which swig || echo swig4.0`
 
 binding: libi2pd libi2pd_client
 
+include i2pd/Makefile
 #install:
 
 SWIG_OPTS= -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go
