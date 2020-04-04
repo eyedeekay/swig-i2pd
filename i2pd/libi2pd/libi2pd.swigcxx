@@ -2,6 +2,10 @@
 %include "std_string.i"
 %include "std_vector.i"
 
+%rename("I2PD%s") "";
+%rename("Compare%s") operator==(const foo&, const bar&);
+%rename("Assign%s") operator=(const foo&);
+
 %module libi2pd
 %{
 /* Includes the header in the wrapper code */
@@ -61,6 +65,8 @@
 #include "version.h"
 %}
 
+%template(DatagramSession) enable_shared_from_this< DatagramSession >;q
+
 /* Parse the header file to generate wrappers */
 %include "api.h"
 %include "Base.h"
@@ -117,4 +123,3 @@
 %include "util.h"
 %include "version.h"
 
-%rename("I2PD_%s") "";

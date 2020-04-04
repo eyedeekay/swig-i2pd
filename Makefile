@@ -14,16 +14,16 @@ binding: libi2pd libi2pd_client
 
 libi2pd:
 	@echo $(SWIG)
-	cp swig/libi2pd.i i2pd/libi2pd/libi2pd.swigcxx
+	cp swig/libi2pd.i i2pd/libi2pd/libi2pd.i
 	rm -rf i2pd/libi2pd/libi2pd_wrap.cxx i2pd/libi2pd/libi2pd.go i2pd/libi2pd/binding.go
-	cd i2pd/libi2pd/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd.swigcxx
+	cd i2pd/libi2pd/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd.i
 	cd i2pd/libi2pd/ && \
 	go install $(GO_OPTS) . #/i2pd/libi2pd/
 
 libi2pd_client:
 	@echo $(SWIG)
-	cp swig/libi2pd_client.i i2pd/libi2pd_client/libi2pd_client.swigcxx
-	cd i2pd/libi2pd_client/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd_client.swigcxx
+	cp swig/libi2pd_client.i i2pd/libi2pd_client/libi2pd_client.i
+	cd i2pd/libi2pd_client/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd_client.i
 	cd i2pd/libi2pd_client && \
 	go install $(GO_OPTS) . #./i2pd/libi2pd_client/
 
