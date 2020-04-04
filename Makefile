@@ -38,8 +38,8 @@ libi2pdinterface:
 	sed -i 's|%include "Tag.h"||g' swig/libi2pd.i
 	#sed -i 's|%include "Garlic.h"||g' swig/libi2pd.i
 	sed -i 's|%include "util.h"||g' swig/libi2pd.i
-	@echo 'package libi2pd' | tee i2pd/libi2pd/binding.go
-	@echo 'import "C"' | tee -a i2pd/libi2pd/binding.go
+	#@echo 'package libi2pd' | tee i2pd/libi2pd/binding.go
+	#@echo 'import "C"' | tee -a i2pd/libi2pd/binding.go
 
 libi2pd_clientinterface:
 	#@echo '%module libi2pd_client' | tee swig/libi2pd_client.i
