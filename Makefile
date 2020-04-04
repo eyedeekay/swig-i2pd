@@ -11,13 +11,13 @@ binding: libi2pd libi2pd_client
 
 libi2pd:
 	cp swig/libi2pd.i i2pd/libi2pd/libi2pd.swigcxx
-	cd i2pd/libi2pd/ && swig4.0 -Wall -Werror -cgo -c++ -intgosize 64 -go libi2pd.swigcxx
+	cd i2pd/libi2pd/ && swig -Wall -Werror -cgo -c++ -intgosize 64 -go libi2pd.swigcxx
 	cd i2pd/libi2pd/ && \
 	go install $(GO_OPTS) . #/i2pd/libi2pd/
 
 libi2pd_client:
 	cp swig/libi2pd_client.i i2pd/libi2pd_client/libi2pd_client.swigcxx
-	cd i2pd/libi2pd_client/ && swig4.0 -Wall -Werror -cgo -c++ -intgosize 64 -go libi2pd_client.swigcxx
+	cd i2pd/libi2pd_client/ && swig -Wall -Werror -cgo -c++ -intgosize 64 -go libi2pd_client.swigcxx
 	cd i2pd/libi2pd_client && \
 	go install $(GO_OPTS) . #./i2pd/libi2pd_client/
 
