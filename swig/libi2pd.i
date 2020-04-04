@@ -6,9 +6,30 @@
 %include "std_string.i"
 %include "shared_ptr.i"
 
+%rename("Compare") operator==;
+%rename("Assign") operator=;
+%rename("Minus") operator-;
+%rename("InlineMinus") operator-=;
+%rename("Plus") operator+;
+%rename("InlinePlus") operator+=;
+
+%rename("Insertion") operator<<;
+%rename("SizeOf") operator^=;
+
 %rename("I2PD%s") "";
-%rename("Compare%s") operator==(const foo&, const bar&);
-%rename("Assign%s") operator=(const foo&);
+
+namespace std {
+     template <class T> class enable_shared_from_this {
+     public:
+         ~enable_shared_from_this();
+         shared_ptr<T> shared_from_this();
+         shared_ptr<const T> shared_from_this() const;
+     protected:
+         enable_shared_from_this();
+         enable_shared_from_this(const enable_shared_from_this &);
+     };
+}
+
 
 %{
 /* Includes the header in the wrapper code */
@@ -68,8 +89,6 @@
 #include "version.h"
 %}
 
-%template(DatagramSession) std::enable_shared_from_this< DatagramSession >;
-
 /* Parse the header file to generate wrappers */
 %include "api.h"
 %include "Base.h"
@@ -126,3 +145,4 @@
 %include "util.h"
 %include "version.h"
 
+%template(DatagramSession) std::enable_shared_from_this< DatagramSession >;
