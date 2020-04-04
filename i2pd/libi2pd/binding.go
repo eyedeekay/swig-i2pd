@@ -1,2 +1,2 @@
-package i2pd
+package libi2pd
 import "C"

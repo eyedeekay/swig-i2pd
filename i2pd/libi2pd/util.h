@@ -109,13 +109,13 @@ namespace util
 				this->Release (t);
 			}
 
-			template<template<typename, typename...>class C, typename... R>
+			/*template<template<typename, typename...>class C, typename... R>
 			void ReleaseMt(const C<T *, R...>& c)
 			{
 				std::lock_guard<std::mutex> l(m_Mutex);
 				for (auto& it: c)
 					this->Release (it);
-			}
+			}*/
 
 		private:
 

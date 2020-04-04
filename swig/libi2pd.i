@@ -1,4 +1,4 @@
-%module i2pd
+%module libi2pd
 %{
 /* Includes the header in the wrapper code */
 #include "api.h"
@@ -74,7 +74,7 @@
 %include "Event.h"
 %include "Family.h"
 %include "FS.h"
-
+%include "Garlic.h"
 %include "Gost.h"
 %include "Gzip.h"
 %include "HTTP.h"

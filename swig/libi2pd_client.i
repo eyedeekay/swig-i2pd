@@ -1,4 +1,4 @@
-%module i2pdclient
+%module libi2pd_client
 %{
 /* Includes the header in the wrapper code */
 #include "AddressBook.h"

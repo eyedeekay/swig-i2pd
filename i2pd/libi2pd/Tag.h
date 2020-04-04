@@ -20,7 +20,7 @@ namespace data {
 template<size_t sz>
 class Tag
 {
-	BOOST_STATIC_ASSERT_MSG(sz % 8 == 0, "Tag size must be multiple of 8 bytes");
+	//BOOST_STATIC_ASSERT_MSG(sz % 8 == 0, "Tag size must be multiple of 8 bytes");
 
 public:
 
