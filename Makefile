@@ -13,6 +13,7 @@ binding: libi2pd libi2pd_client
 #install:
 
 libi2pd:
+	@echo $(SWIG)
 	cp swig/libi2pd.i i2pd/libi2pd/libi2pd.swigcxx
 	rm -rf i2pd/libi2pd/libi2pd_wrap.cxx i2pd/libi2pd/libi2pd.go i2pd/libi2pd/binding.go
 	cd i2pd/libi2pd/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd.swigcxx
@@ -20,6 +21,7 @@ libi2pd:
 	go install $(GO_OPTS) . #/i2pd/libi2pd/
 
 libi2pd_client:
+	@echo $(SWIG)
 	cp swig/libi2pd_client.i i2pd/libi2pd_client/libi2pd_client.swigcxx
 	cd i2pd/libi2pd_client/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd_client.swigcxx
 	cd i2pd/libi2pd_client && \
