@@ -3,7 +3,7 @@
 #CGO_ENABLED=yes
 VERSION=2.29.0
 
-SWIG=`which swig || echo swig4.0`
+SWIG?=`which swig || echo swig4.0`
 
 
 #GO_OPTS=-compiler gccgo

@@ -116,3 +116,5 @@
 %include "TunnelPool.h"
 %include "util.h"
 %include "version.h"
+
+%rename("I2PD_%s") "";
