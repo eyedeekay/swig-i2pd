@@ -1,3 +1,7 @@
+%include "stl.i"
+%include "std_string.i"
+%include "std_vector.i"
+
 %module libi2pd
 %{
 /* Includes the header in the wrapper code */

@@ -28,14 +28,14 @@ libi2pd_client:
 interface: libi2pdinterface libi2pd_clientinterface
 
 libi2pdinterface:
-	@echo '%module libi2pd' | tee swig/libi2pd.i
-	@echo '%{' | tee -a swig/libi2pd.i
-	@echo '/* Includes the header in the wrapper code */' | tee -a swig/libi2pd.i
-	./generate include1 | tee -a swig/libi2pd.i
-	@echo '%}' | tee -a swig/libi2pd.i
-	@echo '' | tee -a swig/libi2pd.i
-	@echo '/* Parse the header file to generate wrappers */' | tee -a swig/libi2pd.i
-	./generate include2 | tee -a swig/libi2pd.i
+	#@echo '%module libi2pd' | tee swig/libi2pd.i
+	#@echo '%{' | tee -a swig/libi2pd.i
+	#@echo '/* Includes the header in the wrapper code */' | tee -a swig/libi2pd.i
+	#./generate include1 | tee -a swig/libi2pd.i
+	#@echo '%}' | tee -a swig/libi2pd.i
+	#@echo '' | tee -a swig/libi2pd.i
+	#@echo '/* Parse the header file to generate wrappers */' | tee -a swig/libi2pd.i
+	#./generate include2 | tee -a swig/libi2pd.i
 	#sed -i 's|%include "Log.h"||g' swig/libi2pd.i
 	#sed -i 's|%include "LittleBigEndian.h"||g' swig/libi2pd.i
 	#sed -i 's|%include "Queue.h"||g' swig/libi2pd.i
