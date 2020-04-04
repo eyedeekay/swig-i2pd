@@ -1,12 +1,15 @@
+
+
+%module libi2pd
+
 %include "stl.i"
 %include "std_string.i"
-%include "std_vector.i"
+%include "shared_ptr.i"
 
 %rename("I2PD%s") "";
 %rename("Compare%s") operator==(const foo&, const bar&);
 %rename("Assign%s") operator=(const foo&);
 
-%module libi2pd
 %{
 /* Includes the header in the wrapper code */
 #include "api.h"
@@ -65,7 +68,7 @@
 #include "version.h"
 %}
 
-%template(DatagramSession) std::enable_shared_from_this< DatagramSession >;q
+%template(DatagramSession) std::enable_shared_from_this< DatagramSession >;
 
 /* Parse the header file to generate wrappers */
 %include "api.h"
