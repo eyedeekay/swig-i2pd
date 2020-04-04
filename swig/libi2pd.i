@@ -89,7 +89,7 @@
 %include "NTCPSession.h"
 %include "Poly1305.h"
 %include "Profiling.h"
-
+%include "Queue.h"
 %include "Reseed.h"
 %include "RouterContext.h"
 %include "RouterInfo.h"
@@ -99,7 +99,7 @@
 %include "SSU.h"
 %include "SSUSession.h"
 %include "Streaming.h"
-
+%include "Tag.h"
 %include "Timestamp.h"
 %include "TransitTunnel.h"
 %include "TransportSession.h"
@@ -110,5 +110,5 @@
 %include "TunnelGateway.h"
 %include "Tunnel.h"
 %include "TunnelPool.h"
-
+%include "util.h"
 %include "version.h"

@@ -3,6 +3,9 @@
 #CGO_ENABLED=yes
 VERSION=2.29.0
 
+SWIG=`which swig || echo swig4.0`
+
+
 #GO_OPTS=-compiler gccgo
 
 binding: libi2pd libi2pd_client
@@ -11,13 +14,14 @@ binding: libi2pd libi2pd_client
 
 libi2pd:
 	cp swig/libi2pd.i i2pd/libi2pd/libi2pd.swigcxx
-	cd i2pd/libi2pd/ && swig -Wall -Werror -cgo -c++ -intgosize 64 -go libi2pd.swigcxx
+	rm -rf i2pd/libi2pd/libi2pd_wrap.cxx i2pd/libi2pd/libi2pd.go i2pd/libi2pd/binding.go
+	cd i2pd/libi2pd/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd.swigcxx
 	cd i2pd/libi2pd/ && \
 	go install $(GO_OPTS) . #/i2pd/libi2pd/
 
 libi2pd_client:
 	cp swig/libi2pd_client.i i2pd/libi2pd_client/libi2pd_client.swigcxx
-	cd i2pd/libi2pd_client/ && swig -Wall -Werror -cgo -c++ -intgosize 64 -go libi2pd_client.swigcxx
+	cd i2pd/libi2pd_client/ && $(SWIG) -v -MD -macroerrors -Wall -Werror -copyctor -cgo -c++ -intgosize 64 -go libi2pd_client.swigcxx
 	cd i2pd/libi2pd_client && \
 	go install $(GO_OPTS) . #./i2pd/libi2pd_client/
 
@@ -34,10 +38,10 @@ libi2pdinterface:
 	./generate include2 | tee -a swig/libi2pd.i
 	#sed -i 's|%include "Log.h"||g' swig/libi2pd.i
 	#sed -i 's|%include "LittleBigEndian.h"||g' swig/libi2pd.i
-	sed -i 's|%include "Queue.h"||g' swig/libi2pd.i
-	sed -i 's|%include "Tag.h"||g' swig/libi2pd.i
+	#sed -i 's|%include "Queue.h"||g' swig/libi2pd.i
+	#sed -i 's|%include "Tag.h"||g' swig/libi2pd.i
 	#sed -i 's|%include "Garlic.h"||g' swig/libi2pd.i
-	sed -i 's|%include "util.h"||g' swig/libi2pd.i
+	#sed -i 's|%include "util.h"||g' swig/libi2pd.i
 	#@echo 'package libi2pd' | tee i2pd/libi2pd/binding.go
 	#@echo 'import "C"' | tee -a i2pd/libi2pd/binding.go
 
