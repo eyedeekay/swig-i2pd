@@ -118,3 +118,4 @@
 %include "version.h"
 
 %rename("I2PD_%s") "";
+%rename(compare_foo) operator==(const foo&, const foo&);
