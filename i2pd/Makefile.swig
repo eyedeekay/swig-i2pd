@@ -1,7 +1,8 @@
 
 SWIG?=`which swig || echo swig4.0`
 
-binding: swig-libi2pd swig-libi2pd_client
+binding: swig-libi2pd 
+    #swig-libi2pd_client
 
 #install:
 

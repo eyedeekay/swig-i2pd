@@ -8,7 +8,8 @@ SWIG?=`which swig || echo swig4.0`
 
 #GO_OPTS=-compiler gccgo
 
-binding: libi2pd libi2pd_client
+binding: libi2pd 
+	#libi2pd_client
 
 include i2pd/Makefile
 #install:
